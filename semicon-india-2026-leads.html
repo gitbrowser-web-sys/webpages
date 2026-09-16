@@ -1,0 +1,766 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Analog Bits booth plan, SEMICON India 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#E8ECEF; --surface:#FFFFFF; --sunk:#F3F5F7; --ink:#15212C; --muted:#5B6874; --line:#D3DAE0;
+  --met:#17805A; --met-soft:#DDF1E8;
+  --t1:#B42318; --t2:#175CD3; --t3:#6941C6; --t4:#687382; --tc:#B54708;
+  --warn-bg:#FEF3E2; --warn-ink:#8A3B07; --shadow:0 1px 0 rgba(21,33,44,.06);
+  --font:"Archivo", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0E151C; --surface:#17212B; --sunk:#1D2935; --ink:#E5ECF2; --muted:#94A3B1; --line:#2B3845;
+    --met:#3DBE8B; --met-soft:#173A2E;
+    --t1:#F97066; --t2:#6FA8FF; --t3:#A48AFB; --t4:#9AA6B2; --tc:#F79009;
+    --warn-bg:#3A2410; --warn-ink:#FDC98A; --shadow:none;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0E151C; --surface:#17212B; --sunk:#1D2935; --ink:#E5ECF2; --muted:#94A3B1; --line:#2B3845;
+  --met:#3DBE8B; --met-soft:#173A2E;
+  --t1:#F97066; --t2:#6FA8FF; --t3:#A48AFB; --t4:#9AA6B2; --tc:#F79009;
+  --warn-bg:#3A2410; --warn-ink:#FDC98A; --shadow:none;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--font);font-size:16px;line-height:1.45;-webkit-text-size-adjust:100%;padding-bottom:env(safe-area-inset-bottom)}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:3px solid var(--t2);outline-offset:2px}
+
+/* Header */
+.top{position:sticky;top:0;z-index:20;background:var(--bg);padding:12px 14px 8px;border-bottom:1px solid var(--line)}
+.titlebar{display:flex;align-items:flex-end;justify-content:space-between;gap:10px}
+h1{margin:0;font-weight:800;font-stretch:78%;font-size:26px;line-height:1;letter-spacing:-.01em}
+.sub{margin:3px 0 0;color:var(--muted);font-size:13px}
+.brief-btn{flex:none;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:7px 13px;font-size:14px;font-weight:600}
+.progress{margin-top:10px;display:flex;align-items:center;gap:10px}
+.bar{flex:1;height:8px;background:var(--line);border-radius:99px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--met);border-radius:99px;transition:width .3s}
+.count{font-size:13px;font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+.search{margin-top:10px;position:relative}
+.search input{width:100%;border:1px solid var(--line);background:var(--surface);border-radius:12px;padding:10px 12px 10px 38px;font-size:16px}
+.search svg{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--muted)}
+.chips{display:flex;gap:6px;overflow-x:auto;margin:10px -14px 0;padding:0 14px 2px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 12px;font-size:14px;font-weight:600;white-space:nowrap}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chip .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;vertical-align:1px}
+.row2{display:flex;gap:6px;margin-top:8px}
+.seg{display:flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--surface);flex:1}
+.seg button{flex:1;border:0;background:none;padding:6px 4px;font-size:13px;font-weight:600;color:var(--muted)}
+.seg button[aria-pressed="true"]{background:var(--sunk);color:var(--ink);box-shadow:inset 0 -2px 0 var(--ink)}
+
+/* List */
+main{padding:6px 10px 90px;max-width:760px;margin:0 auto}
+.group{margin:18px 4px 6px;display:flex;align-items:baseline;gap:8px}
+.group h2{margin:0;font-size:19px;font-weight:800;font-stretch:85%}
+.group span{color:var(--muted);font-size:13px}
+.group .sw{width:10px;height:10px;border-radius:3px;align-self:center}
+.card{display:grid;grid-template-columns:44px 74px 1fr;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:14px;margin:6px 0;box-shadow:var(--shadow);overflow:hidden}
+.card.met{background:var(--met-soft);border-color:color-mix(in srgb,var(--met) 35%,var(--line))}
+.check{height:100%;display:flex;align-items:center;justify-content:center;border:0;background:none;padding:0}
+.box{width:26px;height:26px;border:2px solid var(--muted);border-radius:8px;display:flex;align-items:center;justify-content:center;transition:background .15s,border-color .15s}
+.box svg{opacity:0;transform:scale(.6);transition:.15s}
+.met .box{background:var(--met);border-color:var(--met)}
+.met .box svg{opacity:1;transform:none}
+.booth{height:100%;border:0;border-left:1px solid var(--line);border-right:1px solid var(--line);background:var(--sunk);padding:10px 4px;text-align:center}
+.booth b{display:block;font-weight:800;font-stretch:70%;font-size:22px;line-height:1;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
+.booth small{display:block;margin-top:4px;font-size:11px;color:var(--muted);font-weight:600}
+.info{border:0;background:none;text-align:left;padding:10px 12px;min-width:0;height:100%}
+.name{font-weight:700;font-size:16px;line-height:1.2;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.one{margin-top:3px;color:var(--muted);font-size:13.5px;line-height:1.35;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.tag{font-size:11px;font-weight:700;border-radius:6px;padding:1px 6px;white-space:nowrap}
+.tag.top{background:var(--ink);color:var(--bg)}
+.tag.v{border:1px dashed var(--muted);color:var(--muted)}
+.tier-edge{box-shadow:inset 4px 0 0 var(--tcol)}
+.empty{text-align:center;color:var(--muted);padding:40px 10px}
+
+/* Sheet */
+.scrim{position:fixed;inset:0;background:rgba(8,14,20,.45);opacity:0;pointer-events:none;transition:opacity .2s;z-index:40}
+.scrim.on{opacity:1;pointer-events:auto}
+.sheet{position:fixed;left:0;right:0;bottom:0;z-index:50;max-height:92vh;background:var(--surface);border-radius:18px 18px 0 0;transform:translateY(105%);transition:transform .25s ease;display:flex;flex-direction:column;max-width:760px;margin:0 auto}
+.sheet.on{transform:none}
+@media (prefers-reduced-motion: reduce){.sheet,.scrim,.bar i,.box,.box svg{transition:none}}
+.grab{width:44px;height:5px;border-radius:9px;background:var(--line);margin:8px auto 0}
+.sh-head{padding:10px 16px 12px;border-bottom:1px solid var(--line);display:flex;gap:12px;align-items:flex-start}
+.sh-booth{flex:none;min-width:84px;text-align:center;border-radius:12px;padding:8px 6px;background:var(--tcol);color:#fff}
+.sh-booth b{display:block;font-weight:800;font-stretch:68%;font-size:30px;line-height:1}
+.sh-booth small{display:block;font-size:12px;font-weight:600;opacity:.9;margin-top:3px}
+.sh-title{flex:1;min-width:0}
+.sh-title h3{margin:0;font-size:21px;line-height:1.15;font-weight:800;font-stretch:88%}
+.sh-meta{margin-top:5px;font-size:13px;color:var(--muted)}
+.close{flex:none;border:1px solid var(--line);background:var(--sunk);border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center}
+.sh-body{overflow-y:auto;padding:4px 16px 16px;-webkit-overflow-scrolling:touch}
+.sec{margin-top:16px}
+.sec h4{margin:0 0 4px;font-size:14px;font-weight:700;color:var(--tcol)}
+.sec p{margin:0;font-size:15.5px;max-width:68ch}
+.sec ul{margin:0;padding-left:18px}
+.sec li{margin:3px 0;font-size:15.5px}
+.opener{background:var(--sunk);border-left:4px solid var(--tcol);border-radius:10px;padding:10px 12px;font-size:16px}
+.copy{margin-top:6px;border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:5px 10px;font-size:13px;font-weight:600}
+.warn{background:var(--warn-bg);color:var(--warn-ink);border-radius:10px;padding:10px 12px}
+.warn h4{color:var(--warn-ink)}
+.notes textarea{width:100%;min-height:92px;border:1px solid var(--line);background:var(--sunk);border-radius:10px;padding:10px;font-size:16px;resize:vertical}
+.saved{font-size:12px;color:var(--muted);margin-top:3px;min-height:16px}
+.sh-foot{border-top:1px solid var(--line);padding:10px 12px calc(10px + env(safe-area-inset-bottom));display:flex;gap:8px;align-items:center}
+.nav{border:1px solid var(--line);background:var(--sunk);border-radius:12px;width:48px;height:48px;display:flex;align-items:center;justify-content:center}
+.metbtn{flex:1;height:48px;border-radius:12px;border:2px solid var(--met);background:var(--surface);color:var(--met);font-weight:800;font-size:16px;display:flex;align-items:center;justify-content:center;gap:8px}
+.metbtn.on{background:var(--met);color:#fff}
+.brief .sec p,.brief .sec li{font-size:15px}
+.danger{border:1px solid var(--t1);color:var(--t1);background:none;border-radius:10px;padding:8px 12px;font-weight:600}
+.btnrow{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.plain{border:1px solid var(--line);background:var(--sunk);border-radius:10px;padding:8px 12px;font-weight:600}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);background:var(--ink);color:var(--bg);padding:9px 16px;border-radius:999px;font-size:14px;font-weight:600;opacity:0;pointer-events:none;transition:.2s;z-index:60}
+.toast.on{opacity:1;transform:translateX(-50%)}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="titlebar">
+    <div>
+      <h1>SEMICON India booth plan</h1>
+      <p class="sub">Analog Bits leads, 17–19 Sep, Yashobhoomi</p>
+    </div>
+    <button class="brief-btn" id="briefBtn">Briefing</button>
+  </div>
+  <div class="progress">
+    <div class="bar" aria-hidden="true"><i id="barFill"></i></div>
+    <span class="count" id="count">0 met</span>
+  </div>
+  <div class="search">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input id="q" type="search" placeholder="Search company or booth" autocomplete="off" aria-label="Search company or booth">
+  </div>
+  <div class="chips" id="tierChips" role="group" aria-label="Filter by priority"></div>
+  <div class="row2">
+    <div class="seg" id="hallSeg" role="group" aria-label="Hall">
+      <button data-v="all" aria-pressed="true">All halls</button>
+      <button data-v="1" aria-pressed="false">Hall 1</button>
+      <button data-v="2" aria-pressed="false">Hall 2</button>
+    </div>
+    <div class="seg" id="statSeg" role="group" aria-label="Status">
+      <button data-v="all" aria-pressed="true">All</button>
+      <button data-v="todo" aria-pressed="false">To meet</button>
+      <button data-v="met" aria-pressed="false">Met</button>
+    </div>
+  </div>
+  <div class="row2">
+    <div class="seg" id="sortSeg" role="group" aria-label="Order">
+      <button data-v="tier" aria-pressed="true">By tier</button>
+      <button data-v="route" aria-pressed="false">Walking route</button>
+    </div>
+  </div>
+</header>
+
+<main id="list"></main>
+
+<div class="scrim" id="scrim"></div>
+<section class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="shName">
+  <div class="grab"></div>
+  <div class="sh-head">
+    <div class="sh-booth" id="shBooth"><b></b><small></small></div>
+    <div class="sh-title"><h3 id="shName"></h3><div class="sh-meta" id="shMeta"></div></div>
+    <button class="close" id="shClose" aria-label="Close">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+  <div class="sh-body" id="shBody"></div>
+  <div class="sh-foot" id="shFoot">
+    <button class="nav" id="prev" aria-label="Previous company"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <button class="metbtn" id="metBtn"></button>
+    <button class="nav" id="next" aria-label="Next company"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M9 5l7 7-7 7"/></svg></button>
+  </div>
+</section>
+<div class="toast" id="toast"></div>
+
+<script>
+/* ---------- Data ---------- */
+const TIERS = {
+  1:{label:"Tier 1", long:"Tier 1: direct IP buyers", note:"Companies designing their own chips", col:"--t1"},
+  2:{label:"Tier 2", long:"Tier 2: design services and ASIC houses", note:"They buy IP for client chips", col:"--t2"},
+  3:{label:"Tier 3", long:"Tier 3: strategic partners", note:"Foundries, enablement programs, ecosystem", col:"--t3"},
+  4:{label:"Tier 4", long:"Tier 4: secondary partnerships", note:"OSAT, power, test, tools, academia, states", col:"--t4"},
+  C:{label:"Competitor", long:"Competitor", note:"Know their pitch before your meetings", col:"--tc"}
+};
+const V = "Profile not confirmed. Ask in the first 30 seconds: do you tape out your own chips, or offer design services? If they tape out, ask which node and foundry, and when.";
+const S = (n,b,one) => ({n,b,t:1,v:true,cat:"Startup Pavilion",one:one||"Semiconductor startup at the Startup Pavilion. Verify tape-out plans.",fit:V,open:"What are you building, and when is your next tape-out?"});
+const D = (n,b,one) => ({n,b,t:2,v:true,cat:"Design services (unverified)",one:one||"Name suggests chip design work. Verify at the booth.",fit:V,open:"Do you take chips to tape-out for customers, and who picks the analog IP?"});
+
+const DATA = [
+/* Tier 1 */
+{n:"AHEESA Digital Innovations",b:"714",t:1,top:true,cat:"RISC-V networking SoC",
+ one:"VIHAAN networking SoC got first-pass silicon; production tape-out in 2027.",
+ news:["VIHAAN networking SoC taped out on Republic Day 2026 and achieved first-pass silicon on Independence Day 2026.","Production tape-out planned for 2027.","Built on RISC-V using C-DAC's 64-bit VEGA processor. Approved under the DLI scheme.","CEO Sridharan Mani previously managed software development at Amazon."],
+ fit:"Likely the best-timed lead of the show: IP for the production tape-out is being chosen now. Networking SoCs need SerDes and PLLs.",
+ open:"First-pass silicon on VIHAAN is a big result. For the 2027 production tape-out, are you revisiting your SerDes or clocking IP?",
+ link:"Uses C-DAC's VEGA core, so mention your C-DAC and ChipIN conversations."},
+{n:"Morphing Machines",b:"H3122",t:1,top:true,cat:"Reconfigurable processor",
+ one:"New Series A funds their first production chip tape-out.",
+ news:["Raised about ₹42 crore in a Series A tranche that funds development, tape-out and testing of their first production chip.","REDEFINE is a runtime-reconfigurable processor aimed at data centres, HPC and AI."],
+ fit:"Pre-tape-out on a data-centre-class chip, so high-speed clocking, SerDes and on-die sensors are all relevant.",
+ open:"Where are you on the REDEFINE first tape-out? Have you locked your PLL and high-speed interface IP?",
+ who:"Ask for CEO Deepak Shapeti."},
+{n:"L&T Semiconductor Technologies",b:"713",t:1,top:true,cat:"Indian fabless product company",
+ one:"Unveiling about 40 products at this show.",
+ news:["Plans to unveil about 40 semiconductor products at SEMICON India, after a little over two years of development.","Acquired Bangalore-based SiliConch Systems for ₹183 crore, merged effective 24 March 2026.","Targeting $500 million annual revenue by FY31, with 70–80% from exports.","Has an R&D agreement with IBM on advanced processors."],
+ fit:"With 40 products launching and an export-heavy plan, their next-generation designs will need silicon-proven PLLs, sensors and IOs across foundries.",
+ open:"Congratulations on the 40-product launch. As you plan the next wave for export markets, how are you sourcing clocking and PVT monitoring for new nodes?"},
+{n:"Axiro Semiconductor",b:"1214",t:1,top:true,cat:"RF, mmWave and connectivity ICs",
+ one:"Just closed the Tosil Systems acquisition; RF and mmWave roadmap.",
+ news:["Completed its ₹16.44 crore acquisition of Tosil Systems on 20 August 2026, adding embedded silicon and Edge AI design capability.","Invested in EdgeCortix.","Focused on RF, mmWave and advanced connectivity ICs for telecom, satcom and defence."],
+ fit:"RF and mmWave chips need low-jitter PLLs. Through Tosil they are also building a design-services arm, so they can buy IP for their own chips and for client work.",
+ open:"With Tosil on board and the mmWave roadmap, low-jitter clocking must be a big topic for you.",
+ who:"Ask for CEO Dr Naveen Yanduru. Shares booth 1214 with CG Semi.",
+ link:"Visit EdgeCortix (H4511) next and mention Axiro."},
+{n:"Netrasemi",b:"718",t:1,top:true,cat:"Edge-AI SoC startup",
+ one:"A2000 is production-ready; server-class A4000 enters design next year.",
+ news:["A2000 SoC completed silicon bring-up and is production-ready.","Plans an A4000 server-class derivative that enters design next year.","Raised ₹107 crore in a round led by Zoho and Unicorn India Ventures."],
+ fit:"A4000 is a new design at the IP-selection stage, and a server-class part needs higher-performance interfaces than A2000.",
+ open:"Congratulations on A2000 bring-up. For the A4000, what are your SerDes and clocking requirements?",
+ link:"Same booth as InCore and Startup Mitra."},
+{n:"EdgeCortix India",b:"H4511",t:1,cat:"Edge AI accelerator",
+ one:"Series B took total funding above $110M; SAKURA-X chiplet platform.",
+ news:["Series B brought total funding above $110M.","Funds go to scaling SAKURA-II and speeding up the SAKURA-X chiplet architecture.","Axiro Semiconductor is an investor."],
+ fit:"A chiplet platform needs die-to-die clocking and PVT monitoring on every die.",
+ open:"For SAKURA-X, how are you handling clocking and thermal monitoring across the chiplets?",
+ link:"Mention you are also meeting their investor Axiro."},
+{n:"VSORA",b:"H6207",t:1,cat:"AI inference chips",
+ one:"Jotunn8 built via GUC turnkey on TSMC 5nm; Tyr edge chip next.",
+ news:["GUC provided turnkey ASIC services for Jotunn8: TSMC 5nm, HBM3E PHY, 2.5D chiplet connectivity, CoWoS-S packaging.","Raised another round; plans a larger international expansion round in 2027.","Also has Tyr, an edge-focused product."],
+ fit:"Jotunn8's IP went through GUC, so the open opportunity is Tyr and the next Jotunn generation.",
+ open:"On the next Jotunn generation and Tyr, will you choose IP directly or through a turnkey partner?"},
+{n:"Mindgrove Technologies",b:"H3724",t:1,cat:"RISC-V MCU and SoC",
+ one:"Secure IoT SoC moving to commercial production.",
+ news:["Preparing commercial production of its RISC-V Secure IoT SoC for biometrics, industrial IoT, smart meters, wearables and EV battery management.","Several customers testing prototypes; early demand expected from biometric systems for telecom onboarding."],
+ fit:"Security chips need glitch and tamper detection; EV battery management and meters need voltage and temperature monitors. A direct match for Analog Bits sensors.",
+ open:"For Secure IoT's next revision, how are you handling fault-injection and glitch-attack detection?"},
+{n:"Vervesemi Microelectronics",b:"813",t:1,cat:"Analog and mixed-signal chips",
+ one:"$10M Series A; BLDC controller in production late 2026.",
+ news:["Raised a $10 million Series A to commercialise ML-enhanced analog signal-chain chips for industrial, smart energy, motor control and avionics.","BLDC controller chipset with indigenous RISC-V scheduled for production in late 2026."],
+ fit:"Pitch where they are less likely to have their own blocks: PVT and glitch sensors or IOs on digital-heavy parts.",
+ warn:"They say they have developed over 140 IP blocks and are strong in analog. Don't lead with generic analog IP.",
+ open:"On the digital-heavy parts of your roadmap, do you build your own glitch and PVT sensing, or license it?"},
+{n:"Green PMU Semi",b:"H4511",t:1,cat:"Energy-harvesting PMICs",
+ one:"DLI-selected energy-harvesting IC startup from Hyderabad.",
+ news:["Builds energy-harvesting ICs for IoT devices.","Selected for MeitY's DLI scheme. Hyderabad-based, founded 2021."],
+ fit:"Ultra-low-power PMICs fit power-on reset, brown-out and voltage monitor IP. A small deal but an easy start.",
+ open:"For your next energy-harvesting IC, how are you handling power-on reset and brown-out detection?"},
+{n:"LightSpeed Photonics",b:"H4323",t:1,cat:"Optical interconnect",
+ one:"Launched solderable near-packaged optics at OFC 2026.",
+ news:["At OFC 2026 launched what they call the first solderable, VCSEL-based near-packaged optical interconnect.","Signed an MoU with Infraeo on near-package optics and PCIe-over-fiber for AI data centres, mainly in India."],
+ fit:"Mostly a module and optics company. They only buy IP if they design their own driver or CDR silicon.",
+ open:"Do you design your own driver or CDR silicon, or buy those chips?",
+ warn:"Qualify early: no own silicon means no IP deal."},
+{n:"Micron Technology",b:"1001",t:1,cat:"Memory; large account",
+ one:"Sanand ATMP started production Feb 2026. Target design teams.",
+ news:["PM Modi inaugurated Micron's Sanand ATMP on 28 February 2026, starting commercial production."],
+ fit:"Sanand is packaging and test, not design. The IP buyers are the Hyderabad and Bengaluru design teams (memory controllers, HBM logic).",
+ open:"Who leads controller and HBM logic design in India? I'd like an introduction to that team."},
+{n:"IBM India",b:"1407",t:1,cat:"Processors and AI chips; large account",
+ one:"Announced a sub-1nm nanostack chip in June 2026.",
+ news:["In June 2026 announced a sub-1nm chip using a nanostack 3D architecture with nearly 100 billion transistors.","L&T Semi has an R&D agreement with IBM on advanced processors."],
+ fit:"Mostly an ecosystem conversation. Mention the L&T link since you meet both.",
+ open:"Congratulations on the sub-1nm announcement. How does the India team work with partners like L&T on processor programs?"},
+{n:"AMD India",b:"1102",t:1,cat:"CPU, GPU, adaptive SoC; large account",
+ one:"No fresh India news. Collect engineering contacts.",
+ news:["No 2026 India announcement found. Bengaluru campus works on data-centre and PC CPUs, GPUs, and adaptive SoCs and FPGAs."],
+ fit:"IP decisions are global. Collect engineering-manager contacts and follow up with US counterparts.",
+ open:"Which India teams own mixed-signal IP integration, and who should I follow up with?"},
+{n:"Sandisk India Device Design Centre",b:"1145",t:1,cat:"Flash controllers; large account",
+ one:"No fresh news. Flash controllers need SerDes, PLLs, sensors.",
+ news:["No 2026 India announcement found."],
+ fit:"Flash controller SoCs use SerDes, PLLs and PVT sensors. IP decisions are global; collect contacts.",
+ open:"Who in the India design centre owns controller SoC analog IP choices?"},
+{n:"MBit Wireless",b:"H4502",t:1,cat:"4G/5G chipsets",
+ one:"Skylark and Sunlark chipset families. No recent news.",
+ news:["No recent news. Develops 4G/5G connectivity and edge-computing chipsets including the Skylark and Sunlark families."],
+ fit:"Cellular modems need low-jitter PLLs.",
+ open:"What comes after Skylark and Sunlark, and how are you sourcing clocking?",
+ link:"Tamil Nadu pavilion at H4502."},
+S("Multi Nano Sense Technologies","H4511","Sensor startup. Verify."),
+S("Ptw Semiconductor India","H4502","Name suggests chip design. Verify."),
+S("MumbaiSemi","H4511"),S("NeevSemi India","H4511"),S("Sensesemi Technologies","H4511"),S("Struent Semiconductors","H4511"),
+S("Tahinium Technologies","H4511"),S("MatterWave Technologies","H4511"),S("Truesilicon Technology","H4511"),S("Indnix Technology","H4511"),
+S("Semicon Fab Technologies","H4511"),S("Vesidam Technologies","H4511"),S("TriQuanta Labs","H4511"),S("NYXSES India","H4511"),
+S("Numelo Technologies","H4511"),S("Swadeza Venture","H4511"),S("Synchronous Drives & Inverters","H4511"),S("The Applicable","H4511"),S("SARVTEK","H4511"),
+
+/* Tier 2 */
+{n:"Mirafra Technologies",b:"H5731",t:2,top:true,cat:"Semiconductor design services",
+ one:"Ramanujan 22nm SoC bring-up done; builds IP in-house when licensing is uneconomical.",
+ news:["Taped out a 22nm SoC called Ramanujan to show end-to-end SoC delivery; not entering the merchant chip market.","Site lists successful Ramanujan bring-up and a new AI centre of excellence in 2026.","Built blocks in-house where third-party IP was unavailable or too expensive."],
+ fit:"A direct opening: price and licensing terms. Ramanujan will be reused for customer derivatives, and each derivative needs IP.",
+ open:"Congratulations on Ramanujan bring-up. For customer derivatives, would a pre-negotiated PLL and sensor bundle cost less than building in-house?",
+ who:"Ask for CEO Alok Kuchlous.",
+ warn:"They have senior SerDes and AMS talent, so they can build their own if the terms aren't right."},
+{n:"CHIPEX Technologies",b:"H7222",t:2,top:true,cat:"Custom IC and turnkey SoC design",
+ one:"Design house and authorized Rambus IP rep in India: buyer and possible channel.",
+ news:["Custom IC and turnkey SoC design house: analog and digital design, verification, silicon testing.","MoU with MIC Electronics to co-develop custom chips replacing off-the-shelf parts.","Authorized sales representative for Rambus Silicon IP in India.","Co-founder and CTO has over a decade of high-speed SerDes, power management and ADC/DAC design experience."],
+ fit:"Buyer and possible Indian channel partner. Rambus focuses on interface controllers and security IP, which complements PLLs and sensors.",
+ open:"You already represent Rambus. Would complementary analog IP like PLLs, sensors and IOs round out what you offer Indian customers?"},
+{n:"Cyient Semiconductors",b:"H7205",t:2,cat:"Custom silicon and turnkey ASIC",
+ one:"Closed $85M Kinetic deal; 25+ ASICs taped out in a year.",
+ news:["Closed an $85 million majority-stake investment in Kinetic Technologies in April 2026, adding 100+ silicon-proven IPs and 250+ products in power management, protection and interface.","Taped out 25+ ASICs in about a year as a standalone company.","Co-develops GaN products with Navitas. Partners with GlobalFoundries, MIPS and Anora.","CEO describes MIPS-based RISC-V compute as the intelligence layer of its power-silicon platform."],
+ fit:"Their RISC-V compute and telemetry SoCs still need PLLs, PVT sensors and clocking.",
+ open:"With Kinetic's power IP in place, who supplies clocking and on-die sensing for the MIPS-based telemetry platform?",
+ who:"CEO Suman Narayan.",
+ warn:"Kinetic overlaps on power and protection IP, so don't lead there. Check whether they already use Silicon Creations through GlobalFoundries. 'Anora' may be Anora Instrumentation at H4502."},
+{n:"HCLTech",b:"946",t:2,cat:"Silicon engineering services",
+ one:"Opened a ₹185 crore semiconductor lab in Bengaluru on 8 Sep 2026.",
+ news:["Opened a ₹185 crore Advanced Semiconductor Lab in Bengaluru on 8 September 2026 for post-silicon engineering, testing and failure analysis.","Cites 230+ tape-outs with a 95% first-silicon success rate.","Booth features India Chip, the HCL–Foxconn display-driver OSAT JV in Jewar.","Non-equity collaboration with Suchi Semicon."],
+ fit:"Turnkey work from specification to silicon means they can recommend IP across many client programs. The new lab could characterize silicon in India.",
+ open:"Congratulations on the new lab. Which third-party mixed-signal IP do you standardize on for turnkey programs, and would a silicon-proven PLL and sensor partner help that first-silicon record?",
+ link:"One row behind the Hall 1 Tier 1 cluster at 713–718."},
+{n:"MosChip Technologies",b:"H5316",t:2,cat:"Turnkey ASIC house",
+ one:"Buying 73% of Vayavya Labs for ₹245 crore.",
+ news:["Board approved buying 73% of Vayavya Labs for ₹245.49 crore to strengthen semiconductor and automotive software.","Exhibiting and taking meeting bookings at SEMICON India."],
+ fit:"One of India's biggest turnkey ASIC houses. Every turnkey chip needs clocking and IO IP.",
+ open:"With Vayavya adding the software side, are you pursuing more full turnkey automotive SoCs, and how do you source analog IP for them?",
+ warn:"Avoid: Q1 FY27 profit fell sharply, and an EGM was postponed over litigation involving promoter-linked entities."},
+{n:"SignOff Semiconductors",b:"H6133",t:2,cat:"Physical design and turnkey services",
+ one:"Startups want turnkey ASIC and ODC models from them.",
+ news:["At the IESA Vision Summit (Feb 2026), most fabless startup conversations were about turnkey ASIC and offshore development centre models.","ISO 9001:2015 certified in May 2026.","Opened an Israel office through a partnership with MosaIC."],
+ fit:"Turnkey partner for Indian startups, the same buyers as Tier 1. Being their default IP supplier gives indirect access.",
+ open:"When a startup hires you for turnkey work, who picks the PLL and IO IP? Could we be your default recommendation?"},
+{n:"Tech Mahindra",b:"H6431",t:2,cat:"Semiconductor design services",
+ one:"Relationship play. No 2026 semiconductor news.",
+ news:["No 2026 semiconductor news found. Says it provides end-to-end design services to 9 of the top 10 silicon design companies."],
+ fit:"Mostly staffing-style engagements where the client picks IP. Aim for referrals.",
+ open:"Which of your client programs in India involve new tape-outs where analog IP is still open?"},
+{n:"Infosys",b:"1402",t:2,cat:"Semiconductor engineering services",
+ one:"Relationship play. InSemi added 900+ design specialists.",
+ news:["No new chip announcements. InSemi acquisition added 900+ design specialists to its chip-to-cloud strategy.","Published a 2026 semiconductor industry outlook."],
+ fit:"Relationship play; referral introductions.",
+ open:"I read your 2026 semiconductor outlook. Where do you see Indian design programs heading next year?"},
+{n:"UST",b:"1633",t:2,cat:"Semiconductor design services",
+ one:"Partnered with Kaynes on OSAT. Lower priority.",
+ news:["Partnered with Kaynes Semicon on an OSAT facility.","COO has called 2026 a turning point for AI and semiconductors."],
+ fit:"Lower priority; referrals.",
+ open:"Beyond the Kaynes partnership, is UST taking chips to tape-out for clients?"},
+{n:"KriSemi Design Technologies",b:"H7335",t:2,cat:"Design services",
+ one:"Hyderabad services firm with SerDes and IO layout specialty.",
+ news:["Services covering physical design, AMS, RTL and DFT, with SerDes and IO layout among specialties.","Size unclear: sources range from about 35 to several hundred employees."],
+ fit:"Possible IP integration partner; unlikely direct licensee.",
+ open:"When you do SerDes and IO layout for customers, whose IP are you usually integrating?"},
+{n:"LeadIC Design",b:"H5416",t:2,cat:"Layout and circuit services",
+ one:"Small layout and characterization firm; low priority.",
+ news:["Bengaluru services firm founded 2018: IC layout, circuit design, verification, characterization. India and Canada presence.","About 63 employees; ₹14.8 crore revenue in FY25."],
+ fit:"Possible layout or porting subcontractor. Low priority.",
+ open:"Do you do IP porting or characterization work for IP vendors?"},
+D("ASM Technologies","478","Engineering services with semiconductor work. No research done."),
+D("El Camino Technologies / Adaptsys","556","VLSI design services. No research done."),
+D("Ample Semiconductors","H7035"),D("CraftifAI","H7307"),D("TAAAYANAM","H3723"),D("Primionics","H4524"),
+D("DCAS Technologies","H6624"),D("Intics.ai","H6436"),D("ThirdAI Automation","H4823"),
+D("MAXVY Technologies","H4511","Design services."),D("Chipspirit Technologies","H4511","VLSI design services."),
+D("COVERIFY Systems","H4511","Verification services."),D("circuitEvolve","H4511","Design services."),
+
+/* Tier 3 */
+{n:"ChipIN Centre (C-DAC)",b:"H3402",t:3,top:true,cat:"DLI design infrastructure hub",
+ one:"Top strategic meeting: IP repository reaches every DLI startup.",
+ news:["DLI infrastructure hub: remote EDA tool grid, a repository of IP cores for SoC design, and MPW prototyping funding.","C-DAC signed an MoU with Arm for a Flexible Access Program for startups, announced alongside AHEESA's DLI approval.","Under Chips to Startup, 75 institutions took 211 designs to tape-out by April 2026.","Karnataka leads with 81 organisations supported and 73 tape-outs."],
+ fit:"A flexible-access listing in the ChipIN IP repository would reach every DLI startup at once. The Arm deal shows the model works.",
+ open:"C-DAC already runs a flexible-access program with Arm. Would a similar arrangement for silicon-proven PLLs, sensors and IOs fill a gap in the ChipIN IP repository?",
+ link:"Next to C-DAC (H3302), SCL (H3602) and IIT Bombay (H3608)."},
+{n:"Tata Electronics",b:"414",t:3,top:true,cat:"India's first commercial fab",
+ one:"Building an IP ecosystem with C-DAC; trial production targeted Dec 2026.",
+ news:["Dholera construction past halfway; cleanroom installation and equipment calibration under way ahead of trial production targeted for December 2026.","July reports said the fab starts at 90nm, not 28nm, with commercial output mid-2028. Tata's spokesperson said the plan was always 55nm and 90nm first, then 28nm.","MoU with C-DAC to build a design and IP ecosystem on Tata's fab technology, including silicon-proven IP portfolios for startups and academia."],
+ fit:"IP vendors on Tata's PDKs reach the whole DLI ecosystem. Confirm with your product team which Tata nodes Analog Bits can support, and when.",
+ open:"As you build the IP ecosystem with C-DAC, what's the plan for foundation IP like PLLs and PVT sensors on your first PDKs, and when does IP partner onboarding start?",
+ warn:"Don't raise the node-change or delay story. Keep it forward-looking."},
+{n:"C-DAC",b:"H3302",t:3,top:true,cat:"Processor programs; DLI nodal agency",
+ one:"Launched DHRUV64; next VEGA generation at 28nm and below.",
+ news:["DHRUV64, a 1.0 GHz 64-bit dual-core RISC-V processor, launched December 2025. Third chip under the DIR-V programme.","Third-party reports describe DHANUSH follow-ons at 28nm and 16nm around 2028–2030 (unofficial).","Nodal agency for DLI and ChipIN. AHEESA's VIHAAN uses C-DAC's VEGA processor."],
+ fit:"Two meetings in one: processor teams (need PLLs, sensors, SerDes at 28nm and below) and DLI/ChipIN teams. Ask for both.",
+ open:"Congratulations on DHRUV64. For the next VEGA generation at 28nm and below, how are you sourcing clocking and PVT monitoring?"},
+{n:"Semi-Conductor Laboratory (SCL)",b:"H3602",t:3,cat:"Government fab",
+ one:"₹4,500 crore modernisation; startup tape-out facility planned.",
+ news:["₹900 crore in the 2026–27 budget as part of a ₹4,500 crore modernisation targeting 100 times current wafer output.","Plan includes a tape-out facility for startups; SCL stays government-run.","Earlier plans aimed to move from 180nm toward 28nm and then 14nm."],
+ fit:"Long-term relationship. Today's 180nm process isn't an advanced-node fit, but the modernised process will need an IP ecosystem.",
+ open:"As SCL modernises, what's the roadmap for the process and IP ecosystem, and would you want commercial IP partners involved early?"},
+{n:"InCore Semiconductors",b:"718",t:3,cat:"RISC-V IP and SoC Generator",
+ one:"Partner: their SoC Generator integrates third-party IP.",
+ news:["Their SoC Generator auto-generates RTL, integrates IPs and builds the interconnect fabric."],
+ fit:"Better as a partner than a buyer. Integration-ready Analog Bits blocks in their generator flow could reach many DLI startups.",
+ open:"Could Analog Bits PLLs and sensors be offered as integration-ready blocks in your SoC Generator?"},
+{n:"Cadence Design Systems",b:"720",t:3,cat:"EDA partner and IP competitor",
+ one:"4,800 India staff; IIT Delhi incubator offers low-cost first tape-outs.",
+ news:["About 4,800 employees in India, its largest engineering base worldwide.","June 2026: launched the IIT Delhi–Cadence Innovation Lab with an incubator giving pre-seed startups a low-cost route to first tape-out."],
+ fit:"Incubator startups still need analog IP, and Cadence may not be the cheapest for early-stage teams.",
+ open:"How can IP vendors support startups coming through the IIT Delhi incubator?",
+ warn:"Cadence sells its own IP. Talk to the university or startup programme team, not IP sales."},
+{n:"Agnisys",b:"H6533",t:3,cat:"Specification automation tools",
+ one:"Showed IDS-AI and IDS-NoC at DAC 2026.",
+ news:["At DAC 2026 showed IDS-AI (agentic spec-to-RTL sign-off) and IDS-NoC (network-on-chip automation for AI accelerators).","Customers include Etched for AI ASICs."],
+ fit:"Small but useful: pre-packaged register and IP-XACT views that import into their flows ease integration for AI-chip customers.",
+ open:"Could we pre-package our PLL and sensor register maps so they import directly into IDesignSpec?"},
+{n:"Truechip Solutions",b:"H7611",t:3,cat:"Verification IP vendor",
+ one:"PCIe Gen 7 and UCIe VIP; co-sell and referral fit.",
+ news:["No major 2026 announcement. About 462 employees; publishing on PCIe Gen 7 and UCIe 3.0 verification IP."],
+ fit:"Teams buying PCIe or UCIe VIP are building high-speed interfaces that need SerDes and PLL IP.",
+ open:"Your PCIe and UCIe VIP customers will need PHY-side clocking. Should we cross-refer deals?"},
+{n:"CADFEM India (Ansys Elite Partner)",b:"H3523",t:3,cat:"Simulation partner",
+ one:"Simulation CoE with IISc and Synopsys. Low priority.",
+ news:["March 2026 MoU with IISc and Synopsys for an Advanced Simulation Centre of Excellence at CeNSE."],
+ fit:"Light technical partnership on SI/PI for SerDes. Low priority.",
+ open:"Do your SI and PI customers include SerDes PHY integrators we should know?"},
+{n:"Keysight",b:"1578",t:3,cat:"High-speed validation",
+ one:"Joint SerDes characterization and validation.",news:["No fresh research."],
+ fit:"Joint SerDes characterization and validation stories.",open:"Which Indian teams are validating high-speed links on your equipment this year?"},
+{n:"Semitronix Solutions",b:"H7333",t:3,cat:"Yield and test-chip solutions",
+ one:"Test-chip and yield programmes with fabs.",news:["No fresh research."],
+ fit:"Test-chip and yield programmes with Indian fabs.",open:"Are you working with Tata or SCL on test-chip programmes?"},
+{n:"VerifAIX",b:"H4511",t:3,v:true,cat:"Possible AI verification tools",
+ one:"Possible tool partnership. Verify.",fit:V,open:"What does VerifAIX do, and who are your customers?"},
+{n:"Karnataka KITS",b:"H6702",t:3,cat:"State mission",
+ one:"Karnataka leads ChipIN tape-outs: best state referral source.",
+ news:["Karnataka has the most ChipIN-supported organisations (81) and tape-outs (73) of any state."],
+ fit:"Referral source for funded design startups.",open:"Which Karnataka-funded design startups are close to tape-out? Could you introduce us?"},
+{n:"Government of Telangana",b:"H3521",t:3,cat:"State mission",one:"Third on ChipIN tape-outs.",
+ news:["Ranks third on ChipIN tape-outs."],fit:"Referral source.",open:"Which Telangana design startups should we meet?"},
+{n:"Gujarat State Electronics Mission",b:"745",t:3,cat:"State mission",one:"Referral source for funded startups.",
+ fit:"Referral source.",open:"Which design startups does the mission fund?"},
+{n:"UP Electronics Corporation",b:"H4805",t:3,cat:"State mission",one:"Referral source for funded startups.",
+ fit:"Referral source.",open:"Which design startups does UP support?"},
+{n:"Andhra Pradesh EDB",b:"H6605",t:3,cat:"State mission",one:"Referral source for funded startups.",
+ fit:"Referral source.",open:"Which design startups does AP support?"},
+{n:"Guidance Tamil Nadu",b:"H4502",t:3,cat:"State pavilion",one:"Entry to the Tamil Nadu pavilion (MBit, Ptw).",
+ fit:"Lead source for Tamil Nadu companies at H4502.",open:"Which companies in your pavilion design chips?"},
+{n:"Startup Mitra",b:"718",t:3,cat:"Startup aggregator",one:"Ask for startup introductions while at 718.",
+ fit:"Referral source.",open:"Which design startups in your network are close to tape-out?"},
+{n:"IDSPS",b:"H3002",t:3,cat:"Industry association",one:"Introductions and future speaking slots.",fit:"Introductions.",open:"Are there speaking or member-showcase slots at your events?"},
+{n:"Nasscom",b:"H3413",t:3,cat:"Industry association",one:"Introductions.",fit:"Introductions.",open:"Which Nasscom deep-tech startups are in chip design?"},
+{n:"SEMI Booth",b:"H5248",t:3,cat:"Organizer",one:"Introductions and future India events.",fit:"Introductions.",open:"Who should an IP vendor meet at this show?"},
+{n:"IIT Bombay SemiX",b:"H3608",t:3,cat:"Academic research",one:"University programme discussion.",fit:"Research tape-outs and university programmes.",open:"Do your research tape-outs need licensed PLL or sensor IP?"},
+{n:"IIT Delhi Nanoscale Research Facility",b:"H4522",t:3,cat:"Academic research",one:"University programme discussion.",fit:"University programmes.",open:"Which IIT Delhi groups are taping out chips?"},
+
+/* Tier 4 */
+{n:"3D Glass Solutions",b:"1014",t:4,cat:"Glass packaging, chiplets",one:"Most IP-relevant packager: glass interposers and 3DHI.",
+ news:["Cabinet approved its Odisha unit for glass interposers with passives and silicon bridges, plus 3D heterogeneous integration modules."],
+ fit:"Chiplets on glass interposers need die-to-die clocking and sensors. Propose a joint reference design.",open:"Would a joint chiplet reference design with clocking and sensor IP help your customers?"},
+{n:"Kaynes Semicon",b:"1314",t:4,cat:"OSAT",one:"Sanand OSAT live; SEALKAYNESQ secure-chip centre.",
+ news:["PM Modi inaugurated its Sanand OSAT on 31 March 2026. Phase 1 about 1.5M chips per day, targeting about 6.3M.","JV with SEALSQ (SEALKAYNESQ) runs a secure design, test and personalisation centre for post-quantum chips."],
+ fit:"Secure chips need tamper and glitch detection. Ask for an introduction to SEALKAYNESQ's design team.",open:"Who leads chip design at SEALKAYNESQ?"},
+{n:"CG Semi",b:"1214",t:4,cat:"OSAT",one:"Same booth as Axiro. Relationship only.",
+ news:["CG Power's Gujarat plant makes 500,000 chips a day, aiming for 14.5 million a day by end of 2026."],fit:"Relationship only; visit with Axiro.",open:"How is the ramp going, and which design customers are you packaging for?"},
+{n:"Advanced System in Package Technologies (ASIP)",b:"760",t:4,cat:"SiP / OSAT",one:"Andhra Pradesh unit approved.",
+ news:["Andhra Pradesh unit approved in the same Cabinet round as SiCSem and 3D Glass."],fit:"SiP customers are referral sources.",open:"Which design companies are your first SiP customers?"},
+{n:"Suchi Semicon",b:"915",t:4,cat:"OSAT",one:"Collaborates with HCLTech.",
+ news:["Non-equity collaboration with HCLTech: HCLTech brings design relationships, Suchi brings packaging."],fit:"Relationship only; mention HCLTech.",open:"How is the HCLTech collaboration working for design customers?"},
+{n:"SiCSem",b:"816",t:4,cat:"SiC devices",one:"Second Odisha SiC unit approved yesterday (15 Sep).",
+ news:["Signed ISM fiscal support agreement on 11 May 2026 for India's first SiC fab and ATMP (about ₹2,067 crore).","On 15 September 2026 Odisha approved a second ₹3,406 crore unit for SiC diodes and MOSFETs."],
+ fit:"Discrete devices, no IP fit today. Ask about gate-driver or controller ICs.",open:"Congratulations on yesterday's approval. Any plans for gate-driver or controller ICs?"},
+{n:"CDIL Semiconductors",b:"1614",t:4,cat:"Power discretes",one:"Punjab facility approved. Low priority.",
+ news:["Punjab facility approved for high-power discretes in silicon and SiC."],fit:"Low priority.",open:"Any plans for controller or driver ICs?"},
+{n:"AGNIT Semiconductors",b:"H4511",t:4,cat:"GaN devices",one:"Moved from Tier 1: GaN device maker, not SoCs.",
+ news:["Fab-lite GaN company; new funding scales GaN component production to 100,000 units.","CTO spoke at the IEEE Bangalore Semicon Conclave."],fit:"Unlikely to license PLL or SerDes IP. Useful ecosystem contacts.",open:"Who in the GaN ecosystem is designing controller ICs?"},
+{n:"Teradyne",b:"1333",t:4,cat:"Test",one:"Joint characterization; ask about first-silicon customers.",fit:"Joint characterization of Analog Bits test silicon; ask which startups are bringing up first silicon.",open:"Which Indian startups are bringing up first silicon on your testers?"},
+{n:"Advantest",b:"434",t:4,cat:"Test",one:"Joint characterization; ask about first-silicon customers.",fit:"Same as Teradyne.",open:"Which Indian startups are bringing up first silicon on your testers?"},
+{n:"Aligned Test",b:"940",t:4,cat:"Test",one:"Test partner.",fit:"Characterization partner.",open:"Do you characterize IP test chips for vendors?"},
+{n:"Caliber Interconnects",b:"1632",t:4,cat:"Test and packaging design",one:"Moved from Tier 2: C-DAC's turnkey IC test partner.",
+ news:["Focuses on semiconductor testing, IC package and substrate design, and interconnect simulation.","C-DAC chose Caliber for turnkey IC test solutions."],fit:"Could characterize Analog Bits test silicon in India.",open:"Could you characterize IP test chips for us in India?"},
+{n:"Sahasra Semiconductor",b:"753",t:4,cat:"OSAT",one:"Relationship only.",fit:"Referral source.",open:"Which design customers do you package for?"},
+{n:"izmo microsystems",b:"H6611",t:4,cat:"Packaging",one:"Relationship only.",fit:"Referral source.",open:"Which design customers do you work with?"},
+{n:"Aequs SEZ",b:"H3716",t:4,cat:"Manufacturing",one:"Relationship only.",fit:"Relationship only.",open:"What is Aequs doing in semiconductors?"},
+{n:"RIR Power Electronics",b:"H6805",t:4,cat:"Power devices",one:"Low priority.",fit:"Low priority.",open:"Any controller IC plans?"},
+{n:"Power Cube Semi",b:"1324",t:4,cat:"Power devices",one:"Low priority (KOTRA pavilion).",fit:"Low priority.",open:"Any controller IC plans?"},
+{n:"Nexgen Power",b:"1324",t:4,v:true,cat:"Power devices",one:"Low priority. Verify.",fit:"Low priority.",open:"Any controller IC plans?"},
+{n:"Dixon Technologies",b:"1409",t:4,cat:"Electronics manufacturer",one:"Moving toward semiconductors. Relationship only.",fit:"Relationship only.",open:"What are Dixon's semiconductor plans?"},
+{n:"Syrma SGS",b:"1401",t:4,cat:"Electronics manufacturer",one:"Moving toward semiconductors. Relationship only.",fit:"Relationship only.",open:"What are Syrma's semiconductor plans?"},
+{n:"Dassault Systèmes",b:"1638",t:4,cat:"Tools",one:"Low priority.",fit:"Low priority.",open:"Who uses your semiconductor solutions in India?"},
+{n:"IntelliSense Software",b:"H7229",t:4,cat:"MEMS design tools",one:"Low priority.",fit:"Low priority.",open:"Which MEMS teams in India use your tools?"},
+{n:"H2LooP AI",b:"H5631",t:4,v:true,cat:"Tools",one:"Verify.",fit:"Low priority.",open:"What does H2LooP AI do?"},
+{n:"SEMICONMART",b:"H5318",t:4,v:true,cat:"Marketplace",one:"Sounds like a marketplace. Verify.",fit:"Possible listing channel.",open:"Do you list silicon IP?"},
+{n:"Khurana & Khurana",b:"H6029",t:4,cat:"IP law firm",one:"Local counsel for licensing contracts.",fit:"Useful if you need Indian counsel for licence agreements.",open:"Do you advise on semiconductor IP licensing agreements?"},
+{n:"EFY Enterprises",b:"H7536",t:4,cat:"Media",one:"Covered InCore, Vervesemi, AGNIT this year.",fit:"Byline or interview on India IP enablement.",open:"Would an article on IP enablement for Indian startups interest your readers?"},
+{n:"BIS Infotech",b:"H7036",t:4,cat:"Media",one:"Covered Mindgrove, EdgeCortix this year.",fit:"Byline or interview.",open:"Would you be interested in an interview on IP enablement in India?"},
+{n:"IISc CeNSE",b:"H6202",t:4,cat:"Academia",one:"Moved from Tier 3: fab training focus.",
+ news:["2026 activity mostly fabrication training: summer schools, workforce programmes, Lam Research SEMulator3D course."],fit:"Talent and academic contact.",open:"Which IISc groups design chips rather than process devices?"},
+{n:"IIITM Kerala",b:"H5735",t:4,cat:"Academia",one:"University programmes and hiring.",fit:"Academic.",open:"Do students tape out chips?"},
+{n:"SASTRA Deemed University",b:"H7635",t:4,cat:"Academia",one:"University programmes and hiring.",fit:"Academic.",open:"Do students tape out chips?"},
+{n:"Amity University",b:"H6308",t:4,cat:"Academia",one:"University programmes and hiring.",fit:"Academic.",open:"Do students tape out chips?"},
+{n:"Ramaiah Academy",b:"H7623",t:4,cat:"Academia",one:"University programmes and hiring.",fit:"Academic.",open:"Do students tape out chips?"},
+{n:"Vishwakarma Institute Pune",b:"H5723",t:4,cat:"Academia",one:"University programmes and hiring.",fit:"Academic.",open:"Do students tape out chips?"},
+{n:"Vivekananda Institute",b:"H7016",t:4,cat:"Academia",one:"University programmes and hiring.",fit:"Academic.",open:"Do students tape out chips?"},
+{n:"NITTTR",b:"H6028",t:4,cat:"Academia",one:"University programmes.",fit:"Academic.",open:"Do you run chip design courses with tape-outs?"},
+{n:"PDEU Gandhinagar",b:"H4221",t:4,cat:"Academia",one:"University programmes and hiring.",fit:"Academic.",open:"Do students tape out chips?"},
+{n:"Assam Industrial Development Corp.",b:"1246",t:4,cat:"State body",one:"Tata OSAT location.",fit:"Introductions.",open:"Which design startups does Assam support?"},
+{n:"Maharashtra Industrial Development Corp.",b:"H3405",t:4,cat:"State body",one:"Introductions.",fit:"Introductions.",open:"Which design startups does Maharashtra support?"},
+{n:"MP State Electronics Dev. Corp.",b:"H3005",t:4,cat:"State body",one:"Introductions.",fit:"Introductions.",open:"Which design startups does MP support?"},
+{n:"Dept. of Industries, Bihar",b:"H3111",t:4,cat:"State body",one:"Introductions.",fit:"Introductions.",open:"Which design startups does Bihar support?"},
+{n:"Orissa Computer Application Centre",b:"346",t:4,cat:"State body",one:"Introductions.",fit:"Introductions.",open:"Which design startups does Odisha support?"},
+{n:"Plug and Play Kyoto",b:"H7535",t:4,cat:"Accelerator",one:"Introductions.",fit:"Introductions.",open:"Any chip design startups in your programme?"},
+{n:"Anora Instrumentation",b:"H4502",t:4,v:true,cat:"Unclear",one:"Check: Cyient's CEO names 'Anora' as a partner.",fit:"Check whether this is the Anora that partners with Cyient Semiconductors.",open:"Are you the Anora that works with Cyient Semiconductors?"},
+{n:"Bigprosolution",b:"H4502",t:4,v:true,cat:"Unclear",one:"Low priority.",fit:"Low priority.",open:"What do you do?"},
+{n:"Edveon Technologies",b:"H4502",t:4,v:true,cat:"Unclear",one:"Low priority.",fit:"Low priority.",open:"What do you do?"},
+{n:"Gopalam Embedded Systems",b:"1141",t:4,v:true,cat:"Unclear",one:"Low priority.",fit:"Low priority.",open:"What do you do?"},
+{n:"Atantri Communications",b:"H3024",t:4,v:true,cat:"Unclear",one:"Low priority.",fit:"Low priority.",open:"What do you do?"},
+{n:"DeepLase Technologies",b:"H4511",t:4,v:true,cat:"Unclear",one:"Low priority.",fit:"Low priority.",open:"What do you do?"},
+{n:"Cubetor India",b:"H4521",t:4,v:true,cat:"Unclear",one:"Low priority.",fit:"Low priority.",open:"What do you do?"},
+{n:"Sainor labs",b:"H5822",t:4,v:true,cat:"Unclear",one:"Low priority.",fit:"Low priority.",open:"What do you do?"},
+{n:"RMM and Associates",b:"H4624",t:4,v:true,cat:"Unclear",one:"Low priority.",fit:"Low priority.",open:"What do you do?"},
+
+/* Competitor */
+{n:"Silicon Creations",b:"H5729",t:"C",cat:"PLL, SerDes, IO, sensor IP",one:"Direct competitor. Visit early to learn their pitch.",
+ news:["April 2026: showed 2nm silicon-proven PLL, IO and temperature-sensor IP; announced clocking and sensing IP in development on TSMC A14.","DAC 2026: SerDes bookings more than doubled, helped by a TSMC 3nm 32G design win; nearly a dozen customers adopted its new temperature and voltage sensors.","Expanding on Samsung, Intel Foundry and Rapidus.","TSMC Mixed Signal IP Partner of the Year for 2025 (ninth year); first GlobalFoundries Analog Mixed Signal IP Partner of the Year.","Self-funded; offices in the US and Poland; sells through representatives worldwide."],
+ fit:"Overlaps with Analog Bits on PLLs, SerDes, IOs and temperature/voltage sensors. Prepare your answer for 'we're also looking at Silicon Creations'.",
+ open:"Find out who represents them in India.",
+ warn:"Confirm differentiators with your team before using them: sensor breadth (glitch, droop, supply monitors), proven foundries and nodes, integration support, startup licensing flexibility. Check whether Cyient uses them via GlobalFoundries."}
+];
+
+/* ---------- Helpers ---------- */
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+DATA.forEach(d => {
+  d.id = (d.n + "-" + d.b).toLowerCase().replace(/[^a-z0-9]+/g, "-");
+  d.hall = d.b.startsWith("H") ? 2 : 1;
+  const z = zoneOf(d.b); d.side = z.side; d.row = z.row; d.zone = z.label; d.sideRank = z.sideRank; d.rowRank = z.rowRank;
+  d.num = parseInt(d.b.replace("H",""), 10);
+});
+function zoneOf(b){
+  let pre, row, side, sideRank;
+  if (b.startsWith("H")){
+    const n = b.slice(1); pre = parseInt(n.slice(0,2),10); row = parseInt(n.slice(2),10);
+    side = pre <= 49 ? "left block" : "right block"; sideRank = pre <= 49 ? 0 : 1;
+    const r = row <= 11 ? 0 : row <= 24 ? 1 : 2;
+    return {side, sideRank, rowRank:r, row, label:["Front","Middle","Back"][r] + ", " + side};
+  }
+  pre = parseInt(b.slice(0,-2),10) || 0; row = parseInt(b.slice(-2),10);
+  sideRank = pre <= 5 ? 0 : pre <= 10 ? 1 : 2; side = ["left","centre","right"][sideRank];
+  const r = row <= 24 ? 0 : row <= 49 ? 1 : 2;
+  return {side, sideRank, rowRank:r, row, label:["Front","Middle","Back"][r] + "-" + side};
+}
+
+/* ---------- Storage (per phone) ---------- */
+const KEY = "abSemicon26";
+let store = {met:{}, notes:{}, metAt:{}};
+try { const raw = localStorage.getItem(KEY); if (raw) store = Object.assign(store, JSON.parse(raw)); } catch(e) {}
+function save(){ try { localStorage.setItem(KEY, JSON.stringify(store)); } catch(e) {} }
+
+/* ---------- State ---------- */
+const state = {q:"", tier:"all", hall:"all", stat:"all", sort:"tier"};
+let visible = []; let openIdx = -1;
+
+const chipDefs = [
+  {v:"all", label:"Everything"},
+  {v:"top", label:"Top 10"},
+  {v:"1", label:"Tier 1", col:"--t1"},
+  {v:"2", label:"Tier 2", col:"--t2"},
+  {v:"3", label:"Tier 3", col:"--t3"},
+  {v:"4", label:"Tier 4", col:"--t4"},
+  {v:"C", label:"Competitor", col:"--tc"}
+];
+$("#tierChips").innerHTML = chipDefs.map(c =>
+  `<button class="chip" data-v="${c.v}" aria-pressed="${c.v==='all'}">${c.col?`<span class="dot" style="background:var(${c.col})"></span>`:""}${c.label}</button>`).join("");
+
+function bindSeg(sel, key){
+  $(sel).addEventListener("click", e => {
+    const b = e.target.closest("button"); if (!b) return;
+    state[key] = b.dataset.v;
+    $(sel).querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x === b));
+    render();
+  });
+}
+bindSeg("#tierChips","tier"); bindSeg("#hallSeg","hall"); bindSeg("#statSeg","stat"); bindSeg("#sortSeg","sort");
+$("#q").addEventListener("input", e => { state.q = e.target.value.trim().toLowerCase(); render(); });
+
+const tierRank = t => t === "C" ? 5 : t;
+function filtered(){
+  return DATA.filter(d => {
+    if (state.tier === "top" && !d.top) return false;
+    if (!["all","top"].includes(state.tier) && String(d.t) !== state.tier) return false;
+    if (state.hall !== "all" && String(d.hall) !== state.hall) return false;
+    const m = !!store.met[d.id];
+    if (state.stat === "met" && !m) return false;
+    if (state.stat === "todo" && m) return false;
+    if (state.q){
+      const hay = (d.n + " " + d.b + " " + (d.cat||"") + " " + (d.one||"")).toLowerCase();
+      if (!hay.includes(state.q)) return false;
+    }
+    return true;
+  });
+}
+
+function card(d){
+  const col = TIERS[d.t].col, m = !!store.met[d.id];
+  return `<div class="card tier-edge ${m?"met":""}" style="--tcol:var(${col})" data-id="${d.id}">
+    <button class="check" data-act="toggle" aria-label="${m?"Mark not met":"Mark met"}: ${esc(d.n)}" aria-pressed="${m}">
+      <span class="box"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span>
+    </button>
+    <button class="booth" data-act="open" aria-label="Booth ${d.b}, Hall ${d.hall}. Open details"><b>${d.b}</b><small>Hall ${d.hall}</small></button>
+    <button class="info" data-act="open">
+      <div class="name">${esc(d.n)}${d.top?'<span class="tag top">Top 10</span>':""}${d.v?'<span class="tag v">Verify</span>':""}</div>
+      <div class="one">${esc(d.one||d.cat||"")}</div>
+    </button>
+  </div>`;
+}
+
+function render(){
+  let rows = filtered();
+  let html = "";
+  if (state.sort === "route"){
+    rows.sort((a,b) => a.hall-b.hall || a.sideRank-b.sideRank || a.rowRank-b.rowRank || a.num-b.num || tierRank(a.t)-tierRank(b.t));
+    let key = "";
+    rows.forEach(d => {
+      const k = "Hall " + d.hall + ": " + (d.hall===1 ? d.side + " side" : d.side);
+      if (k !== key){ key = k; html += `<div class="group"><h2>${esc(k)}</h2><span>${rows.filter(x => ("Hall "+x.hall+": "+(x.hall===1?x.side+" side":x.side))===k).length}</span></div>`; }
+      html += card(d);
+    });
+  } else {
+    rows.sort((a,b) => tierRank(a.t)-tierRank(b.t) || (b.top?1:0)-(a.top?1:0) || (a.v?1:0)-(b.v?1:0));
+    ["1","2","3","4","C"].forEach(t => {
+      const g = rows.filter(d => String(d.t) === t); if (!g.length) return;
+      const T = TIERS[t];
+      html += `<div class="group"><i class="sw" style="background:var(${T.col})"></i><h2>${esc(T.long)}</h2><span>${g.length}</span></div>`;
+      html += g.map(card).join("");
+    });
+  }
+  visible = rows;
+  $("#list").innerHTML = html || `<div class="empty">No companies match these filters. Clear the search or pick Everything.</div>`;
+  updateProgress();
+}
+
+function updateProgress(){
+  const total = DATA.length, met = DATA.filter(d => store.met[d.id]).length;
+  const topT = DATA.filter(d => d.top).length, topM = DATA.filter(d => d.top && store.met[d.id]).length;
+  $("#barFill").style.width = (met/total*100) + "%";
+  $("#count").textContent = `${met} of ${total} met, top 10: ${topM}/${topT}`;
+}
+
+function toggle(id){
+  if (store.met[id]) { delete store.met[id]; delete store.metAt[id]; }
+  else { store.met[id] = true; store.metAt[id] = new Date().toISOString(); }
+  save();
+}
+
+$("#list").addEventListener("click", e => {
+  const btn = e.target.closest("button"); if (!btn) return;
+  const id = btn.closest(".card").dataset.id;
+  if (btn.dataset.act === "toggle"){
+    toggle(id);
+    if (state.stat !== "all") render();
+    else {
+      const c = btn.closest(".card"), m = !!store.met[id];
+      c.classList.toggle("met", m); btn.setAttribute("aria-pressed", m); updateProgress();
+    }
+  } else openSheet(visible.findIndex(d => d.id === id));
+});
+
+/* ---------- Sheet ---------- */
+function openSheet(i){
+  if (i < 0 || i >= visible.length) return;
+  openIdx = i; const d = visible[i], T = TIERS[d.t];
+  const sheet = $("#sheet");
+  sheet.style.setProperty("--tcol", `var(${T.col})`);
+  $("#shFoot").style.display = "";
+  $("#shBooth b").textContent = d.b;
+  $("#shBooth small").textContent = "Hall " + d.hall;
+  $("#shName").textContent = d.n;
+  $("#shMeta").textContent = `${T.label}${d.top?", top 10":""}. ${d.cat||""}. ${d.zone} (approx.)`;
+  let h = "";
+  h += `<div class="sec"><h4>Why they're on the list</h4><p>${esc(d.one||"")}</p></div>`;
+  if (d.news && d.news.length) h += `<div class="sec"><h4>Recent news and background</h4><ul>${d.news.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`;
+  if (d.fit) h += `<div class="sec"><h4>${d.v?"Qualify first":"How Analog Bits fits"}</h4><p>${esc(d.fit)}</p></div>`;
+  if (d.open) h += `<div class="sec"><h4>Conversation opener</h4><div class="opener" id="openTxt">${esc(d.open)}</div><button class="copy" id="copyOpen">Copy opener</button></div>`;
+  if (d.who) h += `<div class="sec"><h4>Who to ask for</h4><p>${esc(d.who)}</p></div>`;
+  if (d.link) h += `<div class="sec"><h4>Connects with</h4><p>${esc(d.link)}</p></div>`;
+  if (d.warn) h += `<div class="sec warn"><h4>Be careful</h4><p>${esc(d.warn)}</p></div>`;
+  h += `<div class="sec notes"><h4>Your notes</h4><textarea id="noteBox" placeholder="Contact name, what they said, follow-up">${esc(store.notes[d.id]||"")}</textarea><div class="saved" id="savedMsg"></div></div>`;
+  $("#shBody").innerHTML = h; $("#shBody").scrollTop = 0;
+  setMetBtn(d);
+  const cp = $("#copyOpen"); if (cp) cp.onclick = () => copyText(d.open, "Opener copied");
+  let t; $("#noteBox").addEventListener("input", e => {
+    store.notes[d.id] = e.target.value; if (!e.target.value) delete store.notes[d.id];
+    clearTimeout(t); t = setTimeout(() => { save(); $("#savedMsg").textContent = "Saved on this phone"; }, 350);
+  });
+  $("#prev").disabled = i === 0; $("#next").disabled = i === visible.length - 1;
+  $("#prev").style.opacity = i === 0 ? .35 : 1; $("#next").style.opacity = i === visible.length-1 ? .35 : 1;
+  showSheet();
+}
+function setMetBtn(d){
+  const m = !!store.met[d.id], b = $("#metBtn");
+  b.classList.toggle("on", m);
+  b.innerHTML = m ? `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Met` : "Mark as met";
+  b.setAttribute("aria-pressed", m);
+}
+function showSheet(){ $("#sheet").classList.add("on"); $("#scrim").classList.add("on"); document.body.style.overflow = "hidden"; }
+function closeSheet(){
+  $("#sheet").classList.remove("on"); $("#scrim").classList.remove("on"); document.body.style.overflow = "";
+  if (openIdx !== -2) { openIdx = -1; render(); } else openIdx = -1;
+}
+$("#metBtn").onclick = () => { const d = visible[openIdx]; if (!d) return; toggle(d.id); setMetBtn(d); updateProgress(); toast(store.met[d.id] ? "Marked as met" : "Marked not met"); };
+$("#prev").onclick = () => openSheet(openIdx - 1);
+$("#next").onclick = () => openSheet(openIdx + 1);
+$("#shClose").onclick = closeSheet; $("#scrim").onclick = closeSheet;
+document.addEventListener("keydown", e => { if (e.key === "Escape" && $("#sheet").classList.contains("on")) closeSheet(); });
+
+/* Swipe down to close */
+let y0 = null;
+$("#sheet").addEventListener("touchstart", e => { if ($("#shBody").scrollTop <= 0) y0 = e.touches[0].clientY; else y0 = null; }, {passive:true});
+$("#sheet").addEventListener("touchend", e => { if (y0 !== null && e.changedTouches[0].clientY - y0 > 90) closeSheet(); y0 = null; }, {passive:true});
+
+/* ---------- Briefing ---------- */
+$("#briefBtn").onclick = () => {
+  openIdx = -2;
+  const sheet = $("#sheet"); sheet.style.setProperty("--tcol", "var(--ink)");
+  $("#shBooth b").textContent = "Brief"; $("#shBooth small").textContent = "17–19 Sep";
+  $("#shName").textContent = "Show briefing";
+  $("#shMeta").textContent = "Context for every conversation";
+  $("#shFoot").style.display = "none";
+  $("#shBody").innerHTML = `<div class="brief">
+   <div class="sec"><h4>Top 10 for the show</h4><p>ChipIN, AHEESA, Morphing Machines, L&amp;T Semi, Axiro (then EdgeCortix), Tata Electronics, C-DAC, Netrasemi, Mirafra, CHIPEX.</p></div>
+   <div class="sec"><h4>Say this everywhere</h4><p>ISM 2.0 is reshaping the Design Linked Incentive scheme: it is expected to include larger companies and a co-investment route for VC and PE money. More Indian chip programs will have funding for licensed IP, so ask: “Is this program under DLI?”</p></div>
+   <div class="sec"><h4>Connected meetings</h4><p>ChipIN, C-DAC and Tata reinforce each other: AHEESA's chip uses C-DAC's VEGA core, C-DAC runs DLI and ChipIN, and Tata is building its IP ecosystem with C-DAC. Mention one conversation in the next.</p></div>
+   <div class="sec"><h4>Clusters to plan around</h4><ul>
+     <li>H4511 Startup Pavilion (SEMI HQ): about 30 prospects in one spot.</li>
+     <li>H4502 Tamil Nadu pavilion: MBit, Ptw and the unverified names.</li>
+     <li>H3302 to H3608: C-DAC, ChipIN, SCL, IIT Bombay side by side.</li>
+     <li>Hall 1 front: 713, 714, 718 (L&amp;T, AHEESA, Netrasemi, InCore), then 946 HCLTech, 1001 Micron, 1102 AMD, 1214 Axiro.</li>
+   </ul></div>
+   <div class="sec"><h4>Competitor talking points</h4><p>Silicon Creations (H5729) overlaps on PLLs, SerDes, IOs and temperature/voltage sensors. Confirm your differentiators with your team: sensor breadth, proven foundries and nodes, integration support, startup licensing terms.</p></div>
+   <div class="sec"><h4>Avoid these topics</h4><ul><li>MosChip: profit drop and litigation.</li><li>Tata Electronics: node change and delay reports.</li><li>Cadence: they also sell IP; talk to programme teams.</li></ul></div>
+   <div class="sec"><h4>Removed after research</h4><p>Aether, Asterion, Raana and Bharat Semitech turned out to be equipment or materials companies.</p></div>
+   <div class="sec"><h4>Finding a booth</h4><p>Hall 1 uses plain numbers; Hall 2 uses H numbers. Zones are approximate. Hall 1: 1xx–5xx left, 6xx–10xx centre, 11xx–16xx right; last two digits 01–24 front, 27–49 middle, 53–78 back near food courts. Hall 2: H30xx–H49xx left block, H53xx–H76xx right block; last two digits 02–11 front, 13–24 middle, 26–36 back.</p></div>
+   <div class="sec"><h4>Your data</h4><p>Ticks and notes are saved in this browser on this phone only. Copy a summary before the show ends so your follow-ups are safe.</p>
+     <div class="btnrow"><button class="plain" id="copyAll">Copy met list and notes</button><button class="danger" id="resetAll">Clear all ticks and notes</button></div></div>
+  </div>`;
+  $("#shBody").scrollTop = 0;
+  $("#copyAll").onclick = () => {
+    const lines = DATA.filter(d => store.met[d.id] || store.notes[d.id]).map(d =>
+      `${store.met[d.id]?"[met]":"[not met]"} ${d.n} (booth ${d.b}, Hall ${d.hall}, ${TIERS[d.t].label})${store.notes[d.id]?"\n  Notes: "+store.notes[d.id].replace(/\n/g," / "):""}`);
+    copyText(lines.length ? "SEMICON India 2026 follow-ups\n\n" + lines.join("\n") : "No companies marked yet.", "Summary copied");
+  };
+  $("#resetAll").onclick = () => {
+    if (confirm("Clear every tick and note on this phone? This can't be undone.")) { store = {met:{}, notes:{}, metAt:{}}; save(); render(); toast("Cleared"); }
+  };
+  showSheet();
+};
+
+/* ---------- Utilities ---------- */
+function copyText(text, msg){
+  const done = () => toast(msg);
+  try {
+    if (navigator.clipboard && window.isSecureContext) { navigator.clipboard.writeText(text).then(done, fallback); return; }
+  } catch(e) {}
+  fallback();
+  function fallback(){
+    const ta = document.createElement("textarea"); ta.value = text; ta.setAttribute("readonly",""); ta.style.position="fixed"; ta.style.opacity="0";
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand("copy"); done(); } catch(e) { toast("Copy not available here"); }
+    ta.remove();
+  }
+}
+let tt; function toast(m){ const t = $("#toast"); t.textContent = m; t.classList.add("on"); clearTimeout(tt); tt = setTimeout(() => t.classList.remove("on"), 1600); }
+
+render();
+</script>
+</body>
+</html>
