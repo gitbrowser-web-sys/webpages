@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>X-FAB meeting brief</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F2EFE9; --surface:#FFFFFF; --sunk:#F7F4EE; --ink:#1A1D24; --muted:#5D6470; --line:#DAD4C8;
+  --accent:#1F4E46; --accent2:#9A5B2C; --flag:#8A2B20; --flag-bg:#FAEDEA;
+  --ok:#1F6F52; --ok-bg:#E6F1EA;
+  --serif:"Fraunces", Georgia, "Times New Roman", serif;
+  --sans:"Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#12151A; --surface:#1A1F26; --sunk:#222831; --ink:#E9ECF1; --muted:#9BA4B0; --line:#2E353E;
+  --accent:#6FC2AF; --accent2:#E0A272; --flag:#F2A093; --flag-bg:#34211E; --ok:#6FC2AF; --ok-bg:#1D302B;
+}}
+:root[data-theme="dark"]{
+  --bg:#12151A; --surface:#1A1F26; --sunk:#222831; --ink:#E9ECF1; --muted:#9BA4B0; --line:#2E353E;
+  --accent:#6FC2AF; --accent2:#E0A272; --flag:#F2A093; --flag-bg:#34211E; --ok:#6FC2AF; --ok-bg:#1D302B;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.5;-webkit-text-size-adjust:100%}
+header{padding:22px 16px 14px;background:var(--surface);border-bottom:1px solid var(--line)}
+.kicker{font-size:13px;color:var(--accent2);font-weight:600}
+h1{font-family:var(--serif);font-weight:700;font-size:32px;line-height:1.05;margin:4px 0 6px;letter-spacing:-.01em}
+header p{margin:0;color:var(--muted);font-size:14px;max-width:60ch}
+nav{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line);display:flex;gap:6px;overflow-x:auto;padding:8px 12px;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav a{flex:none;text-decoration:none;color:var(--muted);border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:7px 13px;font-size:14px;font-weight:600;white-space:nowrap}
+nav a.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+main{max-width:720px;margin:0 auto;padding:4px 14px 70px}
+section{padding-top:26px}
+h2{font-family:var(--serif);font-size:24px;font-weight:700;margin:0 0 4px;line-height:1.15}
+.lede{color:var(--muted);font-size:15px;margin:0 0 12px;max-width:62ch}
+h3{font-size:16.5px;margin:18px 0 6px;font-weight:700}
+p{margin:0 0 10px;max-width:66ch}
+ul{margin:0 0 10px;padding-left:20px}
+li{margin:5px 0}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 15px;margin:10px 0}
+.card h3{margin-top:0}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:12px 0}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:11px 12px}
+.stat b{display:block;font-family:var(--serif);font-size:23px;line-height:1.1}
+.stat span{display:block;color:var(--muted);font-size:12.5px;margin-top:3px}
+.flag{background:var(--flag-bg);border-left:4px solid var(--flag);border-radius:0 12px 12px 0;padding:12px 14px;margin:12px 0}
+.flag h3{margin-top:0;color:var(--flag)}
+.good{background:var(--ok-bg);border-left:4px solid var(--ok);border-radius:0 12px 12px 0;padding:12px 14px;margin:12px 0}
+.good h3{margin-top:0;color:var(--ok)}
+.fitgrid{display:grid;gap:8px;margin:10px 0}
+.fit{display:grid;grid-template-columns:auto 1fr;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:11px 12px}
+.pill{align-self:start;font-size:11px;font-weight:700;border-radius:6px;padding:2px 7px;white-space:nowrap}
+.pill.y{background:var(--ok-bg);color:var(--ok);border:1px solid var(--ok)}
+.pill.n{background:var(--flag-bg);color:var(--flag);border:1px solid var(--flag)}
+.pill.c{background:var(--sunk);color:var(--accent2);border:1px solid var(--accent2)}
+.fit b{display:block;font-size:15px}
+.fit span{color:var(--muted);font-size:13.5px}
+.steps{counter-reset:s;list-style:none;padding:0;margin:10px 0}
+.steps li{counter-increment:s;position:relative;padding:10px 12px 10px 44px;background:var(--surface);border:1px solid var(--line);border-radius:12px;margin:7px 0}
+.steps li::before{content:counter(s);position:absolute;left:12px;top:11px;width:22px;height:22px;border-radius:50%;background:var(--accent);color:var(--bg);font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.ask{display:flex;gap:11px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px;margin:7px 0;width:100%;text-align:left;font:inherit;color:inherit;cursor:pointer}
+.ask .bx{flex:none;width:24px;height:24px;border:2px solid var(--muted);border-radius:7px;margin-top:1px;display:flex;align-items:center;justify-content:center}
+.ask .bx svg{opacity:0}
+.ask[aria-pressed="true"]{background:var(--ok-bg);border-color:var(--ok)}
+.ask[aria-pressed="true"] .bx{background:var(--ok);border-color:var(--ok)}
+.ask[aria-pressed="true"] .bx svg{opacity:1}
+.ask[aria-pressed="true"] .qt{opacity:.62;text-decoration:line-through}
+.qt b{display:block;font-size:15.5px}
+.qt span{color:var(--muted);font-size:13.5px}
+.do{display:grid;grid-template-columns:auto 1fr;gap:9px;margin:7px 0}
+.mark{font-weight:800;line-height:1.35}
+.mark.y{color:var(--ok)}
+.mark.n{color:var(--flag)}
+table{width:100%;border-collapse:collapse;font-size:14.5px;margin:8px 0}
+th,td{text-align:left;padding:8px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-weight:600;font-size:13px}
+.scroll{overflow-x:auto}
+footer{color:var(--muted);font-size:13px;padding:24px 14px 40px;max-width:720px;margin:0 auto;border-top:1px solid var(--line)}
+.top{display:inline-block;margin-top:10px;color:var(--accent);font-weight:600;text-decoration:none}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+</style>
+</head>
+<body>
+<header>
+  <div class="kicker">Meeting brief</div>
+  <h1>X-FAB</h1>
+  <p>Specialty analog foundry, Belgium. Prepared for a business meeting on representing their fab in India for tape-outs, with dinner etiquette notes.</p>
+</header>
+
+<nav id="nav">
+  <a href="#who" class="on">Who they are</a>
+  <a href="#money">Their numbers</a>
+  <a href="#tech">Technology</a>
+  <a href="#customers">Customers</a>
+  <a href="#india">India fit</a>
+  <a href="#ask">Questions to ask</a>
+  <a href="#dinner">Japanese dinner</a>
+</nav>
+
+<main>
+
+<section id="who">
+  <h2>Who they are</h2>
+  <p class="lede">A pure-play specialty foundry, not a leading-edge digital one. Their customers design analog, power and sensor chips and have no fab of their own.</p>
+  <div class="card">
+    <h3>The basics</h3>
+    <ul>
+      <li>Founded 1992, headquarters in Tessenderlo, Belgium. Listed on Euronext Paris as XFAB.</li>
+      <li>About 4,300 employees and six wafer fabs: Sarawak (Malaysia), Erfurt and Dresden (Germany), Corbeil-Essonnes (France), Lubbock (Texas).</li>
+      <li>Majority owner Xtrion NV at 61.4%; Sarawak Technology Holdings, owned by the Sarawak government, at 35.2%.</li>
+      <li>Sales offices in Japan (Yokohama, since 2006), China and Hong Kong, Korea and Taiwan, plus R&amp;D and support in the UK.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Leadership change this year</h3>
+    <p>Damien Macq became CEO on 6 February 2026, moving up from Group COO. Rudi De Winter, CEO since 2014, stayed on the board. Macq previously ran Melexis's Sense and Light business unit and held roles at ST-Ericsson and ON Semiconductor, and holds MSEE and PhD degrees from UCLouvain.</p>
+    <p>A new CEO in his first year usually wants visible wins in new markets. That works in your favour.</p>
+  </div>
+  <div class="flag">
+    <h3>Don't mix them up</h3>
+    <p>X-FAB is European. If your dinner is Japanese, you are most likely meeting their Yokohama team, which historically serves Japanese automotive and medical customers, or a Japanese partner. Worth confirming before you prepare gifts or seating courtesies.</p>
+  </div>
+  <a class="top" href="#nav">Back to top</a>
+</section>
+
+<section id="money">
+  <h2>Their numbers</h2>
+  <p class="lede">They are coming out of a downturn with new capacity arriving. That combination is why a new sales region is interesting to them right now.</p>
+  <div class="stats">
+    <div class="stat"><b>$199.8M</b><span>Q2 2026 revenue, down 7% year on year</span></div>
+    <div class="stat"><b>$2.1M</b><span>Q2 2026 EBIT, down about 90%</span></div>
+    <div class="stat"><b>16.8%</b><span>Q2 2026 EBITDA margin</span></div>
+    <div class="stat"><b>~93%</b><span>Revenue from automotive, industrial, medical</span></div>
+  </div>
+  <h3>What is growing and what is not</h3>
+  <div class="scroll"><table>
+    <tr><th>Segment</th><th>Direction</th></tr>
+    <tr><td>Wide bandgap (SiC and GaN)</td><td>Up 152% year on year in Q1 2026</td></tr>
+    <tr><td>Microsystems and photonics</td><td>Up 42% year on year in Q1 2026</td></tr>
+    <tr><td>Medical</td><td>Up 39% year on year in Q2 2026</td></tr>
+    <tr><td>CMOS</td><td>Down 9% in Q1 2026, soft automotive demand</td></tr>
+    <tr><td>Automotive revenue</td><td>Down 19% year on year in Q2, but bookings improving</td></tr>
+  </table></div>
+  <div class="good">
+    <h3>Signs they are turning</h3>
+    <p>Management indicated Q2 2026 likely marked the bottom. Automotive book-to-bill reached its highest level in two years, and they announced several data-centre design wins across different technologies.</p>
+  </div>
+  <h3>Their ambition</h3>
+  <p>X-FAB has stated a target of roughly $1.05bn revenue in 2026 and about $1.5bn by 2030, with EBITDA margin rising toward 35%. Judge any India proposal against whether it helps that path.</p>
+  <a class="top" href="#nav">Back to top</a>
+</section>
+
+<section id="tech">
+  <h2>Technology and capacity</h2>
+  <p class="lede">Know the node list cold. It decides which Indian companies you can and cannot approach.</p>
+  <div class="card">
+    <h3>Processes they offer</h3>
+    <ul>
+      <li>CMOS: 1.0 µm, 350nm, 180nm, 130nm, 110nm. No advanced digital nodes.</li>
+      <li>Specialties: high-voltage CMOS, BCD-on-SOI, RF SOI, embedded non-volatile memory.</li>
+      <li>Wide bandgap: silicon carbide, and GaN-on-Si (XG035 depletion mode) with an open-access MPW shuttle.</li>
+      <li>MEMS and microsystems, including open-platform processes such as XMB10 for 3-axis inertial sensors.</li>
+      <li>Sensors: gas and flow, image, inertial, photodiodes, pressure, temperature. Plus silicon photonics.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Capacity worth mentioning</h3>
+    <ul>
+      <li>The new Malaysia cleanroom lifts that site from 30,000 to 40,000 wafer starts per month, doubling capacity for 180nm BCD-on-SOI, with the full increase expected by Q4 2026.</li>
+      <li>180nm BCD-on-SOI suits smart motor drivers, smart LED drivers and battery management systems.</li>
+      <li>Lubbock, Texas is described by the US Commerce Department as the only high-volume SiC foundry in the United States, and signed preliminary terms for up to $50M in proposed CHIPS Act funding.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>How customers prototype</h3>
+    <ul>
+      <li>Multi Project Wafer shuttles with published 2026 dates, and a Multi Level Mask service using four mask levels on one reticle, which is more flexible than fixed MPW dates.</li>
+      <li>PDKs for all major EDA platforms, analog and digital libraries, a technical hotline, ESD support and the My X-FAB customer portal.</li>
+      <li>They participate in EUROPRACTICE for academic and SME access, and have cited 87 designs going to production through it over five years.</li>
+    </ul>
+  </div>
+  <a class="top" href="#nav">Back to top</a>
+</section>
+
+<section id="customers">
+  <h2>Who their customers are</h2>
+  <p class="lede">About 400 customers worldwide, but revenue is concentrated. Diversifying it is a strategic priority, which is your opening.</p>
+  <div class="flag">
+    <h3>The concentration problem</h3>
+    <p>Melexis, the Belgian automotive sensor company, was about 45% of X-FAB revenue in 2024, down from 55% in 2018. Historically the top three customers were around 60%. Melexis is tied to X-FAB through shared ownership and has prepaid for capacity under long-term agreements.</p>
+  </div>
+  <h3>The five customer types</h3>
+  <div class="card">
+    <h3>1. Fabless automotive and sensor companies</h3>
+    <p>The core. Melexis is the archetype: magnetic position sensors, current sensors, motor drivers, on CMOS and SOI. Elmos is another European example. High volume, long process life, automotive qualification.</p>
+  </div>
+  <div class="card">
+    <h3>2. IDMs outsourcing part of production</h3>
+    <p>Chip makers with their own fabs that send specific specialty or older-node products outside. More analog outsourcing is X-FAB's stated growth thesis.</p>
+  </div>
+  <div class="card">
+    <h3>3. Industrial and power chip designers</h3>
+    <p>Motor drivers, LED drivers, battery management, power management, and increasingly SiC and GaN for EV powertrains and data-centre power. This is where 180nm BCD-on-SOI lives.</p>
+  </div>
+  <div class="card">
+    <h3>4. Medical device chip makers</h3>
+    <p>Smaller but fast growing. Applications include pacemakers, echography and ultrasound, contactless temperature sensing and DNA sequencing.</p>
+  </div>
+  <div class="card">
+    <h3>5. MEMS, sensor and photonics companies</h3>
+    <p>Inertial, pressure and gas sensors, photodiodes, image sensors, and silicon photonics for data centres. Open-platform MEMS processes save customers from developing one from scratch.</p>
+  </div>
+  <div class="card">
+    <h3>Plus the long tail</h3>
+    <p>Universities, research institutes and small companies reaching X-FAB through EUROPRACTICE shuttles. Low revenue, but it is the funnel that feeds everything above.</p>
+  </div>
+  <h3>How an engagement unfolds</h3>
+  <ol class="steps">
+    <li><b>Evaluate.</b> Customer downloads the PDK, simulates, uses the hotline.</li>
+    <li><b>Prototype.</b> An MPW or MLM run at a fraction of full mask-set cost.</li>
+    <li><b>Iterate.</b> Usually one or two more silicon revisions.</li>
+    <li><b>Qualify.</b> Automotive or medical adds a year or more.</li>
+    <li><b>Produce.</b> Volume ramps; large customers sign long-term agreements, sometimes with prepayments.</li>
+  </ol>
+  <p>Prototyping is only around 8–10% of revenue, but every production account started there. Selling India means selling step 2 and asking them to fund the funnel.</p>
+  <a class="top" href="#nav">Back to top</a>
+</section>
+
+<section id="india">
+  <h2>India fit</h2>
+  <p class="lede">Mapped against the companies on your SEMICON India list.</p>
+  <div class="fitgrid">
+    <div class="fit"><span class="pill y">Target</span><div><b>Power and motor control</b><span>Vervesemi (BLDC controller with RISC-V), Green PMU Semi (energy-harvesting PMICs).</span></div></div>
+    <div class="fit"><span class="pill y">Target</span><div><b>Analog product companies</b><span>L&amp;T Semiconductor Technologies, especially its SiliConch power and interface heritage.</span></div></div>
+    <div class="fit"><span class="pill y">Target</span><div><b>Sensor and MEMS startups</b><span>Multi Nano Sense and similar DLI-funded companies.</span></div></div>
+    <div class="fit"><span class="pill y">Target</span><div><b>Automotive and EV chips</b><span>Designers serving Indian EV and two-wheeler supply chains. 180nm high-voltage CMOS is the natural process.</span></div></div>
+    <div class="fit"><span class="pill y">Target</span><div><b>Medical device electronics</b><span>A growing Indian industry needing exactly these processes.</span></div></div>
+    <div class="fit"><span class="pill y">Target</span><div><b>Academic and DLI tape-outs</b><span>211 designs across 75 institutions reached tape-out under Chips to Startup. Mostly small analog parts: shuttle sweet spot.</span></div></div>
+    <div class="fit"><span class="pill y">Target</span><div><b>SiC and GaN designers</b><span>Indian power startups designing wide-bandgap products are X-FAB Texas prospects.</span></div></div>
+    <div class="fit"><span class="pill c">Channel</span><div><b>Design houses</b><span>MosChip, Cyient Semiconductors, Mirafra, CHIPEX, SignOff, HCLTech. One relationship can deliver several tape-outs a year; CHIPEX already does analog and turnkey work.</span></div></div>
+    <div class="fit"><span class="pill n">Skip</span><div><b>Advanced-node companies</b><span>AMD, Micron, Sandisk, VSORA, EdgeCortix, Netrasemi, Mindgrove, Morphing Machines and most AI chip startups need 16nm and below.</span></div></div>
+  </div>
+  <h3>Competition you will face in India</h3>
+  <p>Tata's Dholera fab starting at 90nm and 55nm before 28nm, SCL Mohali, and the established relationships Indian companies already have with TSMC, GlobalFoundries, UMC and SkyWater. X-FAB's edge is specialty processes and automotive-grade qualification, not price per wafer.</p>
+  <div class="good">
+    <h3>Your core argument</h3>
+    <p>Customer diversification plus funnel. India has a government-funded pipeline of small analog and sensor designs that suits their MPW model, and a set of power and automotive product companies that could become production accounts in three to five years.</p>
+  </div>
+  <div class="flag">
+    <h3>Be honest about the shape</h3>
+    <p>The first two years will be shuttle runs and small volumes, not Melexis-scale accounts. If their definition of first-year success is production wafers, reset that expectation before signing anything.</p>
+  </div>
+  <a class="top" href="#nav">Back to top</a>
+</section>
+
+<section id="ask">
+  <h2>Questions to ask them</h2>
+  <p class="lede">Tap each one once you have asked it. Ticks are saved on this phone.</p>
+  <div id="qlist"></div>
+  <a class="top" href="#nav">Back to top</a>
+</section>
+
+<section id="dinner">
+  <h2>Japanese business dinner</h2>
+  <p class="lede">The dinner builds the relationship. The deal gets done later, in the office.</p>
+
+  <h3>Before you sit down</h3>
+  <ul>
+    <li>Be early. Arriving exactly on time already counts as late.</li>
+    <li>Exchange business cards before eating, standing, with both hands, card facing them. Receive with both hands, read it, place it on the table in front of you. Never into a pocket, never write on it.</li>
+    <li>Seating follows hierarchy: the seat farthest from the door is for the most senior guest. Wait to be shown your place.</li>
+    <li>Use surnames with "-san" (Tanaka-san). First names only if invited.</li>
+  </ul>
+
+  <h3>At the table</h3>
+  <div class="do"><span class="mark y">Do</span><div>Wait for the "kanpai" toast before drinking. Hold your glass slightly lower than the senior person's.</div></div>
+  <div class="do"><span class="mark y">Do</span><div>Pour for others and watch their glasses. Someone will fill yours. Leaving it full is the polite way to slow down.</div></div>
+  <div class="do"><span class="mark y">Do</span><div>Say "itadakimasu" before eating and "gochisousama deshita" at the end.</div></div>
+  <div class="do"><span class="mark y">Do</span><div>Use the hot oshibori towel for your hands, then fold it. Slurping noodles is fine.</div></div>
+  <div class="do"><span class="mark n">Don't</span><div>Stand chopsticks upright in rice or pass food chopstick to chopstick. Both echo funeral customs.</div></div>
+  <div class="do"><span class="mark n">Don't</span><div>Pour your own drink, spear food with chopsticks, or pour soy sauce over rice.</div></div>
+  <div class="do"><span class="mark n">Don't</span><div>Push for decisions, open a laptop, or turn dinner into a negotiation.</div></div>
+
+  <div class="card">
+    <h3>If you are vegetarian</h3>
+    <p>Say so in advance and mention fish as well. Most Japanese broths use dashi made from bonito, so dishes that look vegetarian often are not. The phrase that works: no meat, no fish, including dashi. Offering to suggest the restaurant saves everyone awkwardness.</p>
+  </div>
+
+  <div class="card">
+    <h3>If you do not drink alcohol</h3>
+    <p>Say it warmly and early, and order oolong tea or a soft drink. Nobody minds, but a refusal mid-toast feels awkward. Still raise your glass for the kanpai.</p>
+  </div>
+
+  <h3>Reading the room</h3>
+  <ul>
+    <li>"That may be difficult" almost always means no.</li>
+    <li>A long silence is thinking, not disagreement. Let it sit rather than filling it.</li>
+    <li>Decisions are made by consensus afterwards, so judge the evening by trust built, not commitments made.</li>
+    <li>Expect a second round of drinks. That is where the real conversation happens, so join if you can.</li>
+  </ul>
+
+  <h3>Gifts and paying</h3>
+  <ul>
+    <li>A small regional gift from India, nicely wrapped, presented with both hands. Modest beats expensive.</li>
+    <li>The host usually pays. Offer once, then accept gracefully. If you invited them, settle the bill discreetly.</li>
+    <li>Send a short thank-you email the next morning, naming something specific from the conversation. In Japan this note is expected.</li>
+  </ul>
+  <a class="top" href="#nav">Back to top</a>
+</section>
+
+</main>
+
+<footer>
+  Prepared 16 September 2026 from public sources, including X-FAB quarterly results and company pages. Financial figures change each quarter, so check their investor relations page before the meeting. Your ticks are stored only in this browser on this phone.
+</footer>
+
+<script>
+const QS = [
+  ["Are you looking for a representative, a distributor, or a design-house partner in India?","And what commission or margin model goes with it?"],
+  ["Which technologies do you most want to fill?","180nm BCD-on-SOI, 110nm, SiC, GaN or MEMS. Their answer sets your target list."],
+  ["What minimum volume makes a customer worth onboarding?","And how do you handle startups that stay at prototype volume for two years?"],
+  ["Who covers India today, and from where?","Yokohama, Hong Kong or Europe. What happens to existing accounts?"],
+  ["Can Indian customers get MPW pricing comparable to EUROPRACTICE rates?","Price is what decides a DLI-funded startup's first tape-out."],
+  ["Any export-control or logistics constraints on shipping wafers into India?","Ask before you promise anything to a customer."],
+  ["What does a successful first year in a new region look like to you?","If the answer is production wafers, reset expectations now."],
+  ["Which design-service partners do you work with for turn-key, test and assembly?","Decides whether you can offer Indian startups a complete path to product."],
+  ["How do you support automotive qualification for a first-time customer?","Indian EV suppliers will ask this immediately."],
+  ["Who owns the customer relationship after I introduce a lead?","Protects your commission and avoids channel conflict."]
+];
+const KEY = "xfabBrief";
+let ticks = {};
+try { ticks = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch(e) {}
+const check = `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7"/></svg>`;
+document.getElementById("qlist").innerHTML = QS.map((q,i)=>
+ `<button class="ask" data-i="${i}" aria-pressed="${!!ticks[i]}"><span class="bx">${check}</span><span class="qt"><b>${q[0]}</b><span>${q[1]}</span></span></button>`).join("");
+document.getElementById("qlist").addEventListener("click", e => {
+  const b = e.target.closest(".ask"); if (!b) return;
+  const i = b.dataset.i, on = b.getAttribute("aria-pressed") !== "true";
+  b.setAttribute("aria-pressed", on);
+  if (on) ticks[i] = 1; else delete ticks[i];
+  try { localStorage.setItem(KEY, JSON.stringify(ticks)); } catch(e) {}
+});
+const links = [...document.querySelectorAll("nav a")];
+const secs = links.map(a => document.querySelector(a.getAttribute("href"))).filter(Boolean);
+const io = new IntersectionObserver(es => {
+  es.forEach(en => {
+    if (!en.isIntersecting) return;
+    links.forEach(a => a.classList.toggle("on", a.getAttribute("href") === "#" + en.target.id));
+  });
+}, {rootMargin:"-45% 0px -50% 0px"});
+secs.forEach(s => io.observe(s));
+</script>
+</body>
+</html>
