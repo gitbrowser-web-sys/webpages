@@ -1,0 +1,1621 @@
+<!DOCTYPE html>
+<html lang="en" data-theme-auto>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ITC Foods — Packaging Procurement Interview Prep</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#FAF8F4; --surface:#FFFFFF; --tint:#F1EEE6;
+  --ink:#14202E; --ink-soft:#57626F; --ink-faint:#8A93A0;
+  --rule:#DED8CB; --rule-soft:#ECE7DD;
+  --cyan:#0C6E7A; --cyan-tint:#E4F0F1;
+  --kraft:#B4623A; --kraft-tint:#F7EAE2;
+  --ok:#3F7A53;
+  --sans:'Archivo',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --serif:'Source Serif 4',Georgia,'Times New Roman',serif;
+  --mono:'IBM Plex Mono',ui-monospace,'SF Mono',Menlo,monospace;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#11171E; --surface:#171E26; --tint:#1C242D;
+    --ink:#E9E6DF; --ink-soft:#A3ACB8; --ink-faint:#78828E;
+    --rule:#2B343F; --rule-soft:#212932;
+    --cyan:#6BC6D1; --cyan-tint:#152A2E;
+    --kraft:#E29B75; --kraft-tint:#2B1F18;
+    --ok:#7FBF93;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#11171E; --surface:#171E26; --tint:#1C242D;
+  --ink:#E9E6DF; --ink-soft:#A3ACB8; --ink-faint:#78828E;
+  --rule:#2B343F; --rule-soft:#212932;
+  --cyan:#6BC6D1; --cyan-tint:#152A2E;
+  --kraft:#E29B75; --kraft-tint:#2B1F18;
+  --ok:#7FBF93;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);height:100%}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--serif);font-size:17px;line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
+
+/* ---------- sticky bar ---------- */
+.bar{
+  position:sticky;top:env(safe-area-inset-top,0px);z-index:50;
+  background:color-mix(in srgb,var(--paper) 92%,transparent);
+  backdrop-filter:saturate(1.4) blur(10px);
+  border-bottom:1px solid var(--rule);
+}
+.bar-in{max-width:46rem;margin:0 auto;padding:9px 18px 10px;display:flex;align-items:center;gap:12px}
+.bar-t{font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:.01em;flex:1;min-width:0;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar-c{font-family:var(--mono);font-size:11px;color:var(--ink-soft);white-space:nowrap}
+.bar-btn{font-family:var(--sans);font-size:12px;font-weight:600;color:var(--cyan);background:none;
+  border:1px solid var(--rule);border-radius:2px;padding:4px 8px;cursor:pointer}
+.bar-btn:focus-visible,a:focus-visible,summary:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+.prog{height:2px;background:var(--rule-soft)}
+.prog span{display:block;height:100%;width:0;background:var(--cyan);transition:width .3s ease}
+
+.wrap{max-width:46rem;margin:0 auto;padding:0 18px 80px}
+
+/* ---------- hero ---------- */
+.hero{padding:30px 0 6px}
+.spec{border:1.5px solid var(--ink);padding:18px 18px 16px;position:relative;background:var(--surface)}
+.spec::before,.spec::after{
+  content:"";position:absolute;width:13px;height:13px;
+  background:
+    linear-gradient(var(--cyan),var(--cyan)) center/100% 1.5px no-repeat,
+    linear-gradient(var(--cyan),var(--cyan)) center/1.5px 100% no-repeat;
+}
+.spec::before{top:-7px;left:-7px}
+.spec::after{bottom:-7px;right:-7px}
+.spec h1{font-family:var(--sans);font-size:26px;line-height:1.14;font-weight:700;letter-spacing:-.02em;margin:0 0 3px}
+.spec .sub{font-family:var(--sans);font-size:15px;font-weight:500;color:var(--cyan);margin:0 0 14px}
+.grid2{display:grid;grid-template-columns:auto 1fr;gap:5px 14px;font-family:var(--mono);font-size:12.5px;line-height:1.5}
+.grid2 dt{color:var(--ink-faint)}
+.grid2 dd{margin:0;color:var(--ink)}
+.count{margin-top:14px;padding-top:12px;border-top:1px solid var(--rule);font-family:var(--sans);font-size:13px;color:var(--ink-soft)}
+.count b{font-family:var(--mono);font-weight:600;color:var(--kraft);font-size:15px}
+
+.lam{margin:26px 0 8px}
+.lam svg{width:100%;height:auto;display:block}
+.cap{font-family:var(--sans);font-size:12.5px;color:var(--ink-soft);line-height:1.5;margin:10px 0 0;padding-left:12px;border-left:2px solid var(--cyan)}
+
+/* ---------- prose ---------- */
+h2{font-family:var(--sans);font-size:19px;font-weight:700;letter-spacing:-.015em;line-height:1.25;margin:0}
+h3{font-family:var(--sans);font-size:16px;font-weight:600;letter-spacing:-.01em;margin:26px 0 8px;color:var(--ink)}
+h4{font-family:var(--sans);font-size:14px;font-weight:600;margin:20px 0 6px;color:var(--cyan)}
+p{margin:0 0 13px}
+ul,ol{margin:0 0 13px;padding-left:20px}
+li{margin:0 0 7px}
+li::marker{color:var(--ink-faint)}
+strong{font-weight:600}
+em{font-style:italic}
+a{color:var(--cyan)}
+hr{border:0;border-top:1px solid var(--rule-soft);margin:24px 0}
+code,.m{font-family:var(--mono);font-size:.86em;background:var(--tint);padding:1px 5px;border-radius:2px}
+
+/* ---------- contents ---------- */
+.toc{margin:30px 0 8px;border-top:1px solid var(--rule);padding-top:16px}
+.toc h2{margin-bottom:12px}
+.toc ol{list-style:none;padding:0;margin:0;font-family:var(--sans);font-size:14.5px}
+.toc li{margin:0;border-bottom:1px solid var(--rule-soft)}
+.toc a{display:flex;gap:11px;padding:9px 2px;text-decoration:none;color:var(--ink);align-items:baseline}
+.toc a:hover{color:var(--cyan)}
+.toc .n{font-family:var(--mono);font-size:11.5px;color:var(--ink-faint);min-width:20px}
+.toc .tag{margin-left:auto;font-size:10.5px;font-family:var(--mono);color:var(--kraft);white-space:nowrap}
+
+/* ---------- sections ---------- */
+.sec{border-top:1px solid var(--rule);margin-top:0}
+.sec[open]{background:linear-gradient(var(--paper),var(--paper))}
+.sec>summary{
+  list-style:none;cursor:pointer;display:flex;gap:11px;align-items:flex-start;
+  padding:17px 2px 17px 0;
+}
+.sec>summary::-webkit-details-marker{display:none}
+.sec>summary .n{font-family:var(--mono);font-size:11.5px;color:var(--ink-faint);padding-top:4px;min-width:22px}
+.sec>summary .arw{margin-left:auto;color:var(--ink-faint);font-size:18px;line-height:1;padding-top:2px;transition:transform .2s}
+.sec[open]>summary .arw{transform:rotate(45deg)}
+.sec[open]>summary h2{color:var(--cyan)}
+.sec .body{padding:0 0 30px 33px}
+@media (max-width:420px){.sec .body{padding-left:0}}
+.done>summary h2::after{content:"✓";color:var(--ok);font-size:13px;margin-left:8px;vertical-align:middle}
+
+.mark{font-family:var(--sans);font-size:12.5px;font-weight:600;color:var(--ink-soft);background:none;
+  border:1px solid var(--rule);border-radius:2px;padding:7px 13px;cursor:pointer;margin-top:18px}
+.mark:hover{border-color:var(--cyan);color:var(--cyan)}
+
+/* ---------- components ---------- */
+.callout{background:var(--cyan-tint);border-left:3px solid var(--cyan);padding:13px 15px;margin:16px 0;font-size:15.5px;line-height:1.55}
+.callout p:last-child{margin-bottom:0}
+.warn{background:var(--kraft-tint);border-left:3px solid var(--kraft)}
+.say{background:var(--surface);border:1px solid var(--rule);padding:14px 16px;margin:14px 0;
+  font-size:16px;line-height:1.6}
+.say::before{content:"Say this";display:block;font-family:var(--sans);font-size:11px;font-weight:600;
+  color:var(--kraft);margin-bottom:7px;letter-spacing:.04em}
+.say p:last-child{margin-bottom:0}
+.tw{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:16px 0;border:1px solid var(--rule)}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-size:13.5px;line-height:1.45;min-width:100%}
+th,td{text-align:left;padding:9px 11px;border-bottom:1px solid var(--rule-soft);vertical-align:top}
+th{background:var(--tint);font-weight:600;font-size:12.5px;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+td .m{font-size:12px}
+.qa{border:1px solid var(--rule);margin:11px 0;background:var(--surface)}
+.qa>summary{list-style:none;cursor:pointer;padding:13px 15px;font-family:var(--sans);font-size:14.5px;
+  font-weight:600;line-height:1.45;display:flex;gap:10px;align-items:flex-start}
+.qa>summary::-webkit-details-marker{display:none}
+.qa>summary .q{color:var(--kraft);font-family:var(--mono);font-size:11px;padding-top:3px}
+.qa[open]>summary{border-bottom:1px solid var(--rule-soft)}
+.qa .ans{padding:14px 15px 16px;font-size:15.5px;line-height:1.6}
+.qa .ans p:last-child,.qa .ans ul:last-child{margin-bottom:0}
+.hint{font-family:var(--sans);font-size:12.5px;color:var(--ink-soft);margin-top:10px;padding-top:9px;border-top:1px dashed var(--rule)}
+.chk{list-style:none;padding:0;margin:14px 0;font-family:var(--sans);font-size:14.5px}
+.chk li{margin:0;border-bottom:1px solid var(--rule-soft)}
+.chk label{display:flex;gap:11px;padding:10px 2px;cursor:pointer;align-items:flex-start;line-height:1.45}
+.chk input{margin:3px 0 0;width:17px;height:17px;accent-color:var(--cyan);flex:none}
+.chk input:checked+span{color:var(--ink-faint);text-decoration:line-through}
+.filter{width:100%;font-family:var(--sans);font-size:15px;padding:11px 13px;border:1px solid var(--rule);
+  background:var(--surface);color:var(--ink);border-radius:2px;margin:6px 0 4px}
+.count-l{font-family:var(--mono);font-size:11.5px;color:var(--ink-faint);margin-bottom:12px}
+.gl{margin:0;padding:0}
+.gl dt{font-family:var(--sans);font-weight:600;font-size:14.5px;margin-top:14px}
+.gl dd{margin:2px 0 0;font-size:15px;color:var(--ink-soft);line-height:1.5}
+.gl .grp{font-family:var(--sans);font-size:12px;font-weight:600;color:var(--kraft);margin:26px 0 2px;
+  padding-bottom:5px;border-bottom:1px solid var(--rule)}
+.gl .grp:first-child{margin-top:12px}
+.hide{display:none!important}
+.pill{display:inline-block;font-family:var(--mono);font-size:10.5px;color:var(--cyan);
+  border:1px solid var(--cyan);border-radius:2px;padding:1px 6px;margin:0 4px 5px 0;white-space:nowrap}
+.fx{margin:14px 0;padding:13px 15px;background:var(--tint);font-family:var(--mono);font-size:13px;line-height:1.7}
+.fx b{color:var(--kraft);font-weight:600}
+.foot{margin-top:40px;padding-top:20px;border-top:1px solid var(--rule);font-family:var(--sans);
+  font-size:12.5px;color:var(--ink-faint);line-height:1.55}
+.top{display:inline-block;font-family:var(--sans);font-size:12.5px;font-weight:600;color:var(--cyan);
+  text-decoration:none;margin-top:14px}
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <div class="bar-in">
+    <span class="bar-t" id="barT">ITC Foods — Packaging Procurement</span>
+    <span class="bar-c" id="barC">0/22</span>
+    <button class="bar-btn" id="themeBtn" aria-label="Switch colour theme">Theme</button>
+  </div>
+  <div class="prog"><span id="progBar"></span></div>
+</div>
+
+<div class="wrap">
+
+<div class="hero">
+  <div class="spec">
+    <h1>Procurement Officer<br>Packaging Material</h1>
+    <p class="sub">ITC Limited · Foods Division</p>
+    <dl class="grid2">
+      <dt>Location</dt><dd>ITC Green Centre, Banaswadi Main Road, Bangalore 560 005</dd>
+      <dt>Contact</dt><dd>Saritha Kannemadugu, HR</dd>
+      <dt>Interview</dt><dd>Monday, 21 September 2026</dd>
+      <dt>Reports to</dt><dd>Foods Business Division (DCE: Hemant Malik)</dd>
+    </dl>
+    <p class="count" id="countdown">Prep window remaining: <b>—</b></p>
+  </div>
+
+  <div class="lam">
+    <svg viewBox="0 0 360 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cross-section of a metallised laminate: 12 micron reverse-printed BOPET, adhesive, metallised surface, and 20 micron BOPP sealant layer">
+      <defs>
+        <pattern id="hatch" width="5" height="5" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+          <line x1="0" y1="0" x2="0" y2="5" stroke="var(--rule)" stroke-width="2.2"/>
+        </pattern>
+      </defs>
+      <rect x="20" y="30" width="165" height="24" fill="var(--cyan-tint)" stroke="var(--ink)" stroke-width="1.3"/>
+      <rect x="20" y="54" width="165" height="8" fill="url(#hatch)" stroke="var(--ink)" stroke-width="1.3"/>
+      <rect x="20" y="62" width="165" height="4" fill="var(--kraft)" stroke="var(--ink)" stroke-width="1"/>
+      <rect x="20" y="66" width="165" height="26" fill="var(--tint)" stroke="var(--ink)" stroke-width="1.3"/>
+      <g font-family="Archivo, sans-serif">
+        <text x="198" y="38" font-size="11.5" font-weight="600" fill="var(--ink)">12 µ BOPET</text>
+        <text x="198" y="50" font-size="10" fill="var(--ink-soft)">reverse-printed outer</text>
+        <text x="198" y="64" font-size="10" fill="var(--ink-soft)">adhesive · 2 gsm</text>
+        <text x="198" y="76" font-size="10" fill="var(--kraft)">metallised surface</text>
+        <text x="198" y="90" font-size="11.5" font-weight="600" fill="var(--ink)">20 µ BOPP</text>
+        <text x="198" y="102" font-size="10" fill="var(--ink-soft)">barrier + sealant</text>
+      </g>
+      <g font-family="IBM Plex Mono, monospace" font-size="9.5" fill="var(--ink-faint)">
+        <text x="20" y="22">laminate structure</text>
+        <text x="20" y="112">38.5 g/m² · yield 25.97 m²/kg</text>
+      </g>
+      <g stroke="var(--cyan)" stroke-width="1.1" fill="none">
+        <circle cx="28" cy="133" r="6"/><line x1="28" y1="123" x2="28" y2="143"/><line x1="18" y1="133" x2="38" y2="133"/>
+      </g>
+      <text x="46" y="137" font-family="IBM Plex Mono, monospace" font-size="9.5" fill="var(--ink-faint)">registration mark</text>
+    </svg>
+    <p class="cap">This is the product. A snack or biscuit wrapper is a laminate of two films bonded with adhesive — and every cost, quality and sustainability argument you will have at ITC starts with this cross-section. Know it cold.</p>
+  </div>
+</div>
+
+<div class="callout">
+  <p><strong>How to use this.</strong> Sections are collapsed — tap to open. Answers in the question banks are hidden on purpose: read the question, answer it out loud, <em>then</em> open it. That is what makes it stick. Tap “Mark reviewed” at the end of a section to track progress in the bar above; it saves on this device.</p>
+</div>
+
+<nav class="toc">
+  <h2>Contents</h2>
+  <ol id="tocList"></ol>
+</nav>
+
+<main id="secs">
+
+<details class="sec" id="s1" data-tag="do first"><summary><span class="n">01</span><h2>Your 48-hour plan</h2><span class="arw">+</span></summary>
+<div class="body">
+<p>You have roughly two days. Don't read this guide front to back three times — that feels productive and isn't. Work it in this order.</p>
+
+<h3>Saturday evening — 90 minutes</h3>
+<ul>
+<li>Read <strong>02 (one-screen crib)</strong> and <strong>04 (JD decoded)</strong>. These set the frame for everything else.</li>
+<li>Read <strong>13 (your day-to-day, retold)</strong> and say the 90-second role summary out loud three times. Record it on your phone once and listen back — you will immediately hear where you ramble.</li>
+<li>Open <strong>14</strong> and write down actual numbers against your own work: inventory days before/after, savings value, TAT before/after, number of vendors, spend handled. Approximate is fine. Numbers are non-negotiable.</li>
+</ul>
+
+<h3>Sunday morning — 2 hours</h3>
+<ul>
+<li><strong>05 (materials)</strong> and <strong>06 (keyword bank)</strong>. This is your biggest gap from last time. Don't memorise definitions — practise using each term in a sentence about your own work.</li>
+<li><strong>07 (cost sheet)</strong> — work the example through on paper once with a pen. If you can rebuild that cost sheet from memory, you can survive any costing question.</li>
+</ul>
+
+<h3>Sunday afternoon — 2 hours</h3>
+<ul>
+<li><strong>15, 16, 17</strong> — the question banks. Answer aloud <em>before</em> opening each answer. Time yourself: anything over 90 seconds, cut it down and say it again.</li>
+<li><strong>18 (HR questions)</strong> — write your actual answers, don't just read the guidance. These are the ones that ambushed you at Applied Materials.</li>
+</ul>
+
+<h3>Sunday evening — 45 minutes</h3>
+<ul>
+<li><strong>03 (ITC dossier)</strong>, <strong>11 (compliance)</strong>, <strong>12 (market)</strong>. Pick <em>five</em> facts to carry in. Five is plenty; ten will make you sound like you're reciting.</li>
+<li><strong>19</strong> — choose three questions to ask them. Write them in your notepad.</li>
+<li>Stop by 10pm. Sleep matters more than a sixth read.</li>
+</ul>
+
+<h3>Monday morning — 20 minutes</h3>
+<ul>
+<li><strong>21 (quick reference)</strong> only. Then <strong>20 (delivery)</strong> — three rules, read them in the auto.</li>
+<li>Carry: printed CV copies, a notepad and pen, ID, the JD email, and a one-page sheet with your numbers on it. Writing a number down before answering is completely acceptable and buys you three seconds.</li>
+</ul>
+
+<div class="callout warn"><p><strong>The one thing.</strong> If everything else falls away, be able to do this: describe your day-to-day in 90 seconds using ten technical terms, and rebuild a packaging cost sheet out loud. Those two alone will carry the interview.</p></div>
+
+<button class="mark" data-s="s1">Mark reviewed</button>
+</div></details>
+
+<details class="sec" id="s2" data-tag="must know"><summary><span class="n">02</span><h2>If you read only one screen</h2><span class="arw">+</span></summary>
+<div class="body">
+<p>The compressed version. Everything below in this guide expands one of these lines.</p>
+
+<h3>Your positioning in one sentence</h3>
+<div class="say"><p>“I buy packing materials today — films, laminates, cartons, corrugated — and I have a polymer science degree, so I can argue the specification as well as the price. At ITC, packaging <em>is</em> the category, so nothing I know has to be translated.”</p></div>
+
+<h3>The five numbers to carry</h3>
+<ul>
+<li>ITC FY26 gross revenue ≈ <span class="m">₹80,867 cr</span>, up 10.1%; FMCG consumer spend ≈ <span class="m">₹37,000 cr</span>, reaching about 28 crore households.</li>
+<li>Q1 FY27 (June 2026): FMCG-Others revenue up <span class="m">12%</span> YoY, PBIT up <span class="m">21%</span>; dairy, snacks, noodles and frozen snacks all grew 20%+.</li>
+<li>ITC's own commentary that quarter flagged <strong>sharp cost increases in packaging inputs</strong> amid the West Asia conflict, cushioned by strategic inventory covers and commodity hedges.</li>
+<li>Sustainability 2.0 target: <strong>100% of packaging reusable, recyclable or compostable/biodegradable by 2028</strong>; plastic neutral four years running (76,000 tonnes managed in FY25).</li>
+<li>Plastic Waste Management (Amendment) Rules notified <strong>31 March 2026</strong>: mandatory recycled content in rigid plastic packaging rising 30% → 60% by 2028-29.</li>
+</ul>
+
+<h3>The three JD pillars — hang every answer on one</h3>
+<ol>
+<li><strong>Availability</strong> — inventory norms, MRP off the production plan, surge handling, no line stoppage.</li>
+<li><strong>Cost</strong> — cost sheets, vendor margins, market-linked price movement, savings.</li>
+<li><strong>Market intelligence / MIS</strong> — price trends, forecasts, dashboards, published data.</li>
+</ol>
+
+<h3>The cost-sheet sentence</h3>
+<div class="say"><p>“A packing material price is base resin or paper price, plus conversion, plus process wastage, plus freight, plus vendor margin. Resin moves with the market, so I index it rather than argue it. Conversion, wastage and margin are where the negotiation actually lives.”</p></div>
+
+<h3>The two frameworks that answer almost everything</h3>
+<ul>
+<li><strong>Situational →</strong> Immediate action · Root cause · Prevention.</li>
+<li><strong>Experience →</strong> Situation · Task · Action · Result, and the result has a number in it.</li>
+</ul>
+
+<h3>Ten words that must leave your mouth</h3>
+<p><span class="pill">BOPP / BOPET</span><span class="pill">micron &amp; GSM</span><span class="pill">laminate structure</span><span class="pill">WVTR / OTR</span><span class="pill">should-cost</span><span class="pill">safety stock</span><span class="pill">lead time</span><span class="pill">OTIF</span><span class="pill">EPR</span><span class="pill">value engineering</span></p>
+
+<button class="mark" data-s="s2">Mark reviewed</button>
+</div></details>
+
+<details class="sec" id="s3" data-tag="should know"><summary><span class="n">03</span><h2>ITC — the dossier</h2><span class="arw">+</span></summary>
+<div class="body">
+
+<h3>The arc</h3>
+<p>Founded 1910 as the Imperial Tobacco Company of India; renamed India Tobacco Company in 1970, I.T.C. Limited in 1974, and in 2001 simply ITC Limited — the letters no longer stand for anything, which is the whole point of the story. Tobacco-led into the 1970s, diversified into hotels, paperboards and agri through the 1980s-90s, and from the 2000s built a multi-sector FMCG business. <strong>ITC Foods started in 2002</strong> — Hemant Malik, now Executive Director and Divisional Chief Executive of the Foods Business, was its first head of marketing and was involved in launching Aashirvaad, Sunfeast, Bingo!, YiPPee! and Kitchens of India. Chairman &amp; Managing Director: Sanjiv Puri.</p>
+
+<h3>Why this matters for a packaging buyer</h3>
+<p>ITC is one of the very few FMCG companies in India that <strong>makes its own packaging</strong>. The Paperboards, Paper &amp; Packaging segment is a business in its own right — it reported 9% revenue growth and 38% PBIT growth in Q1 FY27, helped by value-added paperboards and sustainable packaging products. So for ITC Foods, some packaging is sourced internally from a sister division and some externally. That means transfer pricing, internal benchmarking against market rates, and capacity allocation are all live conversations. Raising this shows you understand the company, not just the role.</p>
+
+<h3>Segments</h3>
+<div class="tw"><table>
+<tr><th>Segment</th><th>What it is</th><th>Packaging relevance</th></tr>
+<tr><td>FMCG — Cigarettes</td><td>Largest profit pool; hit by the Feb 2026 excise increase</td><td>Board, printing, films</td></tr>
+<tr><td>FMCG — Others</td><td>Foods, personal care, dairy, stationery — <strong>your division</strong></td><td>All of it</td></tr>
+<tr><td>Paperboards, Paper &amp; Packaging</td><td>Boards, specialty papers, converted packaging</td><td>Internal supplier to Foods</td></tr>
+<tr><td>Agri Business</td><td>Sourcing, leaf tobacco, agri commodities</td><td>Raw material for Foods</td></tr>
+<tr><td>Information Technology</td><td>ITC Infotech</td><td>Digital procurement tools</td></tr>
+</table></div>
+
+<h3>Foods brands and their packaging</h3>
+<div class="tw"><table>
+<tr><th>Brand</th><th>Category</th><th>Typical pack format</th></tr>
+<tr><td>Aashirvaad</td><td>Atta, salt, spices, ready-to-eat</td><td>BOPP-laminated woven sacks, PET/PE pouches, mono cartons</td></tr>
+<tr><td>Sunfeast</td><td>Biscuits, cookies, cakes</td><td>Metallised BOPP wrappers, centre-seal packs, laminated trays, cartons</td></tr>
+<tr><td>Bingo!</td><td>Snacks, chips</td><td>Metallised PET / BOPP laminates, nitrogen-flushed pillow packs</td></tr>
+<tr><td>YiPPee!</td><td>Noodles, pasta</td><td>PET/PE laminate wrapper, LDPE tastemaker sachets, shippers</td></tr>
+<tr><td>B Natural</td><td>Juices, beverages</td><td>Aseptic cartons, caps and straws</td></tr>
+<tr><td>Kitchens of India, ITC Master Chef</td><td>Ready-to-eat, frozen</td><td>Retort pouches, laminated cartons, frozen-grade films</td></tr>
+<tr><td>Sunbean, Fabelle, Sunrise, Sresta/24 Mantra, Yoga Bar (Sproutlife)</td><td>Coffee, chocolate, spices, organic, nutrition</td><td>Valve pouches, foil laminates, premium cartons</td></tr>
+</table></div>
+<p>Sproutlife Foods (Yoga Bar) became a subsidiary from 1 April 2026, and ITC raised its stake in Mother Sparsh during May 2026 — the portfolio keeps widening, which means a steady stream of new packaging development. That is the part of the JD about handling new requirements and specifications.</p>
+
+<h3>Recent performance — the honest version</h3>
+<ul>
+<li><strong>FY26:</strong> gross revenue ₹80,867 cr, up 10.1%; EBITDA up 4.9% to ₹25,208 cr. FMCG revenue grew 15% YoY in Q4.</li>
+<li><strong>Q1 FY27 (announced 31 July 2026):</strong> consolidated revenue up ~28% to ₹29,523 cr, but PAT down ~16% to ₹4,394 cr. The profit fall is almost entirely the cigarette excise increase effective 1 February 2026 — not a business collapse. Know this so you don't repeat a scary headline back to them.</li>
+<li>FMCG-Others grew 12% (16% excluding staples); atta was soft on heatwaves, an LPG shortage and benign wheat prices.</li>
+<li>ITC has held an MSCI-ESG <strong>'AA'</strong> rating for eight consecutive years.</li>
+</ul>
+
+<div class="callout"><p>If they ask “what do you know about us?”, do not recite the 1910 story back at them — it's in their own JD. Say something they don't expect: that their own Q1 commentary called out sharp packaging input cost increases cushioned by inventory covers and hedges, and that you'd want to be on that problem.</p></div>
+
+<button class="mark" data-s="s3">Mark reviewed</button>
+</div></details>
+
+<details class="sec" id="s4" data-tag="must know"><summary><span class="n">04</span><h2>The JD, decoded line by line</h2><span class="arw">+</span></summary>
+<div class="body">
+<p>Three Key Result Areas. Every one maps onto something you already do. Learn the mapping, because in the interview you want to answer in <em>their</em> words, not yours.</p>
+
+<h3>KRA 1 — Constant availability at optimal cost</h3>
+<p><em>“Setting up of inventory norms, calculating material requirement derived from the production plan; constant monitoring of inventory levels in the pipeline; support the SBU in ensuring timely payment of dues to vendors; be alert and cope with unplanned surges in demand.”</em></p>
+<div class="tw"><table>
+<tr><th>They say</th><th>They mean</th><th>You say</th></tr>
+<tr><td>Inventory norms</td><td>Days-of-cover targets per material class</td><td>ABC-XYZ classification, safety stock computed from lead-time variability and demand variability, reorder level, review cycle</td></tr>
+<tr><td>Material requirement from production plan</td><td>MRP run</td><td>“I explode the production plan into packing material requirement through the bill of material, net off stock and open POs, and schedule against vendor lead time”</td></tr>
+<tr><td>Pipeline inventory</td><td>Stock at plant + in transit + at vendor</td><td>Stock-in-transit, WIP at converter, consignment stock, pipeline visibility</td></tr>
+<tr><td>Timely payment of dues</td><td>Vendor cash-flow health</td><td>Three-way match, GRN-to-invoice cycle, credit days, advance against proforma, vendor working-capital risk</td></tr>
+<tr><td>Unplanned surge</td><td>Sales spike or promo, and you run short</td><td>Flexibility clauses, buffer at vendor, alternate approved source, expediting, partial dispatches, air/express freight trade-off</td></tr>
+</table></div>
+<p><strong>Your proof:</strong> the inventory reduction project, the weekly sales-loss corrective actions, and coordinating GRN with stores and payments with finance. That last one directly answers “support the SBU in ensuring timely payment of dues” — most candidates won't have it.</p>
+
+<h3>KRA 2 — Evaluate and optimise cost components including vendor margins</h3>
+<p><em>“Preparing / updating the cost sheet for all packing materials indicating all the costs of all input packing materials; constant monitoring of the markets; interact with vendors to improve quality, supply and optimise costs.”</em></p>
+<p>This is the heart of the role and the most technical part. They are explicitly asking for <strong>should-cost modelling</strong> — building the vendor's cost from the ground up rather than accepting a quoted number. Section 07 is your preparation for this; treat it as the single most important section in this guide.</p>
+<p>Note the phrase <strong>“including vendor margins”</strong>. That is unusually direct. They want someone who will ask a converter what margin they're making and hold a view on what's reasonable. Your answer should show you can do that without destroying the relationship — a vendor squeezed below viability delivers late and cuts quality, and that costs more than the margin you saved.</p>
+<p><strong>Your proof:</strong> monthly budget-vs-spend variance and savings calculation; comparing quotations only within the quality-approved set.</p>
+
+<h3>KRA 3 — Set up MIS on demand, supply, price trends and forecasts</h3>
+<p><em>“Collection, collation and trend analysis based on information from websites, subscriptions, networking and published data.”</em></p>
+<p>They are describing a commodity intelligence function: track polymer and paper price indices, build a forecast, and tell the business what packaging cost will do next quarter so they can plan pricing and hedges. Remember ITC said it cushioned Q1 packaging cost increases with <em>strategic inventory covers and commodity hedges</em> — that decision needs someone producing exactly this MIS.</p>
+<p><strong>Your proof:</strong> your dashboard on individual performance, PR-PO TAT, PO-GRN TAT and vendor-wise order value. Reframe it: “I already run the MIS layer — TAT, spend concentration and savings. Extending it into a forward price view on polymer and paper is the natural next step, and I'd start with the resin circulars and published film and board indices.”</p>
+
+<div class="callout warn"><p><strong>What's <em>not</em> in the JD but will come up:</strong> sustainability and EPR compliance. ITC's 2028 packaging target and the March 2026 recycled-content rules land directly on the packaging buyer's desk. Section 11. This is your differentiator — most candidates will not have read the amendment.</p></div>
+
+<button class="mark" data-s="s4">Mark reviewed</button>
+</div></details>
+
+<details class="sec" id="s5" data-tag="must know"><summary><span class="n">05</span><h2>Packaging materials — the masterclass</h2><span class="arw">+</span></summary>
+<div class="body">
+<p>This is the gap that cost you the last interview. Read it once for understanding, then close it and try to explain a biscuit wrapper structure to an imaginary interviewer. If you can do that, you're there.</p>
+
+<h3>5.1 The substrates</h3>
+<div class="tw"><table>
+<tr><th>Material</th><th>Typical thickness</th><th>Why it's used</th><th>Weakness</th></tr>
+<tr><td><strong>BOPP</strong><br>Biaxially oriented polypropylene</td><td>12–40 µ</td><td>Clarity, gloss, stiffness, good moisture barrier, cheapest workhorse film, prints well</td><td>Poor oxygen barrier, low heat resistance</td></tr>
+<tr><td><strong>Metallised BOPP</strong> (MET-BOPP)</td><td>18–25 µ</td><td>Vacuum-deposited aluminium lifts moisture, oxygen and light barrier at a fraction of foil cost</td><td>Metal layer can crack and pinhole if flexed</td></tr>
+<tr><td><strong>BOPET / polyester</strong></td><td>12 µ standard</td><td>Strength, dimensional stability, heat resistance, excellent print surface — usually the reverse-printed outer layer</td><td>Costlier than BOPP per kg</td></tr>
+<tr><td><strong>Metallised PET</strong> (MET-PET)</td><td>12 µ</td><td>Best barrier-to-cost for snacks; the silver inside a chips pack</td><td>Not recyclable in a mono stream</td></tr>
+<tr><td><strong>CPP / RCPP</strong><br>Cast polypropylene</td><td>25–80 µ</td><td>Sealant layer; retort grade (RCPP) survives 121 °C sterilisation</td><td>Lower clarity than BOPP</td></tr>
+<tr><td><strong>LDPE / LLDPE</strong></td><td>25–100 µ</td><td>Cheap sealant, good moisture barrier, tough; LLDPE adds puncture resistance</td><td>Very poor gas barrier, low stiffness</td></tr>
+<tr><td><strong>HDPE</strong></td><td>—</td><td>Woven sacks, jars, closures; stiffness and strength</td><td>Hazy, poor printability without treatment</td></tr>
+<tr><td><strong>BOPA / Nylon</strong></td><td>15 µ</td><td>Puncture and flex-crack resistance, oxygen barrier, thermoformability — used in frozen and heavy-fill packs</td><td>Absorbs moisture, expensive</td></tr>
+<tr><td><strong>Aluminium foil</strong></td><td>7–12 µ</td><td>Absolute barrier to light, oxygen and moisture; used where shelf life is critical — coffee, ghee, retort, tastemakers</td><td>Highest cost, pinholes, not flexible in recycling</td></tr>
+<tr><td><strong>EVOH / PVdC coating</strong></td><td>micro layers</td><td>High oxygen barrier without foil; lets you build a thinner, recyclable structure</td><td>Cost; EVOH is moisture-sensitive</td></tr>
+<tr><td><strong>Woven PP fabric</strong></td><td>—</td><td>Atta and staples sacks — tear strength for 5 kg / 10 kg fills, laminated with BOPP for print and moisture</td><td>Bulky, seam failures</td></tr>
+<tr><td><strong>Paper &amp; board</strong></td><td>by GSM</td><td>Cartons, shippers, wraps, and the growing recyclable alternative to plastic</td><td>No moisture barrier without coating</td></tr>
+</table></div>
+
+<h3>5.2 Which structure goes on which product</h3>
+<p>Memorise three of these. If you can name the structure for a Bingo! pack and explain <em>why</em> each layer is there, you have won the technical round.</p>
+<div class="tw"><table>
+<tr><th>Product</th><th>Typical structure</th><th>The logic</th></tr>
+<tr><td>Chips / extruded snacks</td><td>BOPP / MET-BOPP or PET / MET-PET</td><td>Light and oxygen kill the fat — you need metallisation. Pack is nitrogen-flushed to displace oxygen and cushion the product</td></tr>
+<tr><td>Biscuits, cookies</td><td>MET-BOPP mono-web or BOPP/BOPP laminate</td><td>Moisture barrier to stop softening; stiffness for high-speed wrapping; centre-seal pillow pack</td></tr>
+<tr><td>Instant noodles</td><td>BOPP or PET / PE laminate; tastemaker in PET/AL/PE sachet</td><td>Cheap outer for a short shelf life; the oil-bearing tastemaker needs a foil sachet</td></tr>
+<tr><td>Atta / staples 5–10 kg</td><td>BOPP-laminated woven PP sack, or heavy PE bag</td><td>Load strength and drop resistance are the design driver, not barrier</td></tr>
+<tr><td>Spices, premix</td><td>PET / MET-PET / PE, or paper-poly-foil</td><td>Aroma retention — you're holding volatiles in, not just moisture out</td></tr>
+<tr><td>Ready-to-eat, retort</td><td>PET / AL foil / CPP, sometimes with nylon</td><td>Must survive 121 °C retort and deliver ambient shelf life without preservatives</td></tr>
+<tr><td>Coffee, premium</td><td>PET / AL / PE with a one-way degassing valve</td><td>Roasted coffee off-gasses CO₂; the valve vents without letting oxygen in</td></tr>
+<tr><td>Frozen</td><td>PE-rich or nylon/PE</td><td>Films go brittle at −18 °C; you need low-temperature impact strength</td></tr>
+</table></div>
+
+<h3>5.3 The properties they'll expect you to name</h3>
+<div class="tw"><table>
+<tr><th>Property</th><th>What it measures</th><th>Why a buyer cares</th></tr>
+<tr><td><strong>WVTR</strong> — water vapour transmission rate</td><td>g/m²/day, tested at 38 °C / 90% RH</td><td>Drives shelf life for anything that goes soggy. Lower = better barrier = more expensive structure</td></tr>
+<tr><td><strong>OTR</strong> — oxygen transmission rate</td><td>cc/m²/day at 23 °C</td><td>Drives rancidity in fried and fatty products</td></tr>
+<tr><td><strong>COF</strong> — coefficient of friction</td><td>Slip between film layers</td><td>Too high and the film won't run on the packing machine; too low and packs slide off the conveyor. A classic “material is fine on paper but the line rejects it” issue</td></tr>
+<tr><td><strong>Seal strength &amp; hot tack</strong></td><td>Strength of the seal, cold and while still hot</td><td>Leakers, and machine speed — weak hot tack forces you to slow the line</td></tr>
+<tr><td><strong>Bond strength</strong></td><td>g/15 mm between laminated layers</td><td>Low bond = delamination in the market. Usually adhesive coat weight or cure time</td></tr>
+<tr><td><strong>Dyne level</strong></td><td>Surface energy, typically ≥38 dyne</td><td>Below spec and ink or adhesive won't anchor — print rubs off</td></tr>
+<tr><td><strong>GSM</strong></td><td>Grams per square metre — for paper and board</td><td>The single biggest cost lever in cartons and shippers</td></tr>
+<tr><td><strong>Yield</strong></td><td>Square metres per kg of film</td><td>The buyer's most useful number — see below</td></tr>
+</table></div>
+
+<h4>The yield formula — learn this one</h4>
+<div class="fx">Yield (m²/kg) = <b>1000 ÷ (thickness in µ × density in g/cc)</b><br><br>
+12 µ BOPP, density 0.91 → 1000 ÷ (12 × 0.91) = <b>91.5 m²/kg</b><br>
+12 µ BOPET, density 1.40 → 1000 ÷ (12 × 1.40) = <b>59.5 m²/kg</b></div>
+<p>This is why film is bought by the kilogram but consumed by the square metre, and why a 10% downgauge is a genuine 10% material saving. It's also why polyester costs more per pack than its per-kg price suggests — you get far fewer square metres from a kilo. Being able to say that out loud marks you as someone who actually understands the category.</p>
+
+<h3>5.4 Printing and conversion — where the hidden costs live</h3>
+<ul>
+<li><strong>Rotogravure</strong> — engraved copper cylinders, one per colour. Superb consistency, the standard for flexible food packaging, but each cylinder is a real one-time cost. Economic on long runs.</li>
+<li><strong>Flexography</strong> — photopolymer plates, much cheaper to originate, used for corrugated, paper and shorter runs. Quality has closed the gap considerably.</li>
+<li><strong>Digital</strong> — no cylinders at all; viable for trials, launches and regional variants.</li>
+<li><strong>Lamination</strong> — <em>solvent-based</em> (adhesive carried in solvent, needs curing and has residual solvent limits for food) versus <em>solventless</em> (faster, cheaper per kg, no solvent emission, and better for food safety and ESG). <em>Extrusion lamination</em> bonds with molten polymer instead of adhesive.</li>
+<li><strong>Metallising, slitting, pouching</strong> — each step adds conversion cost and its own wastage percentage.</li>
+</ul>
+<div class="callout"><p><strong>The cylinder question.</strong> Ask who owns the gravure cylinders. If the vendor owns them, you are locked in — you cannot move that SKU to another converter without re-originating artwork at real cost. If ITC owns them, they move with the job. Raising cylinder ownership as a sourcing-flexibility issue, not just a cost line, is a genuinely senior observation and very few candidates make it.</p></div>
+
+<h3>5.5 Paper, board and corrugated</h3>
+<ul>
+<li><strong>Duplex board</strong> — grey back or white back, used for mono cartons. Quoted in ₹/kg by GSM.</li>
+<li><strong>SBS / FBB</strong> — solid bleached board, premium white, roughly double the price of duplex. Used where shelf appeal justifies it.</li>
+<li><strong>Kraft paper</strong> — quoted by GSM and <em>BF (burst factor)</em>, e.g. 120 GSM / 16 BF. The raw material for corrugated.</li>
+<li><strong>Corrugated boxes</strong> — 3-ply or 5-ply; flute profiles A, B, C, E (E-flute is fine and used for retail-ready packs). Tested by <em>bursting strength</em> (kg/cm²), <em>ECT</em> (edge crush) and <em>BCT</em> (box compression, which predicts stacking in the warehouse).</li>
+<li><strong>Cobb value</strong> — water absorbency of the paper; matters for cold-chain and humid warehouses.</li>
+</ul>
+<h4>How a corrugated box is costed</h4>
+<div class="fx">Board area per box (m²) × <b>combined GSM of all plies</b> ÷ 1000 = kg per box<br>
+× ₹/kg of paper + conversion + printing + margin = box price</div>
+<p>Which tells you the three levers: reduce the <strong>size</strong> (better product fit or a changed case count), reduce the <strong>GSM combination</strong> without failing BCT, or change the <strong>flute/ply</strong>. Suggesting a 5-ply to 3-ply change with a BCT validation is exactly the kind of value engineering they're hiring for.</p>
+
+<h3>5.6 Defects and their usual causes</h3>
+<div class="tw"><table>
+<tr><th>Defect</th><th>Usual cause</th></tr>
+<tr><td>Delamination</td><td>Low adhesive coat weight, incomplete cure, contaminated surface, low dyne level</td></tr>
+<tr><td>Leakers / weak seals</td><td>Product dust in the seal area, wrong sealing temperature or dwell, poor hot tack, sealant spec change</td></tr>
+<tr><td>Pinholes</td><td>Flex cracking of the metallised or foil layer, over-tight winding, handling damage</td></tr>
+<tr><td>Print registration drift</td><td>Web tension variation, cylinder wear, eye-mark contrast out of spec</td></tr>
+<tr><td>Shade variation</td><td>Ink batch difference against the approved shade card; control with a delta-E tolerance, not opinion</td></tr>
+<tr><td>Film not running on the line</td><td>COF out of spec, curl, or thickness variation across the web</td></tr>
+<tr><td>Odour / taint in product</td><td>Residual solvent above limit from solvent-based lamination — a food-safety issue, not a cosmetic one</td></tr>
+<tr><td>Box collapse in stacking</td><td>Low BCT, moisture pick-up, ply GSM reduced without validation</td></tr>
+</table></div>
+
+<h3>5.7 Food contact — the constraint that beats cost</h3>
+<p>Primary packaging touching food is regulated. You should be able to say: materials must be food-grade and compliant with FSSAI packaging regulations, with migration testing (overall and specific migration limits), heavy metal limits, and attention to primary aromatic amines from adhesives and residual solvents from printing. This is also why recycled content is so hard in food contact — which is exactly why the 2026 rules allow a carry-forward on food-contact recycled-content targets. Connecting those two facts in one sentence is a strong moment.</p>
+
+<button class="mark" data-s="s5">Mark reviewed</button>
+</div></details>
+
+<details class="sec" id="s6" data-tag="must know"><summary><span class="n">06</span><h2>Keyword bank — 170 terms</h2><span class="arw">+</span></summary>
+<div class="body">
+<p>Every term you could reasonably be expected to know or use. Don't memorise the list — pick twenty and force them into sentences about your own work until they sound natural. Type in the box to filter.</p>
+<input class="filter" id="glFilter" type="search" placeholder="Filter terms — try 'stock', 'cost', 'film'" autocomplete="off">
+<p class="count-l" id="glCount"></p>
+
+<div id="glossary">
+
+<div class="glgrp"><p class="grp">Films and substrates</p><dl class="gl">
+<div class="gi"><dt>BOPP</dt><dd>Biaxially oriented polypropylene — the default low-cost packaging film.</dd></div>
+<div class="gi"><dt>BOPET / polyester</dt><dd>High-strength, heat-resistant film; usually the printed outer layer of a laminate.</dd></div>
+<div class="gi"><dt>Metallised film (MET-PET, MET-BOPP)</dt><dd>Film with vacuum-deposited aluminium for barrier at low cost.</dd></div>
+<div class="gi"><dt>CPP / RCPP</dt><dd>Cast polypropylene sealant film; retort grade withstands 121 °C sterilisation.</dd></div>
+<div class="gi"><dt>LDPE / LLDPE</dt><dd>Low-density polyethylene sealant films; LLDPE adds toughness and puncture resistance.</dd></div>
+<div class="gi"><dt>HDPE</dt><dd>High-density polyethylene — sacks, jars, closures.</dd></div>
+<div class="gi"><dt>BOPA / nylon</dt><dd>Polyamide film for puncture resistance and oxygen barrier.</dd></div>
+<div class="gi"><dt>EVOH</dt><dd>Ethylene vinyl alcohol — very high oxygen barrier, used as a thin interlayer.</dd></div>
+<div class="gi"><dt>PVdC coating</dt><dd>Barrier coating applied to film as an alternative to foil.</dd></div>
+<div class="gi"><dt>Aluminium foil</dt><dd>Absolute light, oxygen and moisture barrier; highest cost layer.</dd></div>
+<div class="gi"><dt>Laminate structure</dt><dd>The written recipe of a pack, e.g. <span class="m">12µ PET / 20µ MET-BOPP</span>.</dd></div>
+<div class="gi"><dt>Mono-material structure</dt><dd>All-PE or all-PP laminate designed to be recyclable in one stream.</dd></div>
+<div class="gi"><dt>Multi-layered plastic (MLP)</dt><dd>Laminate with at least one non-plastic layer — Category III under EPR, hardest to recycle.</dd></div>
+<div class="gi"><dt>Sealant layer</dt><dd>The innermost layer that melts to form the seal.</dd></div>
+<div class="gi"><dt>Woven sack</dt><dd>PP/HDPE tape-woven fabric bag, usually BOPP-laminated, used for atta and staples.</dd></div>
+<div class="gi"><dt>Retort pouch</dt><dd>Sterilisable laminated pouch for ambient ready-to-eat food.</dd></div>
+<div class="gi"><dt>Stand-up pouch (SUP)</dt><dd>Pouch with a gusseted base that stands on shelf; often with a zipper.</dd></div>
+<div class="gi"><dt>Centre-seal / pillow pack</dt><dd>Fin-sealed wrapper — the standard biscuit and chips format.</dd></div>
+<div class="gi"><dt>Preform</dt><dd>Injection-moulded PET tube blown into a bottle.</dd></div>
+<div class="gi"><dt>Shrink sleeve / IML</dt><dd>Decoration methods — shrink film sleeve, or in-mould label applied during moulding.</dd></div>
+<div class="gi"><dt>Resin / polymer grade</dt><dd>The base plastic and its specific grade — the raw material under every film price.</dd></div>
+<div class="gi"><dt>Downgauging</dt><dd>Reducing film thickness or board GSM at constant performance — the fastest genuine saving.</dd></div>
+</dl></div>
+
+<div class="glgrp"><p class="grp">Paper, board and corrugated</p><dl class="gl">
+<div class="gi"><dt>GSM</dt><dd>Grams per square metre — the weight and cost basis for all paper and board.</dd></div>
+<div class="gi"><dt>Duplex board</dt><dd>Coated board with a grey or white back, used for mono cartons.</dd></div>
+<div class="gi"><dt>SBS / FBB</dt><dd>Solid bleached sulphate / folding box board — premium white board.</dd></div>
+<div class="gi"><dt>Kraft paper</dt><dd>Strong unbleached paper for corrugation; specified as GSM and burst factor.</dd></div>
+<div class="gi"><dt>BF — burst factor</dt><dd>Strength grade of kraft paper, e.g. 16 BF, 18 BF.</dd></div>
+<div class="gi"><dt>Ply</dt><dd>Number of paper layers in a corrugated box — 3-ply, 5-ply, 7-ply.</dd></div>
+<div class="gi"><dt>Flute</dt><dd>The wave profile between liners; A, B, C, E, F by height. E-flute is fine, for retail-ready packs.</dd></div>
+<div class="gi"><dt>Bursting strength</dt><dd>Pressure a board withstands before rupture, kg/cm².</dd></div>
+<div class="gi"><dt>ECT</dt><dd>Edge crush test — board's edgewise compression strength.</dd></div>
+<div class="gi"><dt>BCT</dt><dd>Box compression test — predicts how high you can stack in the warehouse.</dd></div>
+<div class="gi"><dt>Cobb value</dt><dd>Water absorbency of paper; matters in humid or cold storage.</dd></div>
+<div class="gi"><dt>Mono carton</dt><dd>Single-piece printed folding carton.</dd></div>
+<div class="gi"><dt>Shipper / CFB</dt><dd>Corrugated fibre board outer case for transport.</dd></div>
+<div class="gi"><dt>Case count</dt><dd>Number of units per shipper — changing it changes your whole packaging cost per unit.</dd></div>
+<div class="gi"><dt>Virgin vs recycled fibre</dt><dd>Strength and food-contact suitability against cost and sustainability.</dd></div>
+</dl></div>
+
+<div class="glgrp"><p class="grp">Properties and testing</p><dl class="gl">
+<div class="gi"><dt>Micron (µ)</dt><dd>Film thickness unit; 1 µ = 0.001 mm.</dd></div>
+<div class="gi"><dt>Yield</dt><dd>Square metres obtained per kilogram of film — the bridge between price per kg and cost per pack.</dd></div>
+<div class="gi"><dt>WVTR</dt><dd>Water vapour transmission rate — moisture barrier.</dd></div>
+<div class="gi"><dt>OTR</dt><dd>Oxygen transmission rate — gas barrier, drives rancidity.</dd></div>
+<div class="gi"><dt>COF</dt><dd>Coefficient of friction — determines whether the film runs on the machine.</dd></div>
+<div class="gi"><dt>Seal strength</dt><dd>Force needed to pull a cooled seal apart.</dd></div>
+<div class="gi"><dt>Hot tack</dt><dd>Seal strength while still molten — limits machine speed.</dd></div>
+<div class="gi"><dt>Bond strength</dt><dd>Adhesion between laminated layers, g/15 mm.</dd></div>
+<div class="gi"><dt>Dyne level</dt><dd>Surface energy; ≥38 dyne needed for ink and adhesive anchorage.</dd></div>
+<div class="gi"><dt>Corona treatment</dt><dd>Electrical surface treatment that raises dyne level.</dd></div>
+<div class="gi"><dt>Tensile strength / elongation</dt><dd>How the film resists and stretches under pull.</dd></div>
+<div class="gi"><dt>Delta E</dt><dd>Numerical colour difference against the approved shade — replaces arguing about shade by eye.</dd></div>
+<div class="gi"><dt>Shade card / drawdown</dt><dd>The approved colour reference for a job.</dd></div>
+<div class="gi"><dt>Shelf-life study</dt><dd>Accelerated or real-time test proving the pack protects the product for its claimed life.</dd></div>
+<div class="gi"><dt>Drop test / transit trial</dt><dd>Validation that secondary packaging survives the supply chain.</dd></div>
+<div class="gi"><dt>AQL</dt><dd>Acceptable quality level — the sampling standard for lot inspection.</dd></div>
+<div class="gi"><dt>COA</dt><dd>Certificate of analysis supplied with each lot.</dd></div>
+</dl></div>
+
+<div class="glgrp"><p class="grp">Printing and conversion</p><dl class="gl">
+<div class="gi"><dt>Rotogravure</dt><dd>Engraved-cylinder printing; the standard for flexible food packaging.</dd></div>
+<div class="gi"><dt>Flexography</dt><dd>Plate-based printing; cheaper origination, used for corrugated and paper.</dd></div>
+<div class="gi"><dt>Gravure cylinder</dt><dd>One engraved copper cylinder per colour — a one-time cost and a lock-in risk.</dd></div>
+<div class="gi"><dt>Cylinder amortisation</dt><dd>Spreading cylinder cost across expected volume instead of charging it upfront.</dd></div>
+<div class="gi"><dt>Reverse printing</dt><dd>Printing on the inside of the outer film so ink is sandwiched and protected.</dd></div>
+<div class="gi"><dt>Solvent-based lamination</dt><dd>Adhesive in solvent; needs curing, carries residual solvent limits.</dd></div>
+<div class="gi"><dt>Solventless lamination</dt><dd>No solvent — faster, cheaper, safer for food and better on emissions.</dd></div>
+<div class="gi"><dt>Extrusion lamination</dt><dd>Bonding layers with molten polymer instead of adhesive.</dd></div>
+<div class="gi"><dt>Metallising</dt><dd>Vacuum deposition of aluminium onto film.</dd></div>
+<div class="gi"><dt>Slitting</dt><dd>Cutting master rolls to the running width — generates its own wastage.</dd></div>
+<div class="gi"><dt>Web width / reel size</dt><dd>Dimensions the machine needs; wrong width means wastage or a stopped line.</dd></div>
+<div class="gi"><dt>Eye mark / registration mark</dt><dd>Printed mark the packing machine reads to cut in the right place.</dd></div>
+<div class="gi"><dt>Make-ready / setup</dt><dd>Time and material consumed before saleable output starts — why MOQs exist.</dd></div>
+<div class="gi"><dt>Process wastage</dt><dd>Percentage lost at each conversion step; a negotiable line in the cost sheet.</dd></div>
+<div class="gi"><dt>Artwork change management</dt><dd>Controlling versions so a label change doesn't strand stock.</dd></div>
+<div class="gi"><dt>Obsolescence liability</dt><dd>Who pays for printed stock made redundant by an artwork or regulation change.</dd></div>
+</dl></div>
+
+<div class="glgrp"><p class="grp">Sourcing and negotiation</p><dl class="gl">
+<div class="gi"><dt>RFQ / RFP</dt><dd>Request for quotation or proposal issued against a frozen specification.</dd></div>
+<div class="gi"><dt>Comparative statement</dt><dd>Side-by-side techno-commercial comparison of quotes on a like-for-like basis.</dd></div>
+<div class="gi"><dt>Landed cost</dt><dd>Price plus freight, duties, taxes and handling — the only fair basis for comparison.</dd></div>
+<div class="gi"><dt>TCO</dt><dd>Total cost of ownership — price plus wastage, rejection, downtime and inventory cost.</dd></div>
+<div class="gi"><dt>Should-cost</dt><dd>Your own bottom-up model of what the item ought to cost.</dd></div>
+<div class="gi"><dt>Reverse auction / e-auction</dt><dd>Live online bidding down; works for standardised, multi-source items.</dd></div>
+<div class="gi"><dt>Rate contract / LTA</dt><dd>Agreed price for a period, with volumes drawn down against it.</dd></div>
+<div class="gi"><dt>Price escalation clause</dt><dd>Formula linking price to a published resin or paper index, moving both ways.</dd></div>
+<div class="gi"><dt>MOQ</dt><dd>Minimum order quantity the vendor will run.</dd></div>
+<div class="gi"><dt>Vendor development</dt><dd>Building a new supplier's capability rather than only buying from proven ones.</dd></div>
+<div class="gi"><dt>Vendor rationalisation</dt><dd>Reducing supplier count to gain volume leverage and cut management cost.</dd></div>
+<div class="gi"><dt>Dual / multi-sourcing</dt><dd>Deliberately splitting volume to de-risk supply.</dd></div>
+<div class="gi"><dt>Single-source risk</dt><dd>Exposure when only one vendor can make an item — often created by cylinder ownership or tooling.</dd></div>
+<div class="gi"><dt>Approved vendor list (AVL)</dt><dd>Vendors cleared on quality and compliance; price comparison happens only within it.</dd></div>
+<div class="gi"><dt>Vendor scorecard</dt><dd>Periodic rating on quality, delivery, price and responsiveness.</dd></div>
+<div class="gi"><dt>Localisation</dt><dd>Moving supply nearer the plant to cut freight and lead time.</dd></div>
+<div class="gi"><dt>Import substitution</dt><dd>Replacing an imported input with a domestic one.</dd></div>
+<div class="gi"><dt>Value engineering / VAVE</dt><dd>Redesigning to remove cost without losing function.</dd></div>
+<div class="gi"><dt>Specification rationalisation</dt><dd>Cutting the number of unique specs so volumes consolidate.</dd></div>
+<div class="gi"><dt>BATNA</dt><dd>Your best alternative if this negotiation fails — what gives you leverage.</dd></div>
+<div class="gi"><dt>Kraljic matrix</dt><dd>Classifying spend by profit impact and supply risk: leverage, strategic, bottleneck, routine.</dd></div>
+<div class="gi"><dt>Spend analysis</dt><dd>Breaking total spend by category, vendor and plant to find where to act.</dd></div>
+<div class="gi"><dt>Spend concentration</dt><dd>Share of category value with one vendor — a risk and a leverage measure at once.</dd></div>
+</dl></div>
+
+<div class="glgrp"><p class="grp">Costing and finance</p><dl class="gl">
+<div class="gi"><dt>Cost sheet</dt><dd>Line-by-line build-up of an item's price from raw material to margin.</dd></div>
+<div class="gi"><dt>Conversion cost</dt><dd>What the vendor charges to turn raw material into the finished item.</dd></div>
+<div class="gi"><dt>Vendor margin</dt><dd>The profit inside the quoted price — named explicitly in this JD.</dd></div>
+<div class="gi"><dt>PPV</dt><dd>Purchase price variance — actual price against standard or budget.</dd></div>
+<div class="gi"><dt>Budget vs actual variance</dt><dd>Your monthly close: what you planned to spend against what you did.</dd></div>
+<div class="gi"><dt>Hard savings</dt><dd>A real reduction against last paid price, visible in the P&amp;L.</dd></div>
+<div class="gi"><dt>Cost avoidance</dt><dd>An increase you prevented or negotiated down — real, but not a P&amp;L reduction.</dd></div>
+<div class="gi"><dt>Annualised savings</dt><dd>Per-unit saving × annual volume — how savings are reported.</dd></div>
+<div class="gi"><dt>Standard cost</dt><dd>The planning price the business builds its budget on.</dd></div>
+<div class="gi"><dt>Cost per pack / per 1000 packs</dt><dd>The unit finance actually cares about, not price per kg.</dd></div>
+<div class="gi"><dt>Packaging cost as % of COGS</dt><dd>Shows how much your category moves the margin.</dd></div>
+<div class="gi"><dt>Credit days / payment terms</dt><dd>Days from invoice to payment; a real negotiating currency.</dd></div>
+<div class="gi"><dt>Advance payment</dt><dd>Paid before dispatch, usually against a proforma invoice.</dd></div>
+<div class="gi"><dt>Working capital</dt><dd>Cash tied up in stock and receivables — inventory reduction releases it.</dd></div>
+<div class="gi"><dt>Three-way match</dt><dd>PO, GRN and invoice must agree before payment is released.</dd></div>
+<div class="gi"><dt>Debit note</dt><dd>Charge raised on a vendor to recover the cost of a rejection or shortfall.</dd></div>
+<div class="gi"><dt>Inverted duty structure</dt><dd>Input taxed higher than output — currently 18% on paperboard against 5% on cartons, which blocks converters' cash.</dd></div>
+<div class="gi"><dt>Hedging / forward cover</dt><dd>Locking a future price or buying inventory ahead to blunt volatility.</dd></div>
+</dl></div>
+
+<div class="glgrp"><p class="grp">Inventory and planning</p><dl class="gl">
+<div class="gi"><dt>MRP</dt><dd>Material requirements planning — exploding the production plan into material needs.</dd></div>
+<div class="gi"><dt>BOM</dt><dd>Bill of material — what and how much packaging each finished SKU consumes.</dd></div>
+<div class="gi"><dt>Indent / PR</dt><dd>Purchase requisition raised by stores or planning.</dd></div>
+<div class="gi"><dt>PO</dt><dd>Purchase order — the commitment you release to the vendor.</dd></div>
+<div class="gi"><dt>Scheduling agreement</dt><dd>Framework order with delivery schedules called off against it.</dd></div>
+<div class="gi"><dt>Lead time</dt><dd>Order to receipt; its <em>variability</em> matters as much as its length.</dd></div>
+<div class="gi"><dt>Safety stock</dt><dd>Buffer held against demand and lead-time uncertainty.</dd></div>
+<div class="gi"><dt>Reorder level (ROL)</dt><dd>Stock level that triggers the next order.</dd></div>
+<div class="gi"><dt>EOQ</dt><dd>Economic order quantity — the size that balances ordering cost against carrying cost.</dd></div>
+<div class="gi"><dt>Days of cover / DOH</dt><dd>Stock expressed as days of consumption — the language planners use.</dd></div>
+<div class="gi"><dt>Inventory turns</dt><dd>Annual consumption divided by average stock.</dd></div>
+<div class="gi"><dt>ABC analysis</dt><dd>Classifying items by value so effort goes where the money is.</dd></div>
+<div class="gi"><dt>XYZ analysis</dt><dd>Classifying items by demand predictability; combine with ABC for norms.</dd></div>
+<div class="gi"><dt>VED</dt><dd>Vital, essential, desirable — criticality rather than value.</dd></div>
+<div class="gi"><dt>Pipeline inventory</dt><dd>Everything you own but haven't received: in transit, at the converter, at the port.</dd></div>
+<div class="gi"><dt>Stock in transit</dt><dd>Dispatched but not yet received.</dd></div>
+<div class="gi"><dt>VMI</dt><dd>Vendor-managed inventory — the vendor holds and replenishes stock to an agreed level.</dd></div>
+<div class="gi"><dt>Consignment stock</dt><dd>Material at your plant but on the vendor's books until consumed.</dd></div>
+<div class="gi"><dt>JIT</dt><dd>Just-in-time delivery timed to consumption.</dd></div>
+<div class="gi"><dt>Dead stock / non-moving</dt><dd>Material with no forward consumption — usually obsolete artwork.</dd></div>
+<div class="gi"><dt>Slow-moving provision</dt><dd>Finance write-down against ageing stock.</dd></div>
+<div class="gi"><dt>Bullwhip effect</dt><dd>Demand swings amplifying up the chain — why you plan off the production plan, not off panic.</dd></div>
+</dl></div>
+
+<div class="glgrp"><p class="grp">Delivery and logistics</p><dl class="gl">
+<div class="gi"><dt>OTIF</dt><dd>On time in full — the headline supplier delivery metric.</dd></div>
+<div class="gi"><dt>Fill rate</dt><dd>Share of the ordered quantity actually supplied.</dd></div>
+<div class="gi"><dt>Expediting</dt><dd>Actively chasing and accelerating an order at risk.</dd></div>
+<div class="gi"><dt>Partial dispatch</dt><dd>Taking what is ready now instead of waiting for the full lot.</dd></div>
+<div class="gi"><dt>FTL / LTL</dt><dd>Full or less-than-truck load — the cost and speed trade-off.</dd></div>
+<div class="gi"><dt>Freight per kg / per pack</dt><dd>How you compare a distant cheap vendor against a nearby dearer one.</dd></div>
+<div class="gi"><dt>E-way bill</dt><dd>Statutory document required to move goods above a threshold value.</dd></div>
+<div class="gi"><dt>GRN</dt><dd>Goods receipt note booked when material is accepted at the plant.</dd></div>
+<div class="gi"><dt>Gate entry to GRN TAT</dt><dd>How long receipt takes once the truck arrives — a stores-coordination metric.</dd></div>
+<div class="gi"><dt>Incoterms</dt><dd>Ex-works, FOR destination, CIF — who bears freight and risk, and from where.</dd></div>
+</dl></div>
+
+<div class="glgrp"><p class="grp">Quality and food safety</p><dl class="gl">
+<div class="gi"><dt>Specification freeze</dt><dd>Locking the technical spec before you ask anyone to quote.</dd></div>
+<div class="gi"><dt>Sample approval</dt><dd>Quality clearance of a vendor's sample before commercial comparison.</dd></div>
+<div class="gi"><dt>Pilot / trial run</dt><dd>Running the material on the actual line before full release.</dd></div>
+<div class="gi"><dt>NC / non-conformance</dt><dd>Formal record of material failing spec.</dd></div>
+<div class="gi"><dt>CAPA</dt><dd>Corrective and preventive action closing out a failure.</dd></div>
+<div class="gi"><dt>8D / 5-why</dt><dd>Structured root-cause methods used with vendors.</dd></div>
+<div class="gi"><dt>Vendor audit</dt><dd>On-site assessment of process, hygiene and systems.</dd></div>
+<div class="gi"><dt>FSSC 22000 / ISO 22000</dt><dd>Food safety management certifications expected of food packaging suppliers.</dd></div>
+<div class="gi"><dt>GMP</dt><dd>Good manufacturing practice.</dd></div>
+<div class="gi"><dt>HACCP</dt><dd>Hazard analysis at critical control points.</dd></div>
+<div class="gi"><dt>Migration testing</dt><dd>Checking that pack components don't transfer into food beyond permitted limits.</dd></div>
+<div class="gi"><dt>Residual solvent</dt><dd>Solvent left after lamination or printing — a taint and safety risk.</dd></div>
+<div class="gi"><dt>Traceability / batch coding</dt><dd>Linking a pack lot back to its production run for recall.</dd></div>
+</dl></div>
+
+<div class="glgrp"><p class="grp">Sustainability and compliance</p><dl class="gl">
+<div class="gi"><dt>EPR</dt><dd>Extended producer responsibility — you are accountable for your packaging after use.</dd></div>
+<div class="gi"><dt>PIBO</dt><dd>Producer, importer or brand owner — the obligated entity under the rules.</dd></div>
+<div class="gi"><dt>PWM Rules</dt><dd>Plastic Waste Management Rules 2016, amended in 2022, 2024 and most recently 31 March 2026.</dd></div>
+<div class="gi"><dt>EPR categories I–V</dt><dd>Rigid, flexible, multi-layered, compostable and biodegradable packaging.</dd></div>
+<div class="gi"><dt>Recycled content mandate</dt><dd>Minimum recycled plastic required in new packaging, phasing up year by year.</dd></div>
+<div class="gi"><dt>CPCB portal</dt><dd>Central Pollution Control Board system where EPR registration, returns and certificates are handled.</dd></div>
+<div class="gi"><dt>EPR certificates</dt><dd>Credits bought from registered recyclers to meet obligations.</dd></div>
+<div class="gi"><dt>IS 14534</dt><dd>The Indian standard for recovery and recycling of plastics waste referenced by the 2026 amendment.</dd></div>
+<div class="gi"><dt>Design for recycling</dt><dd>Choosing structures that can actually be recycled — mono-material over MLP.</dd></div>
+<div class="gi"><dt>Plastic neutrality</dt><dd>Managing at least as much plastic waste as you put on the market. ITC has done this four years running.</dd></div>
+<div class="gi"><dt>Compostable vs biodegradable</dt><dd>Separate EPR categories with separate certification requirements.</dd></div>
+<div class="gi"><dt>EcoVadis</dt><dd>Supplier sustainability rating across environment, labour and human rights, ethics and sustainable procurement.</dd></div>
+<div class="gi"><dt>BRSR</dt><dd>Business Responsibility and Sustainability Report — the listed-company disclosure your supplier data feeds.</dd></div>
+<div class="gi"><dt>Scope 3</dt><dd>Emissions in your value chain, including purchased packaging.</dd></div>
+<div class="gi"><dt>Circularity</dt><dd>Designing material to re-enter the system rather than be discarded.</dd></div>
+</dl></div>
+
+<div class="glgrp"><p class="grp">Systems and process</p><dl class="gl">
+<div class="gi"><dt>SAP MM</dt><dd>The materials management module where PR, PO, GRN and invoice live.</dd></div>
+<div class="gi"><dt>ME21N / MIGO / MIRO</dt><dd>Create PO, post goods receipt, post invoice — name these if you use SAP.</dd></div>
+<div class="gi"><dt>Ariba / e-sourcing</dt><dd>Platforms for RFQs, auctions and contract management.</dd></div>
+<div class="gi"><dt>Material master</dt><dd>The record holding code, spec, unit, vendor and planning parameters for each item.</dd></div>
+<div class="gi"><dt>Vendor master</dt><dd>Supplier record holding terms, bank and compliance data.</dd></div>
+<div class="gi"><dt>PR-PO TAT</dt><dd>Days from requisition to purchase order — your responsiveness.</dd></div>
+<div class="gi"><dt>PO-GRN TAT</dt><dd>Days from order to receipt — the vendor's and logistics' responsiveness.</dd></div>
+<div class="gi"><dt>Open PO / pending PO report</dt><dd>What is committed but not yet received.</dd></div>
+<div class="gi"><dt>DOA / approval matrix</dt><dd>Delegation of authority — who can approve what value.</dd></div>
+<div class="gi"><dt>Sales loss report</dt><dd>Where demand was lost for want of stock — you act on the packaging-caused lines.</dd></div>
+<div class="gi"><dt>Dashboard / MIS</dt><dd>The reporting layer that turns transactions into decisions.</dd></div>
+<div class="gi"><dt>SBU</dt><dd>Strategic business unit — the term the JD itself uses for the business you support.</dd></div>
+</dl></div>
+
+</div>
+
+<div class="callout"><p><strong>How to actually learn these.</strong> Pick one term and finish this sentence out loud: “In my current role I use ______ when ______.” If you can't finish it, you don't own the word yet. Twenty owned words beat a hundred recognised ones.</p></div>
+
+<button class="mark" data-s="s6">Mark reviewed</button>
+</div></details>
+
+<details class="sec" id="s7" data-tag="must know"><summary><span class="n">07</span><h2>The cost sheet, built from scratch</h2><span class="arw">+</span></summary>
+<div class="body">
+<p>The JD asks for this explicitly: <em>“preparing / updating the cost sheet for all packing materials indicating all the costs of all input packing materials”</em>. Work this example through with a pen once. If you can rebuild it on a whiteboard, you can handle any costing question they throw.</p>
+
+<h3>The item</h3>
+<p>A printed laminate for a biscuit wrapper: <span class="m">12µ BOPET (reverse printed) / adhesive / 20µ metallised BOPP</span>.</p>
+
+<h3>Step 1 — turn the structure into grams per square metre</h3>
+<p>Weight per m² = thickness in µ × density. This is the step most people skip, and it's the one that makes the whole sheet work.</p>
+<div class="tw"><table>
+<tr><th>Layer</th><th>Thickness</th><th>Density</th><th>g/m²</th></tr>
+<tr><td>BOPET</td><td>12 µ</td><td>1.40</td><td>16.8</td></tr>
+<tr><td>Metallised BOPP</td><td>20 µ</td><td>0.91</td><td>18.2</td></tr>
+<tr><td>Adhesive</td><td>coat weight</td><td>—</td><td>2.0</td></tr>
+<tr><td>Ink</td><td>coverage</td><td>—</td><td>1.5</td></tr>
+<tr><td><strong>Laminate</strong></td><td></td><td></td><td><strong>38.5</strong></td></tr>
+</table></div>
+<p>So the laminate yields <span class="m">1000 ÷ 38.5 = 25.97 m² per kg</span>.</p>
+
+<h3>Step 2 — cost each layer</h3>
+<div class="tw"><table>
+<tr><th>Line</th><th>Basis</th><th>₹ / m²</th><th>Negotiable?</th></tr>
+<tr><td>BOPET</td><td>16.8 g @ ₹160/kg</td><td>2.69</td><td>Index-linked, not negotiable</td></tr>
+<tr><td>Metallised BOPP</td><td>18.2 g @ ₹175/kg</td><td>3.19</td><td>Index-linked</td></tr>
+<tr><td>Adhesive</td><td>2.0 g @ ₹280/kg</td><td>0.56</td><td>Partly — coat weight is a spec choice</td></tr>
+<tr><td>Ink</td><td>1.5 g @ ₹300/kg</td><td>0.45</td><td>Coverage and colour count are design choices</td></tr>
+<tr><td><em>Material subtotal</em></td><td></td><td><em>6.89</em></td><td></td></tr>
+<tr><td>Conversion</td><td>print + laminate + slit</td><td>2.10</td><td><strong>Yes</strong></td></tr>
+<tr><td>Process wastage</td><td>7% on the above</td><td>0.63</td><td><strong>Yes</strong></td></tr>
+<tr><td>Vendor margin</td><td>8%</td><td>0.77</td><td><strong>Yes</strong></td></tr>
+<tr><td><em>Ex-works</em></td><td></td><td><em>10.39</em></td><td></td></tr>
+<tr><td>Freight</td><td></td><td>0.20</td><td>Yes — route and load</td></tr>
+<tr><td><strong>Landed cost</strong></td><td></td><td><strong>10.59</strong></td><td></td></tr>
+</table></div>
+<p>Which is <span class="m">₹10.59 × 25.97 = ₹275 per kg</span>. And if the pack uses 0.029 m² of film, the packaging cost is <span class="m">₹0.31 per pack</span> — or <span class="m">₹307 per 1,000 packs</span>, which is how finance will want to see it.</p>
+
+<h3>Step 3 — read the sheet like a buyer</h3>
+<p>Material is <strong>65%</strong> of landed cost. Conversion, wastage and margin together are <strong>33%</strong>. That single ratio tells you where the negotiation is and where it isn't.</p>
+
+<h4>The savings levers, quantified</h4>
+<div class="tw"><table>
+<tr><th>Lever</th><th>Change</th><th>Saving</th></tr>
+<tr><td>Downgauge the polyester</td><td>12 µ → 10 µ</td><td>2.8 g/m² ≈ ₹0.45/m² — about <strong>4.2%</strong></td></tr>
+<tr><td>Cut process wastage</td><td>7% → 5%</td><td>≈ ₹0.18/m² — about 1.7%</td></tr>
+<tr><td>Margin negotiation</td><td>8% → 6.5%</td><td>≈ ₹0.14/m² — about 1.3%</td></tr>
+<tr><td>Reduce colours</td><td>8 colours → 6</td><td>Lower ink, fewer cylinders, faster make-ready</td></tr>
+<tr><td>Solvent-based → solventless</td><td>process change</td><td>Lower adhesive cost, no solvent, higher line speed</td></tr>
+<tr><td>Structure change</td><td>MET-PET → MET-BOPP</td><td>Lower density means more m² per kg — cheaper per pack even at similar ₹/kg</td></tr>
+</table></div>
+<p>Notice that the biggest single lever is a <em>technical</em> one, not a commercial one. That is the argument for hiring a polymer science graduate into this seat, and you should say so in exactly those terms.</p>
+
+<h3>Step 4 — the price-increase conversation</h3>
+<div class="say"><p>“Material is roughly 65% of this price. If polyester has moved 10%, the justified impact on my landed cost is about 6.5%, not the 12% you've asked for — conversion, wastage and your margin haven't changed. I'd rather we agree a formula linked to the published resin price so this revises automatically in both directions, and then look together at whether a 10-micron structure holds the same barrier.”</p></div>
+<p>That answer does four things at once: it shows you can do the arithmetic, it's fair rather than aggressive, it removes future argument, and it offers the vendor a path to keep the business. That is what a good procurement officer sounds like.</p>
+
+<div class="callout warn"><p><strong>Don't over-claim.</strong> These numbers are illustrative — if they ask “is BOPET really ₹160?”, say “that's an indicative figure, my point is the structure of the sheet”. Never defend a number you can't source. Being precise about what you do and don't know reads as credible; bluffing is the fastest way to lose a technical panel.</p></div>
+
+<button class="mark" data-s="s7">Mark reviewed</button>
+</div></details>
+
+<details class="sec" id="s8" data-tag="must know"><summary><span class="n">08</span><h2>Sourcing and negotiation playbook</h2><span class="arw">+</span></summary>
+<div class="body">
+
+<h3>The new-material process, in their language</h3>
+<p>This is your day-to-day item 2, upgraded. Nine steps, and the order matters — say the order and they'll know you've actually done it.</p>
+<ol>
+<li><strong>Understand the requirement</strong> — product, shelf life, machine, fill weight, market. Not “what film do you want” but “what does this product need to survive”.</li>
+<li><strong>Freeze the specification</strong> with R&amp;D and quality — structure, micron/GSM, barrier, print, reel dimensions, food-contact compliance.</li>
+<li><strong>Map the supply base</strong> — approved vendors first, then new candidates worth developing.</li>
+<li><strong>Float the RFQ</strong> on identical terms to everyone, with volume, MOQ, delivery point and payment terms stated. Different terms make quotes incomparable.</li>
+<li><strong>Build your should-cost</strong> in parallel — <em>before</em> the quotes land, so their number doesn't anchor yours.</li>
+<li><strong>Samples and quality approval</strong> — lab clearance, then a trial run on the actual line. Machine runnability failures never show up in the lab.</li>
+<li><strong>Compare commercially, within the approved set only</strong> — on landed cost, not ex-works, and on total cost of ownership including wastage and rejection history.</li>
+<li><strong>Negotiate and award</strong> — then raise the indent and release the PO.</li>
+<li><strong>Onboard and monitor</strong> — first-lot inspection at higher stringency, then track OTIF and quality on the scorecard.</li>
+</ol>
+<div class="callout"><p>Say this line: <strong>“I don't compare price across vendors who haven't cleared quality.”</strong> It's one sentence, it's true of how you work, and it instantly separates you from a buyer who just chases the lowest number.</p></div>
+
+<h3>Negotiation levers, ranked by how much they actually move</h3>
+<div class="tw"><table>
+<tr><th>Lever</th><th>Typical impact</th><th>When to use</th></tr>
+<tr><td>Value engineering / downgauging</td><td>High</td><td>Mature, high-volume items where spec has drifted above need</td></tr>
+<tr><td>Volume consolidation &amp; vendor rationalisation</td><td>High</td><td>Fragmented spend across many small vendors</td></tr>
+<tr><td>Spec and SKU rationalisation</td><td>High</td><td>Too many near-identical specs</td></tr>
+<tr><td>Index-linked pricing</td><td>Medium, protective</td><td>Volatile commodity inputs — exactly now</td></tr>
+<tr><td>Reverse auction</td><td>Medium</td><td>Standardised items with several capable vendors</td></tr>
+<tr><td>Localisation</td><td>Medium</td><td>Freight-heavy items like corrugated</td></tr>
+<tr><td>Payment terms</td><td>Low–medium</td><td>Trade credit days against price — quantify the cost of capital</td></tr>
+<tr><td>Pure price hammering</td><td>Low, and risky</td><td>Rarely. It returns as late delivery and quality slippage</td></tr>
+</table></div>
+
+<h3>Three things to say about vendor relationships</h3>
+<ul>
+<li><strong>On margins:</strong> “A vendor squeezed below viability becomes a supply risk. I'd rather take cost out of the design and share the gain than take it out of their margin and pay for it later in rejections.”</li>
+<li><strong>On development:</strong> “Developing a second source takes six months, so I start before I need it, not when the first one fails.”</li>
+<li><strong>On transparency:</strong> “I ask for a cost break-up, not just a price. A vendor who won't open the sheet is telling me something.”</li>
+</ul>
+
+<button class="mark" data-s="s8">Mark reviewed</button>
+</div></details>
+
+<details class="sec" id="s9" data-tag="must know"><summary><span class="n">09</span><h2>Inventory and planning — the formulas</h2><span class="arw">+</span></summary>
+<div class="body">
+<p>KRA 1 is inventory. You already ran a reduction project, so you have the story — this section gives you the vocabulary and the maths to frame it properly.</p>
+
+<h3>The four formulas</h3>
+<div class="fx">
+<b>Safety stock</b> = Z × σ<sub>demand</sub> × √(lead time)<br>
+<span style="opacity:.75">Z = service-level factor: 1.65 for 95%, 2.05 for 98%</span><br><br>
+<b>Reorder level</b> = (average daily consumption × lead time) + safety stock<br><br>
+<b>EOQ</b> = √( 2 × annual demand × ordering cost ÷ carrying cost per unit )<br><br>
+<b>Days of cover</b> = closing stock ÷ average daily consumption
+</div>
+<p>The insight worth stating out loud: <strong>safety stock scales with the square root of lead time and with demand variability, not with demand size.</strong> So the way to cut inventory isn't to hold less and hope — it's to shorten and stabilise lead time. That one sentence sounds like five years of experience.</p>
+
+<h3>Setting norms — ABC crossed with XYZ</h3>
+<div class="tw"><table>
+<tr><th></th><th>X — steady demand</th><th>Y — variable</th><th>Z — erratic</th></tr>
+<tr><td><strong>A — high value</strong></td><td>Low cover, JIT or VMI, weekly review</td><td>Moderate cover, tight tracking</td><td>Make-to-order, no stock held</td></tr>
+<tr><td><strong>B — medium</strong></td><td>Standard cover, monthly review</td><td>Standard + buffer</td><td>Order against confirmed plan</td></tr>
+<tr><td><strong>C — low value</strong></td><td>Bulk order, rate contract, quarterly</td><td>Bulk order with buffer</td><td>Hold a small fixed buffer — not worth managing closely</td></tr>
+</table></div>
+<p>Then add <strong>VED</strong> on top: a low-value item can still stop the line. A ₹2 printed sachet that only one vendor makes is a C-class item by value and a vital one by criticality. Treating those two classifications as separate questions is a mature answer.</p>
+
+<h3>The MOQ versus EOQ conflict — a guaranteed question</h3>
+<p>The vendor's minimum run is often larger than your economic order quantity, especially on printed material where make-ready dominates. Your options, in order of preference:</p>
+<ol>
+<li><strong>Consolidate</strong> — order for multiple plants or several months of a stable SKU.</li>
+<li><strong>Delay the print</strong> — hold plain or generic stock and print late where the process allows it.</li>
+<li><strong>Consignment or VMI</strong> — the vendor runs the full MOQ but bills you as you draw it.</li>
+<li><strong>Pay the make-ready</strong> — accept a lower quantity and pay the setup explicitly. Sometimes cheaper than carrying nine months of stock and writing half of it off.</li>
+<li><strong>Redesign</strong> — make the artwork common across variants so one reel serves several SKUs.</li>
+</ol>
+
+<h3>Levers for an inventory reduction project</h3>
+<ul>
+<li>Re-cut norms from actual consumption and variability, not from historic habit</li>
+<li>Shorten and de-risk lead time; measure lead-time <em>variance</em>, not just the average</li>
+<li>Move A-class items to VMI or consignment</li>
+<li>Liquidate dead stock — usually obsolete artwork — and fix the artwork change process so it stops recurring</li>
+<li>Smaller, more frequent call-offs against a scheduling agreement instead of large one-off POs</li>
+<li>Common components across SKUs, so one item covers more demand</li>
+</ul>
+<div class="callout"><p><strong>Always pair the claim with the guardrail.</strong> “We reduced cover by X days <em>while holding service level at 98% and with no line stoppage</em>.” Inventory reduction without a service-level statement sounds reckless to an operations panel.</p></div>
+
+<button class="mark" data-s="s9">Mark reviewed</button>
+</div></details>
+
+<details class="sec" id="s10" data-tag="should know"><summary><span class="n">10</span><h2>KPIs, MIS and dashboards</h2><span class="arw">+</span></summary>
+<div class="body">
+<p>You already build these. Learn the standard definitions so your dashboard sounds like a professional instrument rather than a personal spreadsheet.</p>
+<div class="tw"><table>
+<tr><th>Metric</th><th>Definition</th><th>What it tells the business</th></tr>
+<tr><td>PR-PO TAT</td><td>Days from requisition approval to PO release</td><td>Procurement's own responsiveness — this is <em>your</em> number</td></tr>
+<tr><td>PO-GRN TAT</td><td>Days from PO to goods receipt</td><td>Vendor lead time plus logistics performance</td></tr>
+<tr><td>OTIF</td><td>% of lines delivered on time and in full</td><td>The headline supplier reliability measure</td></tr>
+<tr><td>Fill rate</td><td>Quantity supplied ÷ quantity ordered</td><td>Partial-delivery behaviour hidden inside OTIF</td></tr>
+<tr><td>Rejection / NC rate</td><td>Rejected value ÷ received value</td><td>Quality cost, and the real cost of a cheap vendor</td></tr>
+<tr><td>Inventory days of cover</td><td>Stock ÷ daily consumption</td><td>Working capital tied up</td></tr>
+<tr><td>Non-moving stock</td><td>Value with no consumption in n months</td><td>Write-off exposure</td></tr>
+<tr><td>PPV / cost variance</td><td>Actual price vs budget or standard</td><td>Whether the year's plan holds</td></tr>
+<tr><td>Savings — hard</td><td>Reduction against last paid price × volume</td><td>Real P&amp;L benefit</td></tr>
+<tr><td>Savings — cost avoidance</td><td>Increase demanded minus increase conceded</td><td>Real value, but report it separately or you'll lose credibility</td></tr>
+<tr><td>Spend concentration</td><td>% of category value with the top vendor</td><td>Supply risk and negotiating leverage together</td></tr>
+<tr><td>Sales loss attributable to packaging</td><td>Lost volume caused by material unavailability</td><td>The metric that makes procurement visible to the business</td></tr>
+</table></div>
+<div class="callout warn"><p><strong>Be ready for “how do you calculate savings?”</strong> It is the most common trap in procurement interviews, because sloppy answers inflate numbers. Say: “Against last paid price for like-for-like specification and volume, annualised, and I report cost avoidance separately from hard savings so the two don't get confused.” Clean, honest, and immediately credible.</p></div>
+
+<button class="mark" data-s="s10">Mark reviewed</button>
+</div></details>
+
+<details class="sec" id="s11" data-tag="differentiator"><summary><span class="n">11</span><h2>Compliance and sustainability</h2><span class="arw">+</span></summary>
+<div class="body">
+<p>Not in the JD. Absolutely in the job. This is where you can be the best-prepared candidate in the room, because most applicants won't have read the March 2026 amendment.</p>
+
+<h3>Where ITC stands</h3>
+<ul>
+<li>Target: <strong>100% of packaging reusable, recyclable or compostable/biodegradable by 2028</strong>, under the Sustainability 2.0 vision.</li>
+<li><strong>Plastic neutral four years running</strong> — 76,000 tonnes of plastic waste collected and sustainably managed in FY 2024-25, more than the packaging it put on the market.</li>
+<li>Framework: <strong>“No Plastic, Better Plastic, Less Plastic”</strong>. Learn those three words; they're ITC's own language.</li>
+<li>Solid waste recycling positive for 19 years; innovations include the Filo range of biodegradable food-grade paperboard and WrapWell, a recyclable paper substitute for aluminium foil.</li>
+</ul>
+
+<h3>The regulation — Plastic Waste Management (Amendment) Rules, 31 March 2026</h3>
+<p>EPR makes producers, importers and brand owners (PIBOs) responsible for their packaging after use, registered and tracked on the CPCB portal. Packaging is classified into categories: I rigid, II flexible, III multi-layered, IV compostable, V biodegradable. The 2026 amendment moved the regime from “collect and recycle” to “actually use recycled material”:</p>
+<div class="tw"><table>
+<tr><th>Category</th><th>2025-26</th><th>2026-27</th><th>2027-28</th><th>2028-29 on</th></tr>
+<tr><td>I — rigid</td><td>30%</td><td>40%</td><td>50%</td><td>60%</td></tr>
+<tr><td>II — flexible</td><td>10%</td><td>10%</td><td>20%</td><td>20%</td></tr>
+<tr><td>III — multi-layered</td><td>5%</td><td>5%</td><td>10%</td><td>10%</td></tr>
+</table></div>
+<p>Plus: conformity to <strong>IS 14534:2023</strong>, exemptions where FSSAI or other statutory requirements restrict recycled content, a carry-forward of up to three years for unmet food-contact targets from 2025-26, and for the first time <strong>reuse obligations</strong> on rigid packaging.</p>
+
+<div class="say"><p>“The hardest part of the recycled-content mandate for a foods business is that primary food-contact packaging can't simply take recycled plastic — there are migration and FSSAI constraints, which is why the rules allow a carry-forward on food-contact targets. So in practice the lever is design: moving multi-layered structures towards mono-material PE or PP that's recyclable in one stream, and shifting secondary packaging to paper-based alternatives. That also happens to reduce cost, because you lose a layer.”</p></div>
+<p>If you deliver that paragraph, you will be the most informed candidate they see this month.</p>
+
+<h3>EcoVadis — your existing advantage</h3>
+<p>You already run the invite-and-follow-up cycle. Frame it as a system, not an admin task:</p>
+<ul>
+<li>It rates suppliers on four themes: environment, labour and human rights, ethics, and sustainable procurement.</li>
+<li>Coverage matters — you're trying to get a high <em>share of spend</em> assessed, not just a count of vendors.</li>
+<li>It feeds corporate ESG disclosure, which for a listed Indian company means the <strong>BRSR</strong>. ITC has held an MSCI-ESG 'AA' rating for eight consecutive years, so supplier assessment data has a real audience.</li>
+<li>The useful part is the corrective action plan — a low-scoring critical supplier is a risk you manage, not just a number you record.</li>
+</ul>
+<div class="callout"><p><strong>Your line:</strong> “I run the EcoVadis assessment cycle today, so supplier ESG isn't new to me — I've done the chasing, the follow-up and the score improvement conversations. At ITC that plugs straight into the 2028 packaging commitment.” Few procurement officers at your level can say this. Use it.</p></div>
+
+<button class="mark" data-s="s11">Mark reviewed</button>
+</div></details>
+
+<details class="sec" id="s12" data-tag="differentiator"><summary><span class="n">12</span><h2>Market intelligence — what's happening right now</h2><span class="arw">+</span></summary>
+<div class="body">
+<p>KRA 3 asks for price trends and forecasts from published data. Here is enough to hold a real conversation. Carry two or three of these, not all of them.</p>
+
+<h3>Where prices are</h3>
+<div class="tw"><table>
+<tr><th>Material</th><th>India level</th><th>Direction</th></tr>
+<tr><td>BOPP film</td><td>≈ USD 1,970/MT (June 2026)</td><td>Up from ≈1,904 in Dec 2025; firm on elevated polypropylene costs</td></tr>
+<tr><td>BOPET film</td><td>≈ USD 1.82/kg (Q1 2026)</td><td>Up 7.1% over Q4 2025 on firmer PET resin; forecast range 1.74–1.96 for 2026</td></tr>
+<tr><td>Duplex board, grey back</td><td>≈ ₹40–50/kg (April 2026)</td><td>Creeping up through the year</td></tr>
+<tr><td>Corrugated / containerboard</td><td>Firm</td><td>Higher containerboard, adhesive, ink, power and freight costs compressing converter margins</td></tr>
+</table></div>
+
+<h3>The drivers to name</h3>
+<ul>
+<li><strong>Crude to polymer.</strong> Crude → naphtha → propylene/ethylene → PP/PE resin → film. That chain is why a geopolitical event shows up in your cost sheet six to ten weeks later. ITC's own Q1 FY27 commentary cited sharp cost increases in fuel and packaging inputs amid the West Asia conflict, cushioned by strategic inventory covers and commodity hedges.</li>
+<li><strong>Domestic resin circulars.</strong> Indian producers publish periodic price revisions — that's your primary index for an escalation clause, not a market report.</li>
+<li><strong>The inverted duty on cartons.</strong> After the September 2025 GST revision, paperboard sits at 18% while cartons are at 5%. Converters accumulate input credit they can't fully set off, which squeezes their cash and eventually your price. Raising this shows you think about your vendor's balance sheet.</li>
+<li><strong>Import protection on board.</strong> A minimum import price on virgin multi-layer paperboard was imposed in August 2025, limiting cheap imports as a benchmark.</li>
+<li><strong>Demand seasonality.</strong> Festive build-up, monsoon-driven agri volumes, and e-commerce peaks all tighten converter capacity at predictable times.</li>
+</ul>
+
+<h3>How you'd build the MIS they're asking for</h3>
+<ol>
+<li><strong>Inputs:</strong> domestic resin circulars, published film and board indices, vendor cost break-ups, crude and freight benchmarks, and informal market intelligence from vendor conversations.</li>
+<li><strong>Normalise:</strong> convert everything to ₹/kg landed and to ₹ per 1,000 packs so the business can actually use it.</li>
+<li><strong>Output:</strong> a monthly note — where prices went, where they're heading, the rupee impact on the packaging budget at current volumes, and a recommendation: cover ahead, hold, or renegotiate.</li>
+<li><strong>Close the loop:</strong> feed it into the budget-versus-actual variance so forecast accuracy is visible and improves.</li>
+</ol>
+<div class="callout"><p>The sentence that lands this section: <strong>“Procurement shouldn't just report what a price did. It should tell the business what the price is going to do, early enough for them to act.”</strong> That is precisely what KRA 3 is asking for, said in your own words.</p></div>
+
+<button class="mark" data-s="s12">Mark reviewed</button>
+</div></details>
+
+<details class="sec" id="s13" data-tag="must know"><summary><span class="n">13</span><h2>Your day-to-day, retold</h2><span class="arw">+</span></summary>
+<div class="body">
+<p>Your ten activities are strong. Last time the content was there and the language wasn't. Here is the same work, said properly. Read the right-hand column aloud — that's the job.</p>
+
+<div class="tw"><table>
+<tr><th>What you do</th><th>How it should sound</th></tr>
+<tr><td>Raise POs for packing and raw material</td><td>“I release purchase orders against MRP output, with delivery schedules matched to vendor lead time and plant consumption, and I track open POs and PO-GRN TAT.”</td></tr>
+<tr><td>New requirement → spec → RFQ → quotes → samples → quality approval → compare → indent → PO</td><td>“For new development I freeze the specification with R&amp;D and quality, float an RFQ on identical terms, take samples through lab clearance and a line trial, and compare commercially only within the quality-approved set — on landed cost, not ex-works.”</td></tr>
+<tr><td>Inventory calculation from system stock; reduction project</td><td>“I set inventory norms from consumption and lead-time variability rather than habit, monitor pipeline stock including in-transit, and ran a reduction project that cut days of cover while holding service level.”</td></tr>
+<tr><td>EcoVadis invites and follow-up</td><td>“I run the supplier sustainability assessment cycle — driving assessed coverage as a share of category spend, and following up on corrective action plans for low-scoring critical suppliers.”</td></tr>
+<tr><td>Month-end variance and savings</td><td>“I close a monthly budget-versus-actual variance by category, and report savings against last paid price for like-for-like spec, with cost avoidance stated separately.”</td></tr>
+<tr><td>Dashboards — TAT, vendor-wise value</td><td>“I maintain the category MIS: PR-PO and PO-GRN turnaround, spend concentration by vendor, and savings tracking against budget.”</td></tr>
+<tr><td>Corrective action on weekly sales loss</td><td>“I work the weekly sales-loss report, isolate the lines where packaging availability was the cause, and fix the norm, the lead time or the source so it doesn't repeat.”</td></tr>
+<tr><td>Vendor follow-up for on-time delivery</td><td>“I manage delivery performance against OTIF and fill rate, expedite at-risk orders, and escalate on a defined path rather than by phone call alone.”</td></tr>
+<tr><td>Arranging transport vendor to plant</td><td>“I plan inbound logistics — load consolidation, full versus part truck loads, and the freight-per-kg trade-off when comparing a distant vendor against a local one.”</td></tr>
+<tr><td>Coordination with stores and finance</td><td>“I close the procure-to-pay loop — three-way match, GRN timeliness with stores, and payment and advance scheduling with finance so vendor cash flow stays healthy.”</td></tr>
+</table></div>
+
+<h3>Your 90-second opening — learn this shape, not the words</h3>
+<div class="say"><p>“I handle end-to-end procurement of packing materials and other raw materials. Three parts to it.</p>
+<p>Operationally, I run material requirements against the production plan, maintain inventory norms and safety stock, and release POs — and I track PR-PO and PO-GRN turnaround on a dashboard along with vendor-wise spend.</p>
+<p>On development, for any new requirement I freeze the specification, float RFQs, take samples through quality approval, and only then compare commercially within the approved set.</p>
+<p>On cost, I close a monthly budget-versus-actual variance and report savings by category. I also ran an inventory reduction project, and I act on the weekly sales-loss report so packaging is never the reason a sale is lost.</p>
+<p>Alongside that I drive our EcoVadis supplier ratings, and I coordinate inbound transport, GRN with stores and payments with finance.”</p></div>
+<p>Then <strong>stop</strong>. Don't add a fourth part. Don't fill the silence. Let them choose what to open up — and every branch they can take is covered somewhere in this guide.</p>
+
+<div class="callout warn"><p><strong>Watch the “and other raw materials” phrase.</strong> It's true and it's useful breadth, but this role is packaging. Lead with packaging every time, and mention other raw materials as additional scope. Don't let the answer drift into a category they're not hiring for — that drift is exactly what happened to you last time.</p></div>
+
+<button class="mark" data-s="s13">Mark reviewed</button>
+</div></details>
+
+<details class="sec" id="s14" data-tag="do first"><summary><span class="n">14</span><h2>Your five stories, with numbers</h2><span class="arw">+</span></summary>
+<div class="body">
+<p>Fill these in tonight. Not on your phone — on paper. A story without a number is an opinion, and “I don't remember the exact figure” is a perfectly good sentence as long as it's followed by “but it was roughly X”.</p>
+
+<h3>The shape</h3>
+<div class="fx"><b>S</b> — one sentence of context<br><b>T</b> — what you were responsible for<br><b>A</b> — what <em>you</em> did, in steps, using technical words<br><b>R</b> — the result, with a number and a timeframe</div>
+<p>Spend 70% of the time on A and R. Most people spend it on S and run out of attention before the result.</p>
+
+<h3>Story 1 — cost saving</h3>
+<p><strong>Have ready:</strong> which material, what you changed (spec, vendor, structure, GSM, volume consolidation), how much per unit, annualised value, and how you protected quality while doing it.</p>
+<p><em>Your numbers:</em> saving per unit ____ · annual volume ____ · annualised saving ₹____ · % against previous price ____</p>
+
+<h3>Story 2 — inventory reduction</h3>
+<p><strong>Have ready:</strong> starting days of cover, ending days of cover, value of working capital released, how many items you re-normed, and the service level you held. The guardrail is as important as the gain.</p>
+<p><em>Your numbers:</em> cover from ____ to ____ days · stock value released ₹____ · stockouts caused: ____</p>
+
+<h3>Story 3 — a supply crisis you handled</h3>
+<p><strong>Have ready:</strong> what nearly stopped, what you did in the first four hours, what the root cause turned out to be, and the permanent fix. Use Immediate / Root cause / Prevention as the spine.</p>
+<p><em>Your numbers:</em> production hours protected ____ · days of delay avoided ____</p>
+
+<h3>Story 4 — a quality failure with a vendor</h3>
+<p><strong>Have ready:</strong> the defect, how you contained it, the root cause method you used, the CAPA, whether you raised a debit note, and whether that vendor is still supplying — the answer “yes, and their rejection rate fell” is the strongest possible ending.</p>
+<p><em>Your numbers:</em> value of the lot ____ · rejection rate before/after ____</p>
+
+<h3>Story 5 — a new development you took end to end</h3>
+<p><strong>Have ready:</strong> the requirement, how you set the spec, how many vendors you brought in, the trial, and the launch date you protected. This is the story that maps onto ITC's constant stream of new launches.</p>
+<p><em>Your numbers:</em> vendors evaluated ____ · development time ____ weeks · cost vs first quote ____</p>
+
+<div class="callout"><p><strong>If you only prepare two, prepare Story 1 and Story 3.</strong> Cost and crisis. Those two cover about 70% of what any procurement panel asks.</p></div>
+
+<h3>A worked example of the difference</h3>
+<p><em>Weak:</em> “We had a vendor issue so I followed up a lot and somehow managed it, and the plant didn't stop.”</p>
+<div class="say"><p>“Our single-source supplier for a printed laminate flagged a two-week delay against a plant that had four days of cover. Immediately, I took a partial dispatch of the quantity already slit, sent our own vehicle rather than waiting for their logistics, and worked with planning to re-sequence to an SKU whose material was available — that bought us eleven days. The root cause was that their base film supply had slipped, which our lead time never accounted for. So I re-normed safety stock on lead-time variability rather than the average, and developed a second source over the following months. No production hours were lost and the item hasn't been at risk since.”</p></div>
+<p>Same event. One sounds like luck, the other sounds like a professional. The difference is entirely structure and specificity.</p>
+
+<button class="mark" data-s="s14">Mark reviewed</button>
+</div></details>
+
+<details class="sec" id="s15" data-tag="must know"><summary><span class="n">15</span><h2>Situational questions — 17</h2><span class="arw">+</span></summary>
+<div class="body">
+<p>Answer each one out loud before you open it. Use the spine every time: <strong>immediate action, root cause, prevention</strong>. Say the spine aloud first — it buys thinking time and sounds structured.</p>
+
+<details class="qa"><summary><span class="q">01</span>Your vendor says material won't arrive and the plant stops tomorrow. What do you do?</summary><div class="ans">
+<p>Immediately: check plant stock, stock-in-transit and anything already slit at the vendor, and take a partial dispatch of whatever is packed rather than waiting for the full lot. Send our own vehicle instead of relying on their logistics. Check whether an alternate approved vendor or another plant can transfer stock. In parallel tell planning now, so they can re-sequence production to an SKU whose material is available — that usually buys more time than anything I do with the vendor.</p>
+<p>Root cause: was it our lead time, their raw material, or a capacity clash with another customer? Prevention: re-norm safety stock on lead-time variability, develop a second source, and put the item on a weekly review if it's A-class.</p>
+<p class="hint">Do not start with “I'd call the vendor and follow up.” Everyone says that. Start with re-sequencing production — it shows you think like operations, not like an expediter.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">02</span>Polymer prices moved and your vendor wants a 12% increase.</summary><div class="ans">
+<p>Ask for the cost break-up and validate it against the published resin movement. If material is 65% of the price and resin moved 10%, the justified impact is about 6.5% — conversion, wastage and margin haven't changed. I'd settle there, and convert it into an index-linked formula so it revises in both directions and we stop negotiating this every quarter. Then I'd look at offsetting the balance technically: a downgauge, a structure change, or reduced colour count.</p>
+<p class="hint">The words that matter: “validate against published index”, “revises both ways”, “offset technically”. Ninety seconds, then stop.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">03</span>How would you reduce packaging inventory without risking stockouts?</summary><div class="ans">
+<p>Classify first — ABC by value crossed with XYZ by demand predictability, and VED on top so a cheap but critical item doesn't get treated as routine. Then re-cut norms from actual consumption and lead-time variability instead of historic habit. The real lever is shortening and stabilising lead time, because safety stock scales with the square root of lead time. Move A-class items to VMI or consignment so the stock sits at the plant but on the vendor's books. Separately, liquidate dead stock — usually obsolete artwork — and fix the artwork change process so it stops recurring. And I'd state the service level I'm holding, because reduction without a guardrail is just risk.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">04</span>A full truck of laminate is rejected at the plant.</summary><div class="ans">
+<p>Contain first: segregate and hold the lot, and check urgently whether any of it reached production or finished goods — that's the recall question and it comes before everything else. Raise the non-conformance, inform the vendor, and get a replacement dispatched against the production requirement so I'm solving supply and quality in parallel.</p>
+<p>Then root cause jointly with the vendor using 5-why or 8D, agree a CAPA with a date, raise a debit note for the loss, and raise inspection stringency on the next three lots before returning to normal AQL. If it's systemic, an on-site audit.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">05</span>We need 5% out of packaging cost this year. Where do you start?</summary><div class="ans">
+<p>Spend analysis first — I can't take 5% out of everything, so I'd find where the value is concentrated and start there. Then four workstreams: value engineering, which is usually the largest single lever — downgauging film, GSM reduction in cartons validated against box compression, fewer colours; spec and SKU rationalisation so volumes consolidate; vendor rationalisation and reverse auctions on standardised items; and localisation on freight-heavy items like corrugated.</p>
+<p>I'd run structure changes towards mono-material where I can, because that takes out a layer, reduces cost <em>and</em> supports the 2028 recyclability target. What I wouldn't do is take it out of vendor margin alone — that comes back as late delivery and rejections.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">06</span>A new product launches in three weeks and packaging isn't developed. Walk me through it.</summary><div class="ans">
+<p>Three weeks means I compress, not skip. Day one, lock the requirement with R&amp;D and marketing — shelf life, machine, fill weight, artwork status. Then I'd run two tracks in parallel: use an existing approved structure from a similar product rather than developing a new one, which removes most of the qualification time; and if artwork is the constraint, look at digital print or a generic pack for launch volumes with the final structure following.</p>
+<p>I'd go to vendors who already hold our approvals and have cylinder capacity, and I'd be explicit with the business about what the compression costs — premium for expedited cylinders, a higher price for a short run — so it's a decision they make with open eyes rather than a surprise on the invoice.</p>
+<p class="hint">The senior move here is making the trade-off visible to the business instead of quietly absorbing it. Say that part out loud.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">07</span>One item, one vendor, no alternative. How do you handle it?</summary><div class="ans">
+<p>First I'd understand why it's single-sourced — usually it's tooling, cylinder ownership or a proprietary structure rather than genuine capability. If it's cylinder ownership, that's fixable: ITC owns the cylinders and they move. Meanwhile I'd manage the risk actively — higher safety stock for that item specifically, visibility of the vendor's own raw material position, and a financial health check. And I'd start developing a second source now, because qualification takes months and you can't start it during a crisis.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">08</span>Vendor MOQ is far above your requirement.</summary><div class="ans">
+<p>It's usually a make-ready economics problem, not obstinacy. Options in order: consolidate demand across plants or months; delay the print so common stock serves several variants; put it on consignment or VMI so they run the full quantity but bill on drawdown; or accept the lower quantity and pay the setup explicitly — sometimes cheaper than carrying nine months of stock and writing half of it off. The design answer is to harmonise artwork so one reel covers multiple SKUs.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">09</span>Sales spike unexpectedly — demand doubles next month.</summary><div class="ans">
+<p>This is KRA 1's “unplanned surge”. I'd confirm the requirement with planning and check pipeline stock across plant, transit and vendor before ordering anything, because the first response to a surge is usually to over-order. Then call off against existing scheduling agreements, check capacity with the approved alternates, and prioritise the highest-margin or highest-visibility SKUs if capacity is short. Where freight can buy time I'd quantify it — express freight on a low-value item is often worth it against a lost sale, and I'd present it that way rather than treating freight cost as sacred.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">10</span>A key vendor is in financial distress and asking for advances.</summary><div class="ans">
+<p>Treat it as a supply risk before a payment question. I'd check how exposed we are — what share of that category sits with them and how long qualification of an alternative would take. If they're strategically important, an advance against a proforma invoice with a clear delivery commitment can be the right commercial decision, agreed with finance rather than promised by me alone. In parallel I'd accelerate a second source and reduce the concentration over time. The JD specifically mentions supporting timely payment of dues to vendors — that's the same instinct: supplier cash health is supply security.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">11</span>An unapproved vendor quotes 15% below your approved one.</summary><div class="ans">
+<p>A price from an unapproved vendor isn't a comparable price — it's a hypothesis. I'd use it as market intelligence to test whether my approved vendor's cost sheet is still competitive, and separately start qualification properly: audit, samples, lab clearance, line trial, first-lot stringency. If they clear, the saving is real and sustainable. If I switch on price alone and the material fails on the line, the 15% disappears in one rejected batch.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">12</span>A regulatory labelling change makes six months of printed stock obsolete.</summary><div class="ans">
+<p>Quantify the exposure first — what's at plant, in transit and at the vendor, and what the transition date actually is, since many changes allow a sell-through period. Then minimise: use up old stock for the longest permissible window, check whether an overlabel or sticker is acceptable, and hold the balance at the vendor unprinted if the change can be applied late. For what genuinely can't be used, agree the commercial split with the vendor — who carries obsolescence is a contract question that should have been settled before the order, which is the prevention point. And going forward, keep printed cover deliberately low on SKUs with regulatory or promotional exposure.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">13</span>Material passed the lab but the plant can't run it.</summary><div class="ans">
+<p>Almost always COF, curl or thickness variation across the web — properties that only show up at machine speed. I'd get the line and quality teams and the vendor's technical person together, with the actual reel, rather than exchanging reports. Short term, see whether machine settings can accommodate it while a corrected lot is made. Long term, the fix is process: a line trial should be part of approval, not just a lab certificate. I'd add machine runnability parameters to the written specification so the next lot is judged against the right test.</p>
+<p class="hint">This answer quietly demonstrates something valuable — that you know lab approval and line performance are different things. Very few candidates say it.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">14</span>It's month nine and you're behind your savings target.</summary><div class="ans">
+<p>I'd be honest about the gap rather than manufacturing soft savings to close it on paper. Then look at what can still land this year: items where market prices have fallen and the contract hasn't been revisited, consolidation of fragmented spend, and any value engineering that's already validated and only needs a decision. I'd also separate what's genuinely achievable from what's a timing issue — a saving that lands in month thirteen is still a saving, and telling finance that clearly is better than surprising them. And I'd be clear about cost avoidance: if input prices rose and I held the increase down, that's real value even though it isn't a reduction.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">15</span>Stores is slow on GRN, the vendor is chasing payment and blaming you.</summary><div class="ans">
+<p>It's a process problem wearing a relationship problem's clothes. I'd look at where the delay actually sits — gate entry to GRN, inspection, or GRN to invoice posting — because the fix is different for each. Usually it's incomplete documentation at receipt or a mismatch between PO and invoice blocking the three-way match. I'd fix the specific blockers, then track GRN and payment TAT as a standing metric so it's visible rather than anecdotal, and give the vendor a realistic date rather than a reassurance.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">16</span>Marketing wants a sustainable pack that costs 20% more.</summary><div class="ans">
+<p>I'd quantify it properly rather than just reporting the premium. Some of it is genuinely recoverable — a mono-material structure often removes a layer, and paper-based secondary packaging can reduce weight and freight. Some of it is a compliance cost we're going to pay anyway given the direction of the rules, and framing it against the 2028 commitment changes the conversation from “premium” to “timing”. So I'd present three options with costed numbers — full switch now, phased by SKU starting with the highest-volume lines, or a partial change to secondary packaging first — and let the business choose with real figures in front of it.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">17</span>ITC's own packaging division supplies you but is more expensive than an outside converter.</summary><div class="ans">
+<p>I'd still build the should-cost and benchmark honestly, because the business is entitled to know the gap. But the decision isn't mine alone at that point — internal sourcing carries advantages that don't show in a unit price: capacity security, confidentiality on new launches, quality systems already aligned, and group-level margin retention. So I'd put the benchmark on the table, discuss where the gap comes from, and treat it as an improvement conversation with a sister division rather than a switching decision. If the gap is structural and large, that's for the business to decide with full information.</p>
+<p class="hint">This question is likely, and it tests judgment rather than knowledge. The wrong answer is “I'd move it outside to save money.” The right answer shows you understand you'd be inside a group, not running a tender.</p>
+</div></details>
+
+<button class="mark" data-s="s15">Mark reviewed</button>
+</div></details>
+
+<details class="sec" id="s16" data-tag="must know"><summary><span class="n">16</span><h2>Technical questions — 15</h2><span class="arw">+</span></summary>
+<div class="body">
+<p>These are the ones you couldn't answer last time. Say them aloud until the vocabulary is automatic.</p>
+
+<details class="qa"><summary><span class="q">01</span>Why is a snack pack a laminate and not a single film?</summary><div class="ans">
+<p>Because no single film does every job. The outer layer needs print quality, stiffness and heat resistance so the machine can seal through it — that's polyester. The inner layer has to melt and seal, and carry the barrier — that's a metallised polypropylene or polyethylene. You bond them with adhesive. Each layer is chosen for one function, and the structure is written as microns and materials in sequence: 12 micron polyester over 20 micron metallised BOPP, for instance.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">02</span>Metallised film or aluminium foil — how do you choose?</summary><div class="ans">
+<p>Foil is an absolute barrier and metallised film is a very good one at a fraction of the cost. So it's a shelf-life and value question: foil for retort, coffee, ghee and anything where you need total light and oxygen exclusion over a long life; metallised film for snacks and biscuits where the required life is months rather than years. Foil also pinholes and flex-cracks, so on a pack that gets handled a lot that's a real consideration, not just a cost one.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">03</span>What determines the shelf life of a packed snack?</summary><div class="ans">
+<p>Three things: the barrier properties of the structure — water vapour transmission rate for sogginess, oxygen transmission rate for rancidity; the integrity of the seals, because a leaker has no barrier at all; and the headspace, which is why fatty snacks are nitrogen-flushed to displace oxygen. Then storage conditions on top. As a buyer my job is to make sure the spec I'm buying matches the shelf life the business has claimed on pack — that's not negotiable downwards.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">04</span>BOPP versus BOPET — when do you use which?</summary><div class="ans">
+<p>BOPP is cheaper, lighter and has a better moisture barrier; polyester is stronger, dimensionally stable, heat-resistant and takes print better. So polyester usually goes outside as the printed layer where you need stiffness and heat resistance, and BOPP inside or as the whole web on simpler packs. The cost difference is bigger than the per-kilo price suggests, because polyester is much denser — you get about 60 square metres per kilo against about 90 for BOPP.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">05</span>Film is sold by the kilo but used by the metre. How do you cost it?</summary><div class="ans">
+<p>Through yield. Yield in square metres per kilogram is 1000 divided by thickness in microns times density. So 12 micron polyester at density 1.4 gives about 59.5 square metres per kilo. Once I have yield I can convert a rupee-per-kilo price into rupees per square metre, then into cost per pack using the pack's film area, and finally into cost per thousand packs — which is the number finance actually works with. Without that conversion you can't compare two structures at all.</p>
+<p class="hint">If you land one technical answer perfectly, make it this one. It is the single most buyer-specific piece of knowledge in the whole category.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">06</span>What is downgauging and what's the risk?</summary><div class="ans">
+<p>Reducing thickness or GSM while holding performance. It's the biggest single cost lever because material is the majority of the price and the saving is proportional. The risks are real though: less stiffness can mean the film won't run at line speed, less barrier can shorten shelf life, and in cartons and boxes you can lose compression strength and get crush in the warehouse. So I'd never downgauge on arithmetic alone — it needs a line trial, a shelf-life confirmation, and for boxes a box compression test before release.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">07</span>Gravure or flexo?</summary><div class="ans">
+<p>Gravure uses engraved cylinders, one per colour — excellent consistency and the standard for flexible food packaging, but each cylinder is a real one-time cost, so it suits long runs. Flexo uses plates, much cheaper to originate, and is standard on corrugated and paper. For a launch or a short regional run, digital avoids origination entirely. The commercial point for a buyer is cylinder ownership — if the vendor owns the cylinders, moving that SKU elsewhere means paying for origination again.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">08</span>What causes delamination, and what would you do about it?</summary><div class="ans">
+<p>Usually adhesive coat weight below spec, incomplete curing, a contaminated surface, or low dyne level so the adhesive never anchored properly. I'd contain the affected lots, check bond strength against specification rather than debating it visually, and take it to root cause with the vendor's technical team. The permanent fix is usually a process control at their end — coat weight monitoring and cure time — captured in a CAPA, with bond strength added to the incoming test plan.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">09</span>Why is recycled content so difficult in food packaging?</summary><div class="ans">
+<p>Because anything in direct contact with food is controlled for migration — what can transfer out of the packaging into the product. Recycled plastic carries contamination risk from its previous life, so food-contact use is restricted under FSSAI and equivalent requirements. That's why the 2026 amendment allows exemptions where a statutory requirement restricts recycled content, and a carry-forward on food-contact targets. In practice the workable levers for a foods business are secondary and tertiary packaging, where recycled content is straightforward, and designing primary packs for recyclability rather than from recyclate.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">10</span>What is mono-material packaging and why does it matter?</summary><div class="ans">
+<p>A laminate built entirely from one polymer family — all polyethylene or all polypropylene — instead of mixing polyester with polypropylene or foil. It matters because a mixed structure can't realistically be recycled; a mono-material structure can go into one stream. The technical challenge is getting enough barrier and enough heat resistance from a single family, which is where barrier coatings come in. It's also often cheaper because you remove a layer — which is why I'd present it as a cost and compliance project rather than a sustainability cost.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">11</span>How would you validate a change to a corrugated box specification?</summary><div class="ans">
+<p>Start from what the box has to survive — stack height in the warehouse, transit route, humidity. Then test rather than assume: bursting strength and edge crush on the board, and box compression on the made box, which is the one that predicts stacking failure. Then a transit trial on a real route before release. I'd change one variable at a time — ply, flute or GSM combination — so I know what caused any change in performance. A 5-ply to 3-ply conversion is a big saving but only with the compression data behind it.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">12</span>What is coefficient of friction and why would a buyer care?</summary><div class="ans">
+<p>It's the slip between film surfaces. It matters because it decides whether the film runs on the packing machine. Too high and the web drags and the line slows or jams; too low and packs slide. It's a classic case of material that passes every lab test and still fails in production, which is why I'd want machine runnability parameters written into the specification and a line trial before approval — not just a certificate of analysis.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">13</span>What's special about retort packaging?</summary><div class="ans">
+<p>It has to survive sterilisation at around 121 °C with the food inside, which rules out ordinary sealant films. Structures are typically polyester outside for print and heat resistance, often nylon for puncture resistance, foil for barrier, and retort-grade cast polypropylene as the sealant. Seal integrity is critical because the pack is the sterile barrier for an ambient shelf life with no preservatives — so seal strength and leak testing carry more weight than usual, and the adhesive system has to be rated for the retort process too.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">14</span>Solvent-based or solventless lamination?</summary><div class="ans">
+<p>Solventless wherever the structure allows it. It's faster, has no solvent cost, no emission and no residual solvent risk in food — which is a taint and safety issue, not a cosmetic one. Solvent-based systems still have a place on some demanding structures, but they need curing time and residual solvent monitoring. Moving a vendor from solvent-based to solventless typically improves cost, throughput and the environmental profile at once, so it's one of the better conversations to have with a converter.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">15</span>How would you reduce packaging weight without losing protection?</summary><div class="ans">
+<p>Work down the hierarchy. First check the specification hasn't drifted above the actual requirement — many specs carry legacy safety margin nobody has questioned in years. Then downgauge with validation: film thickness with a line trial and shelf-life check, board GSM with a compression test. Then look at structure — removing a layer through a barrier coating or mono-material design. Then secondary packaging: better product fit, changed case count, a lighter flute. Every step needs a test behind it, and I'd sequence them so the highest-volume items go first, because that's where the same percentage saving is worth the most.</p>
+</div></details>
+
+<button class="mark" data-s="s16">Mark reviewed</button>
+</div></details>
+
+<details class="sec" id="s17" data-tag="should know"><summary><span class="n">17</span><h2>Commercial and analytical questions — 9</h2><span class="arw">+</span></summary>
+<div class="body">
+
+<details class="qa"><summary><span class="q">01</span>How do you calculate savings?</summary><div class="ans">
+<p>Against last paid price, for like-for-like specification and volume, annualised at current consumption. And I report cost avoidance separately — if input prices rose 10% and I settled at 6%, that's real value but it isn't a reduction in the P&amp;L, and mixing the two destroys the credibility of the whole number. For a spec change I'd compare against what the old spec would have cost at today's material prices, not at last year's, so I'm not claiming market movement as my own saving.</p>
+<p class="hint">That last sentence is the one that gets nods from a finance-minded interviewer.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">02</span>Walk me through building a should-cost.</summary><div class="ans">
+<p>Start from the specification, not the quote. Convert the structure into weight per square metre — thickness times density for each layer, plus adhesive and ink. Price each input at the current market or published resin level. Add conversion for each process step, a realistic wastage percentage, freight, and a fair margin. That gives me a number before I see theirs, so their quote doesn't anchor me. Then the gap between my model and their price is the conversation — and it's a factual conversation about a line item rather than a haggle about a total.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">03</span>Two quotes: one lower price, one better payment terms. How do you compare?</summary><div class="ans">
+<p>Put them on the same basis. Convert the credit difference into money using our cost of capital — thirty extra days on an order value at, say, 9% annual is roughly 0.75% of value. Add it to the cheaper-but-tighter quote and compare landed costs. Then look at what the number doesn't capture: rejection history, delivery reliability, capacity headroom, and whether taking this vendor increases concentration. Price is one input to the decision, not the decision.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">04</span>A vendor 800 km away quotes 6% lower than the local one.</summary><div class="ans">
+<p>Six percent is only real after freight, and on a bulky low-density item like corrugated it usually isn't — freight per kilo can eat the whole gap. So first, compare landed not ex-works. Then consider lead time: a distant vendor lengthens lead time and, more importantly, lead-time variability, which raises safety stock and therefore working capital. I'd quantify that as an inventory cost and add it. If it still wins, I might take it as a second source rather than switching the whole volume, so I keep the local vendor's responsiveness for surges.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">05</span>How would you set inventory norms for a new plant with no history?</summary><div class="ans">
+<p>Without consumption history I'd build from the production plan and the bill of material rather than from stock movement. Take the planned volumes, explode them into packing material requirement, and set initial cover from vendor lead time plus a conservative buffer, tighter for high-value items and generous for cheap critical ones. Then review it monthly against actual consumption and revise as variability becomes visible — I'd expect to re-cut the norms three or four times in the first six months, and I'd say that upfront so nobody treats the first number as final.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">06</span>Single source or dual source — how do you decide?</summary><div class="ans">
+<p>By criticality and by what a stoppage costs. For a high-volume item where a stoppage halts a line, dual source, even at a small price premium — that premium is cheap insurance. For a low-value routine item, a single vendor on a rate contract is more efficient to manage. The Kraljic view is useful: high supply risk and high value means strategic, so you invest in the relationship and the second source; low risk and low value is routine, so you simplify. And I'd watch for accidental single sourcing created by cylinder or tooling ownership rather than by choice.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">07</span>What would you do in your first 90 days here?</summary><div class="ans">
+<p>First month, understand rather than change: spend by category and vendor, the current inventory norms and where they came from, the approved vendor list, the specification library, and the current cost sheets. Meet the plant, quality, planning and the key vendors. Second month, build the baseline — where is spend concentrated, which items have no second source, which norms don't match actual variability, and what the current savings and TAT numbers really are. Third month, pick two or three things with clear value and start them, rather than launching ten. I'd want to be able to show something concrete by the end of the quarter.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">08</span>Take me through a monthly budget-versus-actual close.</summary><div class="ans">
+<p>Compare actual spend by category against budget, then decompose the variance into its causes: price, volume and mix. A price variance means the market moved or a negotiation landed; a volume variance usually means the production plan changed and isn't really mine; a mix variance means we bought a different specification than planned. Separating them matters, because otherwise procurement gets blamed for a volume change or credited for one. Then I report the causes with the numbers, the forward view for the next quarter, and the actions.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">09</span>Your cost sheet says one number, the vendor insists on another. How do you resolve it?</summary><div class="ans">
+<p>Go line by line rather than arguing about the total. Usually the gap sits in one or two places — their wastage assumption, a conversion rate, or a material grade I've assumed differently. Often I learn something: they may be running a smaller width and losing more in slitting, which is a real cost and also a fixable one. If it's genuinely their margin, I'd say so plainly and negotiate it as a margin conversation. What I wouldn't do is insist my model is right — it's a model, and its job is to make the discussion factual.</p>
+</div></details>
+
+<button class="mark" data-s="s17">Mark reviewed</button>
+</div></details>
+
+<details class="sec" id="s18" data-tag="do first"><summary><span class="n">18</span><h2>Personal and HR questions</h2><span class="arw">+</span></summary>
+<div class="body">
+<p>These are what caught you out last time — hobbies, the last book, family background, why polymer science. Write your actual answers tonight. Two or three sentences each. The failure mode isn't a wrong answer; it's a long pause followed by a ramble.</p>
+
+<details class="qa"><summary><span class="q">01</span>Tell me about yourself.</summary><div class="ans">
+<p>Present, past, future, in that order, in 90 seconds. “I'm a procurement officer handling packing materials and other raw materials — that's the summary in section 13. Before that I did my BE in Polymer Science and Technology, which is why packaging materials came naturally to me. What I'm looking for now is a bigger category in an organisation where packaging is central rather than peripheral, which is what brought me to this role.”</p>
+<p class="hint">Not your life story. Not school. Start with what you do now.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">02</span>Why did you choose Polymer Science and Technology?</summary><div class="ans">
+<p>This is a gift of a question here and you should have a real, warm answer. Something in this shape: an interest in materials and how they behave, it's a field where you can see the output of what you studied in everyday objects, and it turned out to be unusually well-matched to what you do now — the films and laminates you buy are the polymers you studied.</p>
+<p>Close it by making it relevant: “It means when a vendor tells me a structure won't run or a barrier can't be achieved, I can test that claim instead of accepting it. In a packaging role that's the difference between negotiating a price and engineering a cost.”</p>
+<p class="hint">Do not say “I got the seat” or “my parents suggested it” and leave it there. Even if that's how it started, land it on why it turned out to be the right fit.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">03</span>Why procurement, and not R&amp;D or production?</summary><div class="ans">
+<p>Say what genuinely appeals: it sits between the technical and the commercial, you see a material from specification all the way to the line running, and the impact is measurable — a saving or a stoppage avoided is a number you can point to. Then add the honest bit: you found you enjoyed the vendor-facing side and the problem-solving under time pressure more than pure lab work.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">04</span>Why did you join your current company?</summary><div class="ans">
+<p>Give a real reason — the role, the category exposure, the chance to own end-to-end procurement early. Then say what you got out of it, so it reads as a good decision rather than a default. Never “it was the offer I had”.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">05</span>Why do you want to leave?</summary><div class="ans">
+<p>Forward-looking, never critical. “I've learnt the end-to-end cycle where I am, but the category is limited in scale. I want a larger spend, a wider material range and an organisation where packaging is a strategic category rather than a support function.” If there's a genuine problem — pay, growth, management — do not make it the headline. Panels read complaints as a preview of how you'll talk about them one day.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">06</span>Why ITC?</summary><div class="ans">
+<p>Three reasons, specific, not flattery. One: scale and range — atta sacks through metallised snack laminates to aseptic cartons, which is far more material breadth than most FMCG buyers see. Two: ITC makes its own packaging, so packaging expertise is taken seriously inside the company rather than outsourced thinking. Three: the 2028 commitment to fully recyclable packaging means this role is a design and redesign job, not only a buying job — and that's the part your materials background is built for.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">07</span>Where do you see yourself in five years?</summary><div class="ans">
+<p>Ambitious but grounded in the category. Owning a larger packaging portfolio, leading sourcing strategy for a set of materials, and having taken real cost and real carbon out of packaging design. Avoid “in management” as a bare answer — say what you want to be good at, not just what title you want.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">08</span>Strengths and weaknesses.</summary><div class="ans">
+<p>Strength: pick one and evidence it. The strongest genuine one here is the technical-commercial combination — you can read a specification and a cost sheet, and most buyers can only do one.</p>
+<p>Weakness: pick a real one that you're visibly working on, and the honest one is available to you. “I've tended to over-explain — I'd give the full background when the person only needed the answer. I've been working on leading with the conclusion and letting them ask for detail.” It's true, it's self-aware, and it's the opposite of a humblebrag. Then demonstrate the fix by stopping there.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">09</span>What are your hobbies?</summary><div class="ans">
+<p>Have a true answer ready, with one specific detail so it sounds like a person rather than a CV line. Cooking, a sport, music, gardening, walking, a craft — anything real. One follow-up detail: what you cooked recently, how long you've played, where you walk. That's all it needs.</p>
+<p class="hint">This is a warmth check, not a test. The only wrong answer is a blank pause. Decide yours today so you never have to think about it in the room.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">10</span>What was the last book you read?</summary><div class="ans">
+<p>Name a book you actually read, in any language and any genre — fiction is completely fine and often more interesting than a business title. Say one sentence about what you liked. If you genuinely haven't read a book recently, say what you've been reading instead — long-form articles, a podcast you follow, industry material — and name a specific one. Honest and specific beats a title you can't discuss.</p>
+<p class="hint">Do not claim a management classic you haven't read. The follow-up question is always “what did you take from it?” and that's a much worse moment.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">11</span>Tell me about your family background.</summary><div class="ans">
+<p>Two sentences, factual, warm, then stop. Where you're from, what your parents do or did, siblings if relevant. It's rapport-building and a check on stability and relocation, nothing more. Don't over-share and don't sound defensive.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">12</span>Are you comfortable being based in Bangalore? Plant visits?</summary><div class="ans">
+<p>Answer clearly and without hedging — hesitation here reads as a flag. If you're comfortable, say so plainly. On travel, be positive and concrete: packaging procurement needs plant and vendor visits, line trials can't be judged from a desk, and you'd expect to be on the floor and at converters regularly.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">13</span>What are your salary expectations?</summary><div class="ans">
+<p>Give your current fixed and variable accurately — it will be verified — and then a range rather than a single number, framed on the role: “Based on the scope of this role and the market, I'd be looking in the range of X to Y, but I'm more interested in the fit and the category exposure, and I'm open to discussing the structure.” Don't refuse to answer; don't inflate. If they press for a single figure, give the lower-middle of your range.</p>
+</div></details>
+
+<details class="qa"><summary><span class="q">14</span>Tell me about a conflict at work and how you handled it.</summary><div class="ans">
+<p>Pick a real one with a good ending — a disagreement with quality, production or a vendor. Describe the substance of the disagreement, not the emotion. Show that you went to data rather than escalating, that you understood the other side's constraint, and what was agreed. End with the working relationship intact. Never a story about someone who was simply wrong.</p>
+</div></details>
+
+<button class="mark" data-s="s18">Mark reviewed</button>
+</div></details>
+
+<details class="sec" id="s19" data-tag="do first"><summary><span class="n">19</span><h2>Questions to ask them</h2><span class="arw">+</span></summary>
+<div class="body">
+<p>Pick three. Write them in your notepad before you go in and say so — “I noted a few down” is a good look, not a weak one. Good questions are the cheapest way to sound senior.</p>
+
+<h4>About the role</h4>
+<ul>
+<li>“Which materials would sit in this portfolio — flexibles, cartons, corrugated, or a mix across all of them?”</li>
+<li>“Is this role attached to a specific plant's requirement, or a category across locations?”</li>
+<li>“How is packaging split between ITC's own paperboards and packaging division and external converters?”</li>
+<li>“What does success look like in this role at the end of the first year?”</li>
+</ul>
+
+<h4>About the work — these show you understand the job</h4>
+<ul>
+<li>“How is the 2028 recyclable packaging commitment being translated into the sourcing plan at SKU level? Is it being led by design or by procurement?”</li>
+<li>“With input volatility the way it is this year, how far ahead does the business currently cover on packaging materials?”</li>
+<li>“How closely does procurement work with R&amp;D on new structures — are buyers involved from the specification stage or after it's frozen?”</li>
+<li>“What's the current split between value engineering and price negotiation in the savings plan?”</li>
+</ul>
+
+<h4>About the team</h4>
+<ul>
+<li>“Who would I work with most closely day to day — planning, quality, the plants?”</li>
+<li>“What's the biggest challenge the packaging procurement team is facing right now?” — then actually listen, because the answer tells you what to emphasise in your closing remarks.</li>
+</ul>
+
+<h4>Don't ask</h4>
+<ul>
+<li>Anything answered in the JD they sent you</li>
+<li>Leave policy, working hours and increments in the first round — those come at offer stage</li>
+<li>“Do you have any concerns about my profile?” — it invites an objection you may not be able to answer on the spot</li>
+</ul>
+
+<div class="callout"><p><strong>Your closing line.</strong> If given the chance at the end: “I've spent the last few years buying packaging materials, and I have a materials background behind it — this role is the first one I've seen where both halves get used. I'd very much like to do it.” Short, warm, and you leave on your strongest point.</p></div>
+
+<button class="mark" data-s="s19">Mark reviewed</button>
+</div></details>
+
+<details class="sec" id="s20" data-tag="must know"><summary><span class="n">20</span><h2>Delivery — fixing what went wrong last time</h2><span class="arw">+</span></summary>
+<div class="body">
+<p>You diagnosed your own Applied Materials interview accurately, which is genuinely rare. Here is each problem with a concrete fix. Read this again on Monday morning.</p>
+
+<h3>Problem 1 — you didn't use technical words</h3>
+<p>Fix: sections 05 and 06, plus one rule. <strong>Every answer should contain at least two category-specific nouns.</strong> Not “the material”, but “the laminate structure”. Not “the thickness”, but “the micron” or “the GSM”. Not “we checked quality”, but “bond strength against specification”. Practise by re-telling one of your stories twice — once naturally, once forcing five technical terms in. The second version is the interview version.</p>
+
+<h3>Problem 2 — you took too long to think</h3>
+<p>Fix: think <em>out loud</em>, not silently. Silence feels like ten seconds to you and thirty to them. These are all acceptable and buy you real time:</p>
+<ul>
+<li>“Let me structure that — there's an immediate action and then a prevention piece.”</li>
+<li>“Three things come to mind. The first is…”</li>
+<li>“Can I check one thing first — is this a single-source item?”</li>
+</ul>
+<p>Asking a clarifying question is not weakness. A buyer who clarifies before acting is exactly what they want. And it gives you five seconds while they answer.</p>
+
+<h3>Problem 3 — you kept switching frames mid-answer and got stuck</h3>
+<p>This was the real killer last time: you'd start answering from your own materials experience, remember you were talking to a semiconductor company, and freeze mid-sentence trying to re-aim.</p>
+<div class="callout warn"><p><strong>That problem does not exist on Monday.</strong> ITC Foods buys packaging materials. You buy packaging materials. There is no translation layer and nothing to re-aim. Answer straight from your own experience — it is directly, literally relevant. Tell yourself this in the auto on the way there, because that one piece of anxiety cost you the last interview and it simply doesn't apply here.</p></div>
+<p>And if you ever do start an answer down the wrong path, don't freeze — just say “let me restart that more simply” and begin again. Interviewers barely register it. Freezing they remember.</p>
+
+<h3>Problem 4 — you explained too much</h3>
+<p>Fix: the three-beat answer, then stop.</p>
+<div class="fx"><b>Beat 1</b> — the headline answer, one sentence<br><b>Beat 2</b> — the structure or reasoning, two or three sentences<br><b>Beat 3</b> — one concrete example from your work<br><b>Then stop.</b> Offer: “I can take you through an example if useful.”</div>
+<p>Ninety seconds maximum. Time yourself on Sunday with your phone — you'll be surprised how long ninety seconds actually is when you're not padding. Handing the turn back is not incompleteness; it's confidence. And it lets them steer towards what they actually want to hear.</p>
+
+<h3>Problem 5 — unexpected personal questions</h3>
+<p>Fix: section 18, written out tonight in your own words. There is no such thing as an unexpected question if you've decided your answer in advance. Hobbies, last book, family, why polymer science, why this company — those five take twenty minutes to prepare and they are the cheapest marks available.</p>
+
+<h3>Five more things</h3>
+<ul>
+<li><strong>Lead with the number.</strong> “We took about four days out of cover” before the story, not after it.</li>
+<li><strong>If you don't know, say so — then show your method.</strong> “I haven't worked on aseptic cartons directly. What I'd do is start from the shelf-life requirement and the fill process, then talk to the converter about structure.” That answer scores nearly as well as knowing, and it's honest. Bluffing a technical detail to a technical panel is the single fastest way to lose them.</li>
+<li><strong>Don't re-answer.</strong> Once you've answered, resist the urge to add another example. That's where over-explaining creeps back in.</li>
+<li><strong>Carry a notepad.</strong> Writing a figure down before answering a numerical question is completely normal and buys you a few seconds of calm.</li>
+<li><strong>Slow down by about 20%.</strong> Nerves speed everyone up. Slower speech sounds more considered even when the content is identical.</li>
+</ul>
+
+<h3>Common mistakes to avoid</h3>
+<div class="tw"><table>
+<tr><th>Don't</th><th>Do</th></tr>
+<tr><td>“I follow up with the vendor” as the answer to a supply crisis</td><td>Re-sequence production, partial dispatch, alternate source — <em>then</em> follow up</td></tr>
+<tr><td>Comparing quotes ex-works</td><td>Always landed cost, always like-for-like spec</td></tr>
+<tr><td>Claiming savings from a falling market</td><td>Separate market movement from your negotiation</td></tr>
+<tr><td>“We reduced inventory by 30%”</td><td>“…by 30% while holding 98% service level, with no stoppages”</td></tr>
+<tr><td>Criticising your current employer</td><td>Frame everything as what you're moving towards</td></tr>
+<tr><td>Reciting ITC's history back at them</td><td>One current, specific observation about their packaging costs or targets</td></tr>
+<tr><td>Guessing a technical number</td><td>“Indicative — my point is the structure of the calculation”</td></tr>
+</table></div>
+
+<button class="mark" data-s="s20">Mark reviewed</button>
+</div></details>
+
+<details class="sec" id="s21" data-tag="monday morning"><summary><span class="n">21</span><h2>Quick reference — read this last</h2><span class="arw">+</span></summary>
+<div class="body">
+<p>Monday morning, twenty minutes before. Nothing else.</p>
+
+<h4>The frame</h4>
+<p>Three pillars: <strong>availability · cost · market intelligence</strong>. Hang every answer on one.</p>
+
+<h4>The formulas</h4>
+<div class="fx">
+Yield (m²/kg) = 1000 ÷ (µ × density)<br>
+g/m² = µ × density<br>
+Safety stock = Z × σ<sub>demand</sub> × √lead time<br>
+ROL = (daily use × lead time) + safety stock<br>
+Days of cover = stock ÷ daily consumption<br>
+Justified price rise = material share × index movement
+</div>
+
+<h4>The cost sheet</h4>
+<p>Material → conversion → wastage → margin → freight → landed. Material ≈ 65%. Negotiation lives in the other 35% and in the specification.</p>
+
+<h4>Five facts</h4>
+<ul>
+<li>100% recyclable, reusable or compostable packaging by <strong>2028</strong>; plastic neutral four years running</li>
+<li>“No Plastic, Better Plastic, Less Plastic”</li>
+<li>PWM Amendment Rules, <strong>31 March 2026</strong> — recycled content 30% → 60% on rigid by 2028-29</li>
+<li>Q1 FY27: FMCG-Others revenue up 12%, PBIT up 21%; packaging input costs called out as a pressure</li>
+<li>ITC makes its own packaging — Paperboards &amp; Packaging PBIT up 38% in Q1 FY27</li>
+</ul>
+
+<h4>Ten words to use</h4>
+<p><span class="pill">laminate structure</span><span class="pill">micron / GSM</span><span class="pill">yield</span><span class="pill">WVTR / OTR</span><span class="pill">should-cost</span><span class="pill">landed cost</span><span class="pill">safety stock</span><span class="pill">lead-time variability</span><span class="pill">OTIF</span><span class="pill">value engineering</span></p>
+
+<h4>The three delivery rules</h4>
+<ol>
+<li>Structure out loud before you answer.</li>
+<li>Ninety seconds, then stop and offer more.</li>
+<li>Two technical nouns in every answer.</li>
+</ol>
+
+<h4>The reminder</h4>
+<div class="callout"><p>You buy packaging. They buy packaging. Nothing needs translating today. Answer straight from your own work.</p></div>
+
+<button class="mark" data-s="s21">Mark reviewed</button>
+</div></details>
+
+<details class="sec" id="s22" data-tag="monday morning"><summary><span class="n">22</span><h2>Am I ready?</h2><span class="arw">+</span></summary>
+<div class="body">
+<p>Tick these off as you go. Saved on this device.</p>
+
+<h4>Content</h4>
+<ul class="chk">
+<li><label><input type="checkbox" data-c="c1"><span>I can give the 90-second role summary without notes</span></label></li>
+<li><label><input type="checkbox" data-c="c2"><span>I can rebuild a packaging cost sheet out loud, layer by layer</span></label></li>
+<li><label><input type="checkbox" data-c="c3"><span>I can explain the yield formula and why it matters</span></label></li>
+<li><label><input type="checkbox" data-c="c4"><span>I can name the structure of a snack pack and say why each layer is there</span></label></li>
+<li><label><input type="checkbox" data-c="c5"><span>I have numbers attached to at least three of my own stories</span></label></li>
+<li><label><input type="checkbox" data-c="c6"><span>I can answer a supply crisis using immediate / root cause / prevention</span></label></li>
+<li><label><input type="checkbox" data-c="c7"><span>I can explain how I calculate savings, and the difference from cost avoidance</span></label></li>
+<li><label><input type="checkbox" data-c="c8"><span>I can say something specific and current about ITC's packaging position</span></label></li>
+<li><label><input type="checkbox" data-c="c9"><span>I can explain the EPR recycled-content issue for food contact</span></label></li>
+<li><label><input type="checkbox" data-c="c10"><span>I have twenty technical terms I can use naturally, not just recognise</span></label></li>
+</ul>
+
+<h4>Personal answers written down</h4>
+<ul class="chk">
+<li><label><input type="checkbox" data-c="p1"><span>Why polymer science — and how it makes me better at this job</span></label></li>
+<li><label><input type="checkbox" data-c="p2"><span>Why procurement</span></label></li>
+<li><label><input type="checkbox" data-c="p3"><span>Why ITC — three specific reasons</span></label></li>
+<li><label><input type="checkbox" data-c="p4"><span>Why I'm leaving — forward-looking, no criticism</span></label></li>
+<li><label><input type="checkbox" data-c="p5"><span>Hobbies, with one real detail</span></label></li>
+<li><label><input type="checkbox" data-c="p6"><span>Last book, and one thing I took from it</span></label></li>
+<li><label><input type="checkbox" data-c="p7"><span>Family background, two sentences</span></label></li>
+<li><label><input type="checkbox" data-c="p8"><span>Strength and weakness</span></label></li>
+<li><label><input type="checkbox" data-c="p9"><span>Salary — current figure and a range</span></label></li>
+<li><label><input type="checkbox" data-c="p10"><span>Three questions to ask them</span></label></li>
+</ul>
+
+<h4>Practicals</h4>
+<ul class="chk">
+<li><label><input type="checkbox" data-c="x1"><span>Printed CVs, notepad, pen, ID</span></label></li>
+<li><label><input type="checkbox" data-c="x2"><span>One page with my numbers on it</span></label></li>
+<li><label><input type="checkbox" data-c="x3"><span>Route and travel time to Banaswadi checked — arrive 15 minutes early</span></label></li>
+<li><label><input type="checkbox" data-c="x4"><span>Recorded my role summary once and listened back</span></label></li>
+<li><label><input type="checkbox" data-c="x5"><span>Slept properly on Sunday</span></label></li>
+</ul>
+
+<div class="callout"><p>If most of these are ticked, you are better prepared than you were last time by a wide margin — and last time the content was already there. Go and have the conversation.</p></div>
+
+<button class="mark" data-s="s22">Mark reviewed</button>
+</div></details>
+
+</main>
+
+<p class="foot">
+Prepared for the ITC Foods Procurement Officer interview, Bangalore. Market figures, ITC results and regulatory details were checked in September 2026 and are indicative — verify anything you intend to quote as fact. Progress and checkboxes are stored only on this device.
+<br><a class="top" href="#">Back to top</a>
+</p>
+
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var LS = {
+    get:function(k,d){ try{ var v=localStorage.getItem(k); return v===null?d:JSON.parse(v);}catch(e){return d;} },
+    set:function(k,v){ try{ localStorage.setItem(k,JSON.stringify(v)); }catch(e){} }
+  };
+
+  /* ---- contents ---- */
+  var secs = Array.prototype.slice.call(document.querySelectorAll('#secs > .sec'));
+  var toc = document.getElementById('tocList');
+  secs.forEach(function(s){
+    var n = s.querySelector('summary .n').textContent;
+    var t = s.querySelector('summary h2').textContent;
+    var tag = s.getAttribute('data-tag') || '';
+    var li = document.createElement('li');
+    li.innerHTML = '<a href="#'+s.id+'"><span class="n">'+n+'</span><span>'+t+'</span>'+(tag?'<span class="tag">'+tag+'</span>':'')+'</a>';
+    li.querySelector('a').addEventListener('click', function(){ s.open = true; });
+    toc.appendChild(li);
+  });
+
+  /* ---- reviewed progress ---- */
+  var done = LS.get('itcprep.reviewed', {});
+  var barC = document.getElementById('barC');
+  var progBar = document.getElementById('progBar');
+  function paint(){
+    var n = 0;
+    secs.forEach(function(s){
+      var on = !!done[s.id];
+      s.classList.toggle('done', on);
+      var b = s.querySelector('.mark');
+      if (b) b.textContent = on ? 'Reviewed \u2014 undo' : 'Mark reviewed';
+      if (on) n++;
+    });
+    barC.textContent = n + '/' + secs.length;
+    progBar.style.width = (n / secs.length * 100) + '%';
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest ? e.target.closest('.mark') : null;
+    if(!b) return;
+    var id = b.getAttribute('data-s');
+    done[id] = !done[id];
+    LS.set('itcprep.reviewed', done);
+    paint();
+  });
+  paint();
+
+  /* ---- checklist ---- */
+  var checks = LS.get('itcprep.checks', {});
+  Array.prototype.forEach.call(document.querySelectorAll('.chk input'), function(i){
+    var k = i.getAttribute('data-c');
+    i.checked = !!checks[k];
+    i.addEventListener('change', function(){
+      checks[k] = i.checked;
+      LS.set('itcprep.checks', checks);
+    });
+  });
+
+  /* ---- glossary filter ---- */
+  var f = document.getElementById('glFilter');
+  var items = Array.prototype.slice.call(document.querySelectorAll('#glossary .gi'));
+  var groups = Array.prototype.slice.call(document.querySelectorAll('#glossary .glgrp'));
+  var cnt = document.getElementById('glCount');
+  function filter(){
+    var q = (f.value || '').trim().toLowerCase();
+    var shown = 0;
+    items.forEach(function(it){
+      var hit = !q || it.textContent.toLowerCase().indexOf(q) > -1;
+      it.classList.toggle('hide', !hit);
+      if (hit) shown++;
+    });
+    groups.forEach(function(g){
+      var any = g.querySelector('.gi:not(.hide)');
+      g.classList.toggle('hide', !any);
+    });
+    cnt.textContent = q ? shown + ' of ' + items.length + ' terms' : items.length + ' terms';
+  }
+  if (f){ f.addEventListener('input', filter); filter(); }
+
+  /* ---- countdown ---- */
+  var target = new Date(2026, 8, 21, 10, 0, 0); /* Mon 21 Sep 2026, 10:00 local */
+  var cd = document.getElementById('countdown');
+  function tick(){
+    var ms = target - new Date();
+    if (ms <= 0){ cd.innerHTML = 'Go well. You know this material.'; return; }
+    var h = Math.floor(ms / 3600000);
+    var d = Math.floor(h / 24);
+    var rh = h % 24;
+    cd.innerHTML = 'Prep window remaining: <b>' + (d > 0 ? d + 'd ' : '') + rh + 'h</b>';
+  }
+  if (cd){ tick(); setInterval(tick, 60000); }
+
+  /* ---- theme ---- */
+  var tb = document.getElementById('themeBtn');
+  var saved = LS.get('itcprep.theme', null);
+  if (saved) document.documentElement.setAttribute('data-theme', saved);
+  tb.addEventListener('click', function(){
+    var cur = document.documentElement.getAttribute('data-theme');
+    if (!cur){
+      var dark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      cur = dark ? 'dark' : 'light';
+    }
+    var next = cur === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    LS.set('itcprep.theme', next);
+  });
+
+  /* ---- open a section when linked directly ---- */
+  if (location.hash){
+    var el = document.querySelector(location.hash);
+    if (el && el.classList.contains('sec')) el.open = true;
+  }
+})();
+</script>
+</body>
+</html>
