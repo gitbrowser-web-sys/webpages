@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Analog Bits sales handbook: India</title>
+<style>
+:root{
+  --paper:#F7F9F8; --card:#FFFFFF; --ink:#13233A; --soft:#4D5B6C; --line:#DCE3E0;
+  --mask:#1D6B52; --mask-soft:#E3F1EC; --copper:#A85B17; --copper-soft:#FAEBDD;
+  --alert:#A32A22; --alert-soft:#FBE9E7; --blue-soft:#E6EDF7;
+  --side:272px; --radius:10px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;-webkit-text-size-adjust:100%}
+a{color:var(--mask)} a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--copper);outline-offset:2px}
+h1,h2,h3,h4{line-height:1.2;margin:0}
+h1{font-size:clamp(1.7rem,4.5vw,2.6rem);font-weight:800;letter-spacing:-.02em}
+h2{font-size:clamp(1.4rem,3.2vw,1.9rem);font-weight:800;letter-spacing:-.015em;padding-top:.4rem}
+h3{font-size:1.15rem;font-weight:700;margin-top:1.8rem}
+h4{font-size:1rem;font-weight:700;margin-top:1.1rem}
+p{margin:.6rem 0;max-width:72ch} ul,ol{margin:.5rem 0;padding-left:1.25rem;max-width:72ch} li{margin:.3rem 0}
+small,.note{color:var(--soft);font-size:.88rem}
+
+/* layout */
+.top{position:sticky;top:0;z-index:30;background:var(--ink);color:#fff;display:flex;align-items:center;gap:.75rem;padding:.6rem .9rem;padding-top:calc(.6rem + env(safe-area-inset-top,0px))}
+.top b{font-size:1rem;letter-spacing:.01em;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.menu-btn{background:none;border:1.5px solid rgba(255,255,255,.5);color:#fff;border-radius:8px;padding:.35rem .7rem;font:inherit;font-size:.9rem;cursor:pointer}
+.side{position:fixed;inset:0 auto 0 0;width:min(86vw,320px);background:var(--card);border-right:1px solid var(--line);transform:translateX(-102%);transition:transform .2s;z-index:40;overflow-y:auto;padding:1rem 1rem 6rem;padding-top:calc(1rem + env(safe-area-inset-top,0px))}
+.side.open{transform:none}
+.scrim{position:fixed;inset:0;background:rgba(19,35,58,.45);z-index:35;display:none}
+.scrim.open{display:block}
+.side h2{font-size:1rem;padding:0;margin-bottom:.6rem}
+.side a{display:block;padding:.5rem .6rem;border-radius:8px;color:var(--ink);text-decoration:none;font-size:.95rem;border-left:3px solid transparent}
+.side a.sub{padding-left:1.3rem;font-size:.88rem;color:var(--soft)}
+.side a.on{background:var(--mask-soft);border-left-color:var(--mask);font-weight:600;color:var(--ink)}
+main{padding:1.1rem 1rem 6.5rem;max-width:980px;margin:0 auto}
+section{padding:1.4rem 0 1.2rem;border-bottom:1px solid var(--line)}
+section:last-of-type{border-bottom:0}
+.tabs{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--card);border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(5,1fr);padding-bottom:env(safe-area-inset-bottom,0px)}
+.tabs a{padding:.55rem .2rem .5rem;text-align:center;font-size:.74rem;color:var(--soft);text-decoration:none;font-weight:600}
+.tabs a.on{color:var(--mask);box-shadow:inset 0 3px 0 var(--mask)}
+@media(min-width:960px){
+  .top .menu-btn{display:none}
+  .side{transform:none;top:49px;width:var(--side);padding-bottom:2rem}
+  .scrim{display:none!important}
+  main{margin-left:var(--side);padding:1.5rem 2.5rem 4rem;max-width:calc(var(--side) + 940px)}
+  .tabs{display:none}
+}
+
+/* pieces */
+.hero{background:var(--ink);color:#fff;border-radius:14px;padding:1.5rem 1.3rem 1.4rem;position:relative;overflow:hidden}
+.hero>*{position:relative}
+.hero p{color:#D5DEE9;max-width:60ch}
+.hero .pins{position:absolute;right:-18px;top:0;bottom:0;width:90px;opacity:.3;background:repeating-linear-gradient(180deg,transparent 0 14px,var(--copper) 14px 20px);-webkit-mask:linear-gradient(90deg,transparent,#000);mask:linear-gradient(90deg,transparent,#000)}
+.jump{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:.6rem;margin-top:1rem}
+.jump a{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);color:#fff;text-decoration:none;border-radius:var(--radius);padding:.7rem .8rem;font-weight:600;font-size:.95rem}
+.jump a span{display:block;font-weight:400;font-size:.8rem;color:#C5D0DE}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:.6rem;margin:.9rem 0}
+.fact{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:.7rem .8rem}
+.fact b{display:block;font-size:1.25rem;color:var(--mask)}
+.fact span{font-size:.85rem;color:var(--soft)}
+.box{border-radius:var(--radius);padding:.8rem 1rem;margin:.9rem 0;max-width:76ch}
+.box p{margin:.25rem 0}
+.box.warn{background:var(--alert-soft);border-left:4px solid var(--alert)}
+.box.tip{background:var(--mask-soft);border-left:4px solid var(--mask)}
+.box.say{background:var(--copper-soft);border-left:4px solid var(--copper)}
+.scroll{overflow-x:auto;margin:.8rem 0;border:1px solid var(--line);border-radius:var(--radius);background:var(--card)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;min-width:520px}
+th,td{padding:.5rem .65rem;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--blue-soft);font-weight:700;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+.y{color:var(--mask);font-weight:700}.n{color:#9AA5B1}
+details{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);margin:.6rem 0}
+summary{cursor:pointer;position:relative;padding:.75rem 2.6rem .75rem .9rem;font-weight:700;list-style:none;display:flex;align-items:center;gap:.6rem;flex-wrap:wrap}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:.95rem;top:.5rem;font-size:1.3rem;font-weight:400;color:var(--soft)}
+details[open]>summary::after{content:"−"}
+details>.in{padding:0 .9rem .9rem;border-top:1px solid var(--line)}
+.pill{display:inline-block;border-radius:999px;padding:.1rem .6rem;font-size:.75rem;font-weight:700;white-space:nowrap}
+.f-high{background:var(--mask);color:#fff}.f-medium{background:var(--copper-soft);color:var(--copper)}.f-low{background:#ECEFF2;color:var(--soft)}.f-partner{background:var(--blue-soft);color:#2A4A7B}
+.dli{background:#fff;border:1px solid var(--line);color:var(--soft)}
+.controls{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:.8rem 0}
+.controls input,.controls select{font:inherit;padding:.5rem .7rem;border:1.5px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);min-width:0}
+.controls input{flex:1 1 200px}
+.chip{font:inherit;font-size:.85rem;border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:.3rem .8rem;cursor:pointer}
+.chip[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.co-sub{font-weight:400;color:var(--soft);font-size:.88rem;flex-basis:100%}
+.kv{display:grid;grid-template-columns:7.2rem 1fr;gap:.25rem .8rem;margin:.7rem 0;font-size:.93rem}
+.kv dt{color:var(--soft)} .kv dd{margin:0}
+ol.q{counter-reset:q;list-style:none;padding:0}
+ol.q li{counter-increment:q;position:relative;padding:.45rem .5rem .45rem 2.3rem;border-bottom:1px dashed var(--line);margin:0}
+ol.q li::before{content:counter(q);position:absolute;left:.3rem;top:.5rem;width:1.5rem;height:1.5rem;border-radius:50%;background:var(--mask-soft);color:var(--mask);font-weight:700;font-size:.8rem;display:grid;place-items:center}
+ol.q li small{display:block}
+.grid2{display:grid;gap:.8rem;grid-template-columns:1fr}
+@media(min-width:720px){.grid2{grid-template-columns:1fr 1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:.9rem 1rem}
+.card h4{margin-top:0}
+#finderOut ul{columns:2;column-gap:1.5rem}
+@media(max-width:520px){#finderOut ul{columns:1}}
+.steps{counter-reset:s;list-style:none;padding:0}
+.steps li{counter-increment:s;padding:.5rem .6rem .5rem 2.6rem;position:relative;background:var(--card);border:1px solid var(--line);border-radius:8px;margin:.35rem 0}
+.steps li::before{content:counter(s);position:absolute;left:.6rem;top:.55rem;font-weight:800;color:var(--copper)}
+.empty{padding:1rem;color:var(--soft)}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.side{transition:none}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <button class="menu-btn" id="menuBtn" aria-controls="side" aria-expanded="false">Contents</button>
+  <b>Analog Bits sales handbook: India</b>
+</header>
+<div class="scrim" id="scrim"></div>
+
+<nav class="side" id="side" aria-label="Contents">
+  <h2>Contents</h2>
+  <a href="#start">Start here</a>
+  <a href="#company">Analog Bits, the company</a>
+  <a href="#products">Products</a>
+  <a class="sub" href="#clocking">Clocking</a>
+  <a class="sub" href="#sensors">Sensors and power</a>
+  <a class="sub" href="#io">I/O</a>
+  <a class="sub" href="#serdes">SERDES (short)</a>
+  <a class="sub" href="#usecase">What each IP does for the customer</a>
+  <a class="sub" href="#specs">How to read the specifications</a>
+  <a href="#finder">Node finder: what is available</a>
+  <a href="#pfinder">Product finder: which nodes</a>
+  <a href="#selling">How Analog Bits sells</a>
+  <a href="#competition">Competition</a>
+  <a href="#basics">Chip basics in 2 minutes</a>
+  <a href="#dli">India and the DLI scheme</a>
+  <a href="#companies">Companies</a>
+  <a href="#questions">Questions for any meeting</a>
+  <a href="#talk">How to run the conversation</a>
+  <a href="#objections">Objections and answers</a>
+  <a href="#glossary">Glossary</a>
+  <a href="#sources">Sources and limits</a>
+</nav>
+
+<main>
+
+<section id="start" style="padding-top:.2rem">
+  <div class="hero">
+    <div class="pins" aria-hidden="true"></div>
+    <h1>Know the product. Know the account. Ask good questions.</h1>
+    <p>One page for your India meetings. It has the Analog Bits portfolio, the DLI companies, and the questions that keep a conversation going.</p>
+    <div class="jump">
+      <a href="#products">Products<span>Clocking, sensors, I/O</span></a>
+      <a href="#finder">Node finder<span>What you can sell on each node</span></a>
+      <a href="#pfinder">Product finder<span>Which nodes have each IP</span></a>
+      <a href="#companies">Companies<span>19 accounts with questions</span></a>
+      <a href="#questions">Questions<span>For any meeting</span></a>
+    </div>
+  </div>
+  <div class="box warn">
+    <p><b>Read this first.</b> The product data comes from two internal decks: Sales Training (October 2024) and the Corporate Presentation (April 2025). Both are confidential. Do not share this page outside the company.</p>
+    <p>Some status data is possibly old. Confirm availability with your application engineers before you quote.</p>
+  </div>
+  <div class="box tip">
+    <p><b>The first question in every meeting:</b> "Which foundry, node and process variant do you use?" An analog IP operates on one process only. The answer tells you what you can sell.</p>
+  </div>
+</section>
+
+<section id="company">
+  <h2>Analog Bits, the company</h2>
+  <div class="facts">
+    <div class="fact"><b>1995</b><span>Year the company started</span></div>
+    <div class="fact"><b>5,000+</b><span>IP deliveries</span></div>
+    <div class="fact"><b>Billions</b><span>Units shipped with its IP</span></div>
+    <div class="fact"><b>500+</b><span>Customers</span></div>
+    <div class="fact"><b>0.25 µm to 2 nm</b><span>Node range</span></div>
+    <div class="fact"><b>No royalty</b><span>License fee only</span></div>
+  </div>
+  <ul>
+    <li>Analog Bits makes mixed-signal IP. A mixed-signal IP is a design block with analog and digital circuits. Customers put these blocks into their chips.</li>
+    <li>It is a California corporation. SemiFive is the owner. SemiFive is a design service company.</li>
+    <li>It has ISO 9001 certification.</li>
+    <li>TSMC gave it the Analog IP Partner of the Year award at OIP 2024.</li>
+    <li>It has four product families: clocking, sensors, I/O and SERDES.</li>
+    <li>Its end markets are consumer electronics, IoT, automotive and aerospace, and AI.</li>
+  </ul>
+  <h3>Foundry relations</h3>
+  <div class="scroll"><table>
+    <tr><th>Foundry</th><th>Position</th><th>Nodes</th></tr>
+    <tr><td>TSMC</td><td>Top-5 mixed-signal IP supplier in advanced nodes</td><td>0.25 µm to N3. N2 and A16 were in development in April 2025.</td></tr>
+    <tr><td>Samsung</td><td>SERDES supplier to the memory group. Samsung internal teams also compete.</td><td>28LP, 28FDSOI, 14LPP, 8LPP, 7LPP, 4LPP</td></tr>
+    <tr><td>GlobalFoundries</td><td>GF selected it as analog IP supplier for advanced nodes</td><td>22FDX, 14LPP, 12LP, 12LP+, 28SLP, 40LP</td></tr>
+    <tr><td>Intel Foundry</td><td>Supplier of PLLs, sensors and custom SERDES</td><td>Intel 16, Intel 3, Intel 18A</td></tr>
+    <tr><td>UMC</td><td>PLLs only in the decks</td><td>28, 40, 65 nm</td></tr>
+  </table></div>
+  <details><summary>Work on the newest nodes (April 2025 status)</summary><div class="in">
+    <ul>
+      <li><b>In production:</b> N3, N4 and N5. Silicon proven in 5 nm, 4 nm and 3 nm. Working silicon in 2 nm.</li>
+      <li><b>TSMC N2P:</b> TSMC selected Analog Bits as a preferred partner. Test chips taped out in September 2024 and April 2025. The second test chip has more than 10 IPs.</li>
+      <li><b>N3P test chip (shown at TSMC Symposiums):</b> droop detector, pinless PLL, wide-range PLL, SSCG PLL for PCIe 5/6, high-speed PLL, PVT sensor, high-accuracy thermometer, scalable LDO, crystal oscillator, I/O buffer and differential clock receiver.</li>
+      <li><b>Intel 18A:</b> Intel selected Analog Bits as a preferred partner. Test chip tape-out was planned for Q1 2026.</li>
+      <li><b>Rapidus 2 nm:</b> first test chip planned for Q2 2025, second for Q3 2026.</li>
+      <li><b>Samsung 3/2 nm GAA:</b> first technical analysis is complete. Work starts when a customer wants it.</li>
+    </ul>
+    <p class="note">Why this is important in India: it is proof of quality. A startup on 28 nm buys from the same company that TSMC selected for 2 nm.</p>
+  </div></details>
+  <details><summary>Persons to speak to in Analog Bits</summary><div class="in">
+    <ul>
+      <li><b>Mahesh:</b> executive contact. Involve him for important customers, for SERDES accounts and for inside data from foundry executive teams.</li>
+      <li><b>Arthur:</b> Salesforce, datasheet location, front-end kit access, quotes, licenses, contracts, delivery and invoices.</li>
+      <li><b>Greg:</b> marketing messages with Arthur.</li>
+      <li><b>Application engineers:</b> technical calls and exact specifications.</li>
+    </ul>
+    <p class="note">Names come from the October 2024 training deck. Confirm that the roles are the same now.</p>
+  </div></details>
+  <h3>Why Analog Bits (the four deck messages)</h3>
+  <ul>
+    <li><b>Differentiated IP:</b> a wide portfolio with good power, performance and area.</li>
+    <li><b>Reputation:</b> known for mixed-signal design and support.</li>
+    <li><b>Global customers:</b> from 0.25 µm to 2 nm.</li>
+    <li><b>Good for volume:</b> no royalty model.</li>
+  </ul>
+</section>
+
+<section id="products">
+  <h2>Products</h2>
+  <p>Learn clocking, sensors and I/O well. These are the products that most Indian accounts can buy.</p>
+
+  <h3 id="clocking">Clocking</h3>
+  <p>A PLL makes the clocks for a chip from one reference clock. A chip usually has 3 to 10 PLLs.</p>
+  <div class="scroll"><table>
+    <tr><th>Product</th><th>What it does</th><th>When to offer it</th></tr>
+    <tr><td>Wide-range integer PLL</td><td>Programmable, low power. Multiplies by whole numbers.</td><td>System clocks, DDR clocks. The usual first PLL.</td></tr>
+    <tr><td>FracN/SSCG PLL</td><td>Makes almost any frequency. Spread spectrum decreases EMI.</td><td>Video and audio clocks. Products that must pass EMI tests.</td></tr>
+    <tr><td>LC PLL</td><td>Jitter below 1 picosecond.</td><td>SERDES and other high-speed links.</td></tr>
+    <tr><td>PCIe reference clock PLL</td><td>Makes the PCIe reference clock on the chip.</td><td>Removes the external clock chip from the board.</td></tr>
+    <tr><td>IoT PLL</td><td>Uses less than 1 microwatt.</td><td>Battery products, wearables.</td></tr>
+    <tr><td>Radiation-tolerant PLL</td><td>Hard by design.</td><td>Space, defence, avionics.</td></tr>
+    <tr><td>C2C PLL, 20 GHz</td><td>Low jitter for chip-to-chip links.</td><td>Chiplets. Available in N7, N5, N3.</td></tr>
+  </table></div>
+  <details><summary>Pinless technology (the main difference)</summary><div class="in">
+    <ul>
+      <li>Today, each PLL and sensor needs a dedicated supply pin and an external filter.</li>
+      <li>A pinless block uses the core voltage of the chip.</li>
+      <li>It removes pins and filters. This decreases board cost.</li>
+      <li>The designer can put it in any position on the chip.</li>
+      <li>Analog Bits has a patent for this.</li>
+      <li>Working silicon is available in N5, N4, N3 and N2.</li>
+    </ul>
+    <div class="box warn"><p>The decks do not show pinless products on 28 nm or 12 nm. Do not offer pinless to an account on these nodes.</p></div>
+  </div></details>
+
+  <h3 id="sensors">Sensors and power</h3>
+  <div class="scroll"><table>
+    <tr><th>Product</th><th>What it does</th><th>Key data from the decks</th></tr>
+    <tr><td>PVT sensor</td><td>Measures process speed, voltage and temperature on the chip.</td><td>One macro. ±1% accuracy with trim. Pinless version in N5, N4, N3P.</td></tr>
+    <tr><td>High-accuracy thermometer</td><td>A better temperature sensor.</td><td>±3.5 °C with no trim (old: ±8 °C). 0.023 sq mm. 30,000 samples per second. Silicon in N5A, N4, N3P, N2P.</td></tr>
+    <tr><td>Process monitor</td><td>Measures the speed of different transistor types.</td><td>Area 0.0005 sq mm.</td></tr>
+    <tr><td>Power-on reset (POR)</td><td>Holds the chip in reset until the supplies are stable.</td><td>Monitors core and I/O supply. Detects brown-out.</td></tr>
+    <tr><td>Glitch detector</td><td>Reports a fast voltage change immediately.</td><td>Programmable levels. Many can connect together.</td></tr>
+    <tr><td>Glitch catcher (new)</td><td>Reports voltage above and below a limit in each clock period.</td><td>Helps debug.</td></tr>
+    <tr><td>Droop detector</td><td>Measures a decrease in supply voltage.</td><td>0.495 to 1.05 V. 500 MHz bandwidth. Pinless version was in development.</td></tr>
+    <tr><td>Bandgap</td><td>A stable voltage reference.</td><td></td></tr>
+    <tr><td>ADC</td><td>A low-speed converter.</td><td>Listed on N7/N6.</td></tr>
+    <tr><td>On-die LDO</td><td>Gives a clean supply to a circuit.</td><td>For CPU cores and SERDES with many lanes. Silicon in N3P.</td></tr>
+    <tr><td>Automotive regulators</td><td>0.8 V and 1.8 V outputs.</td><td>GF 22FDX. Up to 500 mA. −40 to 150 °C.</td></tr>
+  </table></div>
+  <div class="box tip"><p><b>Security use.</b> An attacker can change the supply voltage to cause an error. Glitch and droop detectors detect this. Use this message with security-focused accounts.</p></div>
+  <details><summary>On-die LDO: more data</summary><div class="in">
+    <ul>
+      <li>An LDO is a linear regulator with a small difference between input and output voltage, for example 50 to 100 mV.</li>
+      <li>Benefits: better power efficiency and signal quality, fast response to load changes, voltage scaling, less board area, less noise.</li>
+      <li>Target uses: high-performance CPU cores (Arm) and high-performance SERDES with many lanes.</li>
+      <li>The example in the deck supplies 3.75 A to a core of 1.5 mm by 1.5 mm. LDO units of 50 µm width are along the sides of the core.</li>
+      <li>Status in April 2025: silicon in N3P. A version with 30% less area was in development for N3 and N2.</li>
+    </ul>
+    <div class="box warn"><p>The on-die LDO is an advanced-node product. On 28 nm it is not off-the-shelf.</p></div>
+  </div></details>
+  <details><summary>GF 22FDX automotive regulators: full table</summary><div class="in">
+    <div class="scroll"><table>
+      <tr><th>Item</th><th>0.8 V, board capacitor</th><th>0.8 V, capless</th><th>1.8 V, board capacitor</th></tr>
+      <tr><td>Input voltage</td><td>1.8, 2.5 or 3.3 V ±10%</td><td>1.8, 2.5 or 3.3 V ±10%</td><td>2.5 or 3.3 V ±10%</td></tr>
+      <tr><td>Output voltage</td><td>0.76 to 0.84 V</td><td>0.76 to 0.84 V</td><td>1.71 to 1.89 V</td></tr>
+      <tr><td>Load current</td><td>Up to 500 mA</td><td>Up to 12 mA</td><td>Up to 150 mA</td></tr>
+      <tr><td>Board capacitor</td><td>10 µF</td><td>None</td><td>1 to 10 µF</td></tr>
+      <tr><td>Area</td><td colspan="2">0.044 sq mm</td><td>0.024 sq mm</td></tr>
+      <tr><td>Output precision</td><td colspan="3">±5% with no trim, ±2.5% with trim</td></tr>
+      <tr><td>Supply rejection at 100 MHz</td><td>&gt;20 dB</td><td>&gt;10 dB</td><td>&gt;20 dB</td></tr>
+      <tr><td>Load regulation</td><td>22 mV/A</td><td>30 mV/A</td><td>18 mV/A</td></tr>
+      <tr><td>Line regulation</td><td>15 mV/V</td><td>15 mV/V</td><td>6 mV/V</td></tr>
+      <tr><td>Start time</td><td>≤240 µs</td><td>≤4.5 µs</td><td>≤195 µs</td></tr>
+      <tr><td>Temperature</td><td colspan="3">−40 to 150 °C</td></tr>
+    </table></div>
+  </div></details>
+  <details><summary>Automotive certificates</summary><div class="in">
+    <ul>
+      <li>Five IPs have ISO 26262 ASIL-B Ready certificates on TSMC N5A: pinless FracN PLL, pinless PVT sensor, crystal oscillator, droop detector and POR.</li>
+      <li>They agree with AEC-Q100 Grade 2 (125 °C).</li>
+      <li>GF 22FDX has an automotive Grade 1 portfolio.</li>
+    </ul>
+  </div></details>
+
+  <h3 id="io">I/O</h3>
+  <ul>
+    <li><b>Crystal oscillator pads:</b> low noise and low power. They connect to the external crystal.</li>
+    <li><b>Crystal-less oscillator pads:</b> for IoT. They remove the external crystal.</li>
+    <li><b>Differential clock transmitter and receiver</b> (clock buffers).</li>
+    <li><b>HCSL clock drivers</b> for PCIe.</li>
+    <li><b>Programmable I/O</b> that supports many standards.</li>
+    <li><b>Voltage-tolerant I/O buffers.</b></li>
+    <li><b>DDR I/O.</b></li>
+    <li><b>Chip-to-chip (C2C) I/O</b> for chiplets. Core voltage signals. Good for CoWoS packages. More than 2 GHz, and more than 10 GHz in low-loss material.</li>
+  </ul>
+
+  <h3 id="serdes">SERDES (short)</h3>
+  <ul>
+    <li>A SERDES sends data at high speed on a small number of pins.</li>
+    <li>The low-cost type supports PCIe Gen2 and Gen3, SATA and eDP. It uses very low power and operates in wire-bond packages.</li>
+    <li>The enterprise type supports PCIe Gen4 and Gen5. Synopsys is the controller partner.</li>
+  </ul>
+  <details><summary>SERDES numbers, if a customer asks</summary><div class="in">
+    <div class="scroll"><table>
+      <tr><th>Item</th><th>Low-cost type (full-rate)</th><th>Enterprise type (dual thread)</th></tr>
+      <tr><td>Markets</td><td>Cameras, microcontrollers, mobile SSD, infotainment</td><td>Data centre storage, GPU, bridges, re-timers, AI</td></tr>
+      <tr><td>Protocols</td><td>PCIe Gen2/3, SATA, eDP, XFI</td><td>PCIe Gen4/5, SAS, Ethernet</td></tr>
+      <tr><td>Power</td><td>4 pJ/bit at Gen3</td><td>6 pJ/bit at Gen4; 7.6 pJ/bit at Gen5</td></tr>
+      <tr><td>Area for each lane</td><td>0.1 sq mm (Gen3)</td><td>0.26 sq mm (Gen4); 0.432 sq mm (Gen5, Samsung 8LPP)</td></tr>
+      <tr><td>Package</td><td>Wire-bond up to 10G</td><td>High lane count: 196 to 300+ lanes</td></tr>
+    </table></div>
+    <ul>
+      <li>Lane widths: x1, x2, x4, x8, x16. Each lane is programmable for the protocol.</li>
+      <li>Other points: clock on each lane, real-time eye monitor, custom package types, automotive version in N5A.</li>
+      <li>Production nodes for the low-cost type: TSMC 40G, 28HPC, 28HPC+, 16FFC, 12FFC; Samsung 32LP, 28LPP, 28FDSOI, 14LPP.</li>
+    </ul>
+  </div></details>
+  <div class="box warn"><p>The team has limited SERDES resources. Speak to Mahesh before you qualify a SERDES account.</p></div>
+
+  <h3 id="usecase">What each IP does for the customer</h3>
+  <p>These one-line uses come from the deck tables. Use them as your short explanation.</p>
+  <div class="scroll"><table>
+    <tr><th>IP</th><th>Use for the customer</th></tr>
+    <tr><td>Integer PLL</td><td>System clock and DDR clock</td></tr>
+    <tr><td>Pinless PLL (integer, FracN)</td><td>Less clock power, fewer board parts, shorter test time</td></tr>
+    <tr><td>PCIe Gen4/5 LC PLL</td><td>Makes the reference clock; removes external clock chips</td></tr>
+    <tr><td>20 GHz C2C PLL</td><td>Low-jitter clock for high-performance chip-to-chip links</td></tr>
+    <tr><td>PVT sensor</td><td>One integrated sensor for process, voltage, temperature</td></tr>
+    <tr><td>Pinless high-accuracy PVT</td><td>Better accuracy; put it in any position</td></tr>
+    <tr><td>Remote high-accuracy sensor</td><td>Measures temperature at a distant point with fewer supplies</td></tr>
+    <tr><td>POR</td><td>Monitors I/O power and core power</td></tr>
+    <tr><td>Glitch detector</td><td>Detects high-frequency supply events for high reliability</td></tr>
+    <tr><td>Droop detector</td><td>An always-on sensor against security attacks</td></tr>
+    <tr><td>Bandgap</td><td>Stable voltage reference</td></tr>
+    <tr><td>C2C I/O</td><td>Low-latency communication between chiplets</td></tr>
+    <tr><td>Oscillator pads</td><td>Clock source with an external crystal</td></tr>
+    <tr><td>LDO</td><td>Supply regulation on the die</td></tr>
+    <tr><td>Clock buffers (TX/RX)</td><td>Clock input from a clock chip; clean output clock</td></tr>
+  </table></div>
+
+  <h3 id="specs">How to read the specifications</h3>
+  <p>You do not have to answer specification questions. But you must understand the words. Typical ranges below are general industry values, not Analog Bits data.</p>
+  <details><summary>PLL words</summary><div class="in"><div class="scroll"><table>
+    <tr><th>Word</th><th>Meaning</th><th>Why the customer cares</th></tr>
+    <tr><td>Input frequency</td><td>The reference clock range that the PLL accepts</td><td>Must agree with their crystal</td></tr>
+    <tr><td>Output frequency</td><td>The clock range that it can make</td><td>Must reach their CPU and interface clocks</td></tr>
+    <tr><td>Jitter</td><td>Time error of the clock edges, in picoseconds</td><td>Less jitter gives a faster chip and fewer link errors</td></tr>
+    <tr><td>Lock time</td><td>Time from start to a stable clock</td><td>Important when the chip wakes from sleep</td></tr>
+    <tr><td>Power and area</td><td>What the PLL uses</td><td>Cost and battery life</td></tr>
+    <tr><td>Supply</td><td>Core only, or core and analog supply</td><td>An analog supply needs a pin</td></tr>
+    <tr><td>Integer or fractional</td><td>Whole-number steps, or almost any frequency</td><td>Fractional gives flexibility</td></tr>
+    <tr><td>Ring or LC</td><td>Small with moderate jitter, or large with very low jitter</td><td>LC is for SERDES</td></tr>
+    <tr><td>Spread spectrum</td><td>A small, slow frequency sweep</td><td>Helps pass EMI tests</td></tr>
+  </table></div></div></details>
+  <details><summary>Sensor words</summary><div class="in"><div class="scroll"><table>
+    <tr><th>Word</th><th>Meaning</th><th>Why the customer cares</th></tr>
+    <tr><td>Accuracy</td><td>Error of the reading (°C or %)</td><td>Better accuracy lets the chip operate nearer its limit</td></tr>
+    <tr><td>Trim</td><td>Calibration of each chip in production test</td><td>Trim costs test time. Good accuracy with no trim saves money.</td></tr>
+    <tr><td>Sample rate</td><td>Readings in each second</td><td>Fast readings catch fast heat changes</td></tr>
+    <tr><td>Remote sense</td><td>A small sense point far from the main block</td><td>Many measure points with small area</td></tr>
+    <tr><td>Threshold</td><td>The voltage level that causes an alarm</td><td>Must be programmable for their supply</td></tr>
+    <tr><td>Bandwidth</td><td>How fast an event the detector can see</td><td>Fast droops and glitches need high bandwidth</td></tr>
+  </table></div></div></details>
+  <details><summary>Regulator and reset words</summary><div class="in"><div class="scroll"><table>
+    <tr><th>Word</th><th>Meaning</th><th>Why the customer cares</th></tr>
+    <tr><td>Dropout</td><td>Smallest difference between input and output voltage</td><td>Small dropout wastes less power</td></tr>
+    <tr><td>Load current</td><td>Largest current that it can supply</td><td>Must cover the block that it feeds</td></tr>
+    <tr><td>PSRR</td><td>How well it stops supply noise, in dB</td><td>Clean supply for PLLs and SERDES</td></tr>
+    <tr><td>Load and line regulation</td><td>How much the output moves when load or input changes</td><td>Stable voltage</td></tr>
+    <tr><td>Capless</td><td>Needs no external capacitor</td><td>Saves a pin and a board part</td></tr>
+    <tr><td>Trip threshold</td><td>The voltage where reset releases</td><td>The chip must start in a known state</td></tr>
+    <tr><td>Brown-out</td><td>The supply goes too low during operation</td><td>The chip must reset safely</td></tr>
+  </table></div></div></details>
+</section>
+
+<section id="finder">
+  <h2>Node finder: what is available</h2>
+  <p>Select the customer's node. The list shows the IP that the decks give as available. All other IP is semi-custom or full custom work with a fee.</p>
+  <div class="controls">
+    <label for="nodeSel"><b>Node</b></label>
+    <select id="nodeSel"></select>
+  </div>
+  <div class="card" id="finderOut"></div>
+  <div class="box tip"><p><b>Starter bundle for most Indian accounts (TSMC 28HPC+ or 12FFC):</b> integer PLL, FracN PLL, PVT sensor, POR, oscillator pads and clock buffers. Add the 1-8G SERDES if they have PCIe Gen2/3.</p></div>
+  <p class="note">Source: availability tables in the April 2025 deck. Confirm before you quote.</p>
+</section>
+
+<section id="pfinder">
+  <h2>Product finder: which nodes</h2>
+  <p>Select a product. The list shows the nodes where the decks give it as available. Use it when a customer asks "Do you have this IP on our node?"</p>
+  <div class="controls">
+    <label for="prodSel"><b>Product</b></label>
+    <select id="prodSel"></select>
+  </div>
+  <div class="card" id="prodOut"></div>
+  <p class="note">Source: availability tables in the April 2025 deck. Confirm before you quote.</p>
+</section>
+
+<section id="selling">
+  <h2>How Analog Bits sells</h2>
+  <div class="grid2">
+    <div class="card"><h4>Off-the-shelf (OTS)</h4><p>The IP has a part number and usually a test-chip report. The customer can download the front-end kit before the contract. Margin and commission are higher. Sell bundles and re-use licenses.</p></div>
+    <div class="card"><h4>Semi-custom</h4><p>An OTS IP with added features (pins, voltages, temperature range), or a port to a related node. It has an engineering fee (NRE). Give the customer a clear technical reason.</p></div>
+    <div class="card"><h4>Full custom</h4><p>A new design, a new process or a new foundry. It has a large NRE and license fee.</p></div>
+    <div class="card"><h4>Kits</h4><p><b>Front-end kit:</b> Verilog model, timing files, LEF, datasheet, integration guide. It lets the customer start. <b>Back-end kit:</b> adds GDSII layout and LVS netlist. It is necessary for tape-out.</p></div>
+  </div>
+  <details><summary>More about off-the-shelf IP</summary><div class="in">
+    <ul>
+      <li>An OTS IP came from a current customer or a foundry-sponsored project.</li>
+      <li>Arthur can enable the front-end kit. A customer who downloads it before the contract designs the IP in.</li>
+      <li>The IP possibly needs a PDK update. Ask.</li>
+      <li>Always offer more OTS IPs and close a larger bundle.</li>
+      <li>Re-use licenses for the next chips are easy to sell.</li>
+      <li>The OTS portfolio increases on N5, N4, N3 and N2.</li>
+      <li>The fee for semi-custom work comes from the number of weeks for circuit, layout and quality work.</li>
+    </ul>
+  </div></details>
+  <h3>Sales steps</h3>
+  <ol class="steps">
+    <li>Follow up the lead by email or phone.</li>
+    <li>Ask about IP needs, foundry and application.</li>
+    <li>Do research on the company from its website.</li>
+    <li>Sign an NDA. If there is one, go to the next step.</li>
+    <li>Do a discovery call. Keep the record in Salesforce.</li>
+    <li>Send datasheets. Follow up with technical calls.</li>
+    <li>Send the commercial proposal: quote and contract.</li>
+    <li>Negotiate the quote with the VP of engineering or procurement.</li>
+    <li>Negotiate the contract with legal.</li>
+    <li>Close with a signed contract or a purchase order.</li>
+    <li>Give the account to the support team and Arthur for delivery.</li>
+    <li>Arthur makes the invoices. You follow the payment status.</li>
+    <li>Monitor the program for support and for design changes.</li>
+    <li>Meet the customer each quarter. Involve Mahesh if necessary.</li>
+    <li>Tell them about new products. Invite them to shows.</li>
+  </ol>
+  <h3>Where leads come from</h3>
+  <ul>
+    <li>Foundry sales teams, foundry support teams and the foundry portal.</li>
+    <li>The Design &amp; Reuse website. Analog Bits is a platinum sponsor and runs ad campaigns there.</li>
+    <li>The Analog Bits website. Customers can get datasheets there.</li>
+    <li>Product announcements at foundry shows.</li>
+    <li>Design integrators, service providers and EDA suppliers.</li>
+    <li>Past customers and persons who move to a new company.</li>
+    <li>System companies that used the IP through an ASIC supplier.</li>
+    <li>Controller partners that recommend the SERDES.</li>
+    <li>Strategic customers and personal relations.</li>
+  </ul>
+  <details><summary>Shows and events</summary><div class="in">
+    <ul>
+      <li>TSMC Technology Symposiums and TSMC OIP forums (US, Japan, Taiwan, China, Europe).</li>
+      <li>GlobalFoundries shows (US, Singapore, Germany, China).</li>
+      <li>Design &amp; Reuse IP-SoC Days, for selected events.</li>
+      <li>DAC, and GSA shows.</li>
+      <li>Samsung shows are online.</li>
+      <li>For India: SEMICON India is where your accounts show their chips.</li>
+    </ul>
+  </div></details>
+  <details><summary>Product focus in the 2024 plan</summary><div class="in">
+    <ul>
+      <li>New product: N3 LDO.</li>
+      <li>N2 test chip with pinless technology.</li>
+      <li>Better high-accuracy PVT sensors in N3, N4 and N5.</li>
+      <li>More IP on GF 22FDX.</li>
+      <li>SERDES: the team looked for customers.</li>
+    </ul>
+  </div></details>
+  <details><summary>Discovery sheet (Salesforce) items</summary><div class="in">
+    <ul>
+      <li>Region. New or current customer. Start-up or established company.</li>
+      <li>Technical contacts, business contact, decision maker.</li>
+      <li>Foundry and process node.</li>
+      <li>Market application of the chip.</li>
+      <li>IPs requested. Where Analog Bits is strong. Where it has competition.</li>
+      <li>Off-the-shelf, semi-custom or full custom.</li>
+      <li>Competition (possibly internal). Advantage and disadvantage.</li>
+      <li>Third-party influence. Other IPs in use.</li>
+      <li>Design start date and tape-out date.</li>
+      <li>Technical status and problems. Business status and problems.</li>
+      <li>Planned close month. Risks. Step in the sales cycle.</li>
+    </ul>
+  </div></details>
+</section>
+
+<section id="competition">
+  <h2>Competition</h2>
+  <div class="scroll"><table>
+    <tr><th>Area</th><th>Competitor</th><th>Analog Bits advantage</th></tr>
+    <tr><td>PLL, TSMC FinFET</td><td>Silicon Creations: good jitter, low price, early on new nodes</td><td>Pinless PLL, better LC PLL, possibly smaller area</td></tr>
+    <tr><td>PVT sensor</td><td>Synopsys: gives the sensor with its lifecycle software</td><td>High accuracy and pinless</td></tr>
+    <tr><td>POR, droop, glitch</td><td>None from outside. Some customers design their own.</td><td>Strong position. Sell as a bundle.</td></tr>
+    <tr><td>I/O</td><td>Silicon Creations, Aragio: low price</td><td>Bundle</td></tr>
+    <tr><td>PLL on 28, 22, 40 nm</td><td>Silicon Creations, GUC, M31: price war</td><td>Relations and bundles</td></tr>
+    <tr><td>PVT on 28, 22, 40 nm</td><td>Synopsys, low-cost China vendors</td><td>Longer track record</td></tr>
+    <tr><td>SERDES</td><td>Synopsys and Cadence, with controller</td><td>Lowest power and area. Wire-bond at Gen3.</td></tr>
+    <tr><td>GF 12 nm</td><td>None</td><td>Almost the only supplier</td></tr>
+  </table></div>
+  <details><summary>TSMC FinFET nodes: detail</summary><div class="in"><ul>
+    <li><b>PLL:</b> two vendors, Silicon Creations and Analog Bits. Silicon Creations is usually first on a new process. It shows better jitter and a lower price.</li>
+    <li><b>PVT sensor:</b> two vendors, Synopsys and Analog Bits. Synopsys sells lifecycle software and gives the sensor with it. Answer with high accuracy and pinless.</li>
+    <li><b>POR, droop, glitch:</b> no real outside competition. If a customer needs these, Analog Bits has a strong position to win all the sockets.</li>
+    <li><b>LDO in N3:</b> there is good interest.</li>
+    <li><b>I/O:</b> some competition from Silicon Creations and Aragio on price.</li>
+    <li>Current customers usually use the Analog Bits PLL.</li>
+    <li>Use the 2 nm partnership with TSMC as proof.</li>
+  </ul></div></details>
+  <details><summary>TSMC planar nodes, 22 nm and larger: detail</summary><div class="in"><ul>
+    <li><b>PLL:</b> Silicon Creations, Analog Bits, and others such as GUC and M31. It is usually a price war. Silicon Creations wins most with cost and features. Analog Bits wins some with relations and bundles.</li>
+    <li><b>PVT sensor:</b> Synopsys, Analog Bits and low-cost vendors from China. Analog Bits usually wins on 40, 28 and 22 nm because of its track record.</li>
+    <li><b>POR:</b> only on 28 nm. Analog Bits wins some.</li>
+    <li><b>I/O:</b> clock TX/RX and crystal pads on 40 and 28 nm.</li>
+    <li><b>SERDES on 28HPC+:</b> Synopsys competes with its controller. The Analog Bits advantages are lowest power, lowest area and wire-bond at PCIe Gen3.</li>
+    <li><b>SERDES on 40G:</b> no competition.</li>
+    <li>Most customers on these nodes are in Asia. They are low-cost customers. Use relations to close.</li>
+  </ul><div class="box tip"><p>This is the situation for most Indian DLI accounts.</p></div></div></details>
+  <details><summary>GlobalFoundries: detail</summary><div class="in"><ul>
+    <li><b>12LP, 12LP+:</b> almost the only supplier for PLL, PVT and POR. The market is small, mostly US military, but deals can be large. Keep the price high.</li>
+    <li><b>22FDX:</b> a good node for RF and automotive. PLL: Silicon Creations has a FracN PLL, Analog Bits has an integer PLL; price competition. PVT: Analog Bits is stronger because of automotive qualification. POR: no competition.</li>
+    <li><b>55, 40, 28 nm:</b> no PLL competition, but the markets are price-sensitive.</li>
+    <li>Use personal relations with the GF sales teams.</li>
+  </ul></div></details>
+  <details><summary>Intel and Samsung: detail</summary><div class="in"><ul>
+    <li><b>Intel 16:</b> LC PLL, PVT sensor and crystal I/O have no competition. Silicon Creations competes on the ring PLL. There are few customers.</li>
+    <li><b>Samsung:</b> Analog Bits is a supplier and also a competitor to Samsung internal teams. The result is difficult to predict.</li>
+    <li><b>Samsung 14LPP:</b> PLL, PVT and PCIe Gen4 SERDES. Competition is internal, and Synopsys for SERDES.</li>
+    <li><b>Samsung 4LPP:</b> a port of PLL, PVT and POR started, with a test chip planned.</li>
+  </ul></div></details>
+  <ul>
+    <li>The strongest nodes are N5, N5A, N4, N3 and N3A.</li>
+    <li>Customers on 28, 22 and 40 nm are usually low-cost customers. Use relations and bundle price.</li>
+    <li>Use test-chip reports as proof.</li>
+  </ul>
+</section>
+
+<section id="basics">
+  <h2>Chip basics in 2 minutes</h2>
+  <ul>
+    <li>An SoC is a full computer on one chip: CPU, accelerators, memory, interfaces.</li>
+    <li>The customer designs the digital logic. That is where they are different from competitors.</li>
+    <li>Each chip also needs clocks, clean power, sensors and pads. The customer usually buys these. This is your product.</li>
+    <li>These blocks are small, but if one fails, the chip fails. Thus customers want silicon proof on their node.</li>
+  </ul>
+  <details><summary>The blocks in an SoC, and your way in</summary><div class="in"><div class="scroll"><table>
+    <tr><th>Block</th><th>What it does</th><th>What it needs from you</th></tr>
+    <tr><td>CPU cores</td><td>Run the software. Arm or RISC-V.</td><td>A fast clock from a PLL. Temperature sensors.</td></tr>
+    <tr><td>Accelerators</td><td>AI, video, image processing. The hottest blocks.</td><td>PVT sensors. Droop detection on advanced nodes.</td></tr>
+    <tr><td>Memory</td><td>SRAM on the chip. DRAM outside through DDR.</td><td>A PLL for the DDR clock. DDR I/O.</td></tr>
+    <tr><td>Bus</td><td>Connects all blocks.</td><td>Nothing directly.</td></tr>
+    <tr><td>Peripherals</td><td>UART, SPI, I2C, GPIO.</td><td>I/O pads.</td></tr>
+    <tr><td>High-speed interfaces</td><td>PCIe, Ethernet, USB, MIPI. Each has a controller and a PHY.</td><td>Reference clock PLL, HCSL drivers, SERDES for PCIe.</td></tr>
+    <tr><td>Security</td><td>Secure boot, keys, tamper detection.</td><td>Glitch detector, POR with brown-out detect.</td></tr>
+    <tr><td>Clock and reset</td><td>Makes all clocks. Controls start-up.</td><td>PLLs, oscillator pads, POR. Your core products.</td></tr>
+    <tr><td>Power management</td><td>Controls supplies and sleep states.</td><td>LDO, POR, voltage monitors.</td></tr>
+    <tr><td>I/O ring</td><td>The pads around the die.</td><td>Oscillator pads, clock buffers, programmable I/O.</td></tr>
+  </table></div></div></details>
+  <details><summary>Where the analog blocks sit on the die</summary><div class="in"><ul>
+    <li><b>PLL:</b> at the edge or a corner, away from noisy logic. Supply noise becomes jitter.</li>
+    <li><b>Oscillator pads:</b> in the I/O ring, next to the crystal pins.</li>
+    <li><b>POR:</b> near the supply pads.</li>
+    <li><b>PVT sensors:</b> inside the hottest digital blocks. A large chip has many.</li>
+    <li><b>SERDES:</b> at the die edge, above its package connections.</li>
+    <li><b>LDO:</b> next to the block that it feeds.</li>
+  </ul>
+  <p>Customers ask about three things when they place a block: the supply pins that it needs, its area and shape, and the metal layers that it uses.</p></div></details>
+  <details><summary>The persons you will meet</summary><div class="in"><div class="scroll"><table>
+    <tr><th>Role</th><th>What is important to them</th><th>What to ask them</th></tr>
+    <tr><td>CEO or founder</td><td>Schedule, money, risk</td><td>Roadmap, next chip, how IP decisions are made</td></tr>
+    <tr><td>Chip architect</td><td>Specifications and features</td><td>Clock and power architecture, interfaces</td></tr>
+    <tr><td>Analog lead</td><td>Datasheet detail, integration</td><td>Jitter, supply needs, silicon reports</td></tr>
+    <tr><td>Physical design lead</td><td>Area, shape, metal stack, pins</td><td>Floorplan limits, package</td></tr>
+    <tr><td>Procurement</td><td>Price and terms</td><td>Budget cycle, payment terms</td></tr>
+  </table></div></div></details>
+  <details><summary>How customers judge silicon proof</summary><div class="in">
+    <ol>
+      <li>Design complete, simulation only. The weakest proof.</li>
+      <li>Taped out on a test chip. No silicon data yet.</li>
+      <li>Silicon proven, with a characterization report.</li>
+      <li>Proven in a customer chip.</li>
+      <li>In volume production. The strongest proof.</li>
+    </ol>
+    <p>Ask which level they need. If the IP is not on their node, the alternative is a port with a fee.</p>
+    <p>A startup usually makes its first silicon on an MPW shuttle. This is a shared, low-cost run. The DLI scheme gives money for it.</p>
+  </div></details>
+  <h3>When the customer selects IP</h3>
+  <ol class="steps">
+    <li>Architecture: they select the foundry and the node.</li>
+    <li><b>IP selection: your window.</b></li>
+    <li>Design and verification. Your block goes into the floorplan.</li>
+    <li>Tape-out. No changes are possible after this without new masks.</li>
+    <li>Bring-up: they test first silicon. Clocks and power must operate first.</li>
+    <li>Production.</li>
+  </ol>
+  <div class="box tip"><p>If IP selection is complete, your window is the next chip. Ask about the next chip.</p></div>
+</section>
+
+<section id="dli">
+  <h2>India and the DLI scheme</h2>
+  <p>DLI is the Design Linked Incentive scheme. MeitY operates it in the Semicon India Programme. C-DAC is the agency. Most of your accounts are DLI companies.</p>
+  <div class="facts">
+    <div class="fact"><b>50%</b><span>Of eligible design cost paid back, limit ₹15 crore</span></div>
+    <div class="fact"><b>4% to 6%</b><span>Of net sales for 5 years, limit ₹30 crore</span></div>
+    <div class="fact"><b>24</b><span>Chip design projects approved (January 2026)</span></div>
+    <div class="fact"><b>95</b><span>Companies with EDA tool access</span></div>
+    <div class="fact"><b>16</b><span>Tape-outs completed</span></div>
+  </div>
+  <h3>What a DLI company receives</h3>
+  <ul>
+    <li><b>Design money:</b> payback of up to 50% of eligible cost.</li>
+    <li><b>Sales money:</b> 4% to 6% of net sales after the chip is in products.</li>
+    <li><b>EDA tools:</b> remote access to a national tool grid at the ChipIN Centre.</li>
+    <li><b>IP core repository:</b> access to a set of IP cores.</li>
+    <li><b>MPW support:</b> money for shared prototype runs at a foundry.</li>
+    <li><b>Post-silicon support:</b> money for test and bring-up.</li>
+  </ul>
+  <p>A company must have domestic status. Resident Indian citizens must own more than 50%.</p>
+  <p>The next phase has a target of 50 fabless companies. Its six focus areas are compute, RF, networking, power management, sensors and memory.</p>
+  <h3>What this means for your sales</h3>
+  <ul>
+    <li><b>Nodes:</b> the chips I found are on TSMC 28 nm, TSMC 12 nm and UMC 28 nm. Your primary offer is the 28HPC+ and 12FFC portfolio: PLLs, PVT sensor, POR, oscillator pads, clock buffers.</li>
+    <li><b>Price:</b> budgets are small. Sell a bundle.</li>
+    <li><b>No royalty:</b> all cost is at the start. Prepare an answer for a startup with small cash.</li>
+    <li><b>Payback:</b> ask if your license fee is eligible design cost in their DLI claim. If yes, their real cost is lower.</li>
+    <li><b>Timing:</b> DLI money comes in steps that follow milestones. A purchase can depend on the next milestone.</li>
+    <li><b>Alternatives:</b> the customer can get some IP from the C-DAC repository or the foundry library. Sell on silicon proof and support.</li>
+    <li><b>Design partners:</b> a design service company can influence the IP selection.</li>
+    <li><b>Local support:</b> you are in Bengaluru. Offer fast local support.</li>
+    <li><b>Investors:</b> a small group of funds supports many startups. One good relation can give more introductions.</li>
+  </ul>
+</section>
+
+<section id="companies">
+  <h2>Companies</h2>
+  <p>Fit is my estimate of how well the Analog Bits off-the-shelf portfolio agrees with the account. "Where Analog Bits fits" is my analysis, not public fact. Confirm it in the meeting.</p>
+  <details><summary>Three things to know before you open the cards</summary><div class="in"><ul>
+    <li><b>Camera chips are a crowded area.</b> BigEndian, Netrasemi and Mindgrove all make chips for CCTV cameras. They compete with each other. Do not share data from one with another.</li>
+    <li><b>Investors connect the accounts.</b> IAN Alpha Fund and IvyCap: BigEndian and Morphing Machines. Peak XV: Mindgrove, InCore and C2i. Speciale Invest: Mindgrove and Morphing Machines. Zoho and Unicorn India Ventures: Netrasemi.</li>
+    <li><b>Order of work.</b> Start with the high-fit accounts on TSMC nodes. Use the partner accounts for introductions. Qualify low-fit accounts with one short call.</li>
+  </ul></div></details>
+  <div class="controls">
+    <input id="coSearch" type="search" placeholder="Search name, product or node" aria-label="Search companies">
+    <button class="chip" data-fit="all" aria-pressed="true">All</button>
+    <button class="chip" data-fit="high" aria-pressed="false">High fit</button>
+    <button class="chip" data-fit="medium" aria-pressed="false">Medium</button>
+    <button class="chip" data-fit="low" aria-pressed="false">Low</button>
+    <button class="chip" data-fit="partner" aria-pressed="false">Partner or rival</button>
+  </div>
+  <div id="coList"></div>
+</section>
+
+<section id="questions">
+  <h2>Questions for any meeting</h2>
+  <p>These questions are good for any account. Ask one, then follow the answer two levels down before you ask the next.</p>
+  <div id="qBank"></div>
+</section>
+
+<section id="talk">
+  <h2>How to run the conversation</h2>
+  <div class="grid2">
+    <div class="card"><h4>Do</h4><ul>
+      <li>Read the company website before the meeting.</li>
+      <li>Start with their product and their progress.</li>
+      <li>Repeat their answer in your words. This shows that you understand.</li>
+      <li>Write the technical words that they use. Learn them later.</li>
+      <li>Say "I will bring our engineer" when a question is too deep.</li>
+      <li>End with a named next step and a date.</li>
+    </ul></div>
+    <div class="card"><h4>Do not</h4><ul>
+      <li>Do not say "our PLL is the best". Ask for their jitter target.</li>
+      <li>Do not say "we have everything". Check the node first.</li>
+      <li>Do not guess a specification.</li>
+      <li>Do not explain their architecture to them. Ask about it.</li>
+      <li>Do not offer pinless, droop detector or LDO on 28 nm as off-the-shelf.</li>
+    </ul></div>
+  </div>
+  <h3>Checklist for each meeting</h3>
+  <div class="grid2">
+    <div class="card"><h4>Before</h4><ul>
+      <li>Read the company card and their website.</li>
+      <li>Find their node in the node finder.</li>
+      <li>Select 5 questions from the bank and 3 from the card.</li>
+      <li>Check if an NDA is in place.</li>
+      <li>Know the name of the engineer who can join a follow-up call.</li>
+    </ul></div>
+    <div class="card"><h4>After</h4><ul>
+      <li>Fill the discovery sheet in Salesforce on the same day.</li>
+      <li>Send a thank-you note with the agreed next step.</li>
+      <li>Ask Arthur to enable the front-end kit if they want to try the IP.</li>
+      <li>Tell Mahesh about SERDES needs or important accounts.</li>
+      <li>Set a reminder for their next milestone or tape-out date.</li>
+    </ul></div>
+  </div>
+  <h3>Sentences you can use</h3>
+  <div class="box say"><p>"We make the clocks, sensors and pads that each chip needs. Which of these do you buy today?"</p></div>
+  <div class="box say"><p>"On your node, our PLL and PVT sensor are in production silicon. Can I send the front-end kit so your team can try it?"</p></div>
+  <div class="box say"><p>"We have no royalty. You pay one license fee and no fee for each chip."</p></div>
+  <div class="box say"><p>"That is a good question for our application engineer. Can we set up a call this week?"</p></div>
+  <h3>What their answers tell you</h3>
+  <div class="scroll"><table>
+    <tr><th>You hear</th><th>It means</th><th>You offer</th></tr>
+    <tr><td>Many clock domains, many PLLs</td><td>Volume</td><td>A PLL family as a bundle</td></tr>
+    <tr><td>EMI test problems</td><td>They need spread spectrum</td><td>FracN/SSCG PLL</td></tr>
+    <tr><td>PCIe on the chip</td><td>They need a clean reference clock</td><td>PCIe reference clock PLL, HCSL drivers, SERDES (check first)</td></tr>
+    <tr><td>Chip runs hot, outdoor product</td><td>Thermal control is important</td><td>PVT sensor</td></tr>
+    <tr><td>Security is their message</td><td>They must detect attacks</td><td>Glitch detector, POR with brown-out detect</td></tr>
+    <tr><td>Too many board parts or pins</td><td>They want integration</td><td>PCIe clock PLL, crystal-less pads, pinless (advanced nodes)</td></tr>
+    <tr><td>Bring-up problems with clocks or reset</td><td>They are open to a new vendor</td><td>Silicon reports, support</td></tr>
+    <tr><td>Next chip moves to a new node</td><td>All analog IP is selected again</td><td>Full bundle on the new node</td></tr>
+  </table></div>
+</section>
+
+<section id="objections">
+  <h2>Objections and answers</h2>
+  <p>These answers use the deck messages. Do not argue. Agree with the concern, then give one fact and one question.</p>
+  <details open><summary>"Silicon Creations is cheaper."</summary><div class="in">
+    <p>"I understand. Price is important. We can give a bundle price for PLL, sensor, POR and pads together. Which of these blocks do you need on this chip?"</p>
+    <p class="note">Deck guidance: win with bundles, relations and test-chip proof.</p></div></details>
+  <details><summary>"We use the free PLL from the foundry library."</summary><div class="in">
+    <p>"That is a good start for a first chip. Does it meet your jitter and spread-spectrum needs for the next chip? We can send a front-end kit so your team can compare."</p></div></details>
+  <details><summary>"Synopsys gives us the PVT sensor with its software."</summary><div class="in">
+    <p>"Many teams use that. Our sensor has a long track record on 28 and 40 nm, and you do not need the software package. What accuracy do you get today?"</p></div></details>
+  <details><summary>"We design our analog blocks in-house."</summary><div class="in">
+    <p>"That is a strong capability. Many teams keep their special blocks in-house and buy the standard ones, to save engineer time. Which blocks take the most time from your analog team?"</p></div></details>
+  <details><summary>"You do not have that IP on our node."</summary><div class="in">
+    <p>"Correct, it is not off-the-shelf there. We can port it as semi-custom work. Tell me your tape-out date, and I will ask our engineers for the effort and the schedule."</p>
+    <p class="note">Do not promise a date or a price in the meeting.</p></div></details>
+  <details><summary>"We have no budget now."</summary><div class="in">
+    <p>"I understand. Two facts can help: we have no royalty, and your team can try the front-end kit before a contract. When is your next DLI milestone or funding step?"</p></div></details>
+  <details><summary>"We want a royalty model, with less cost now."</summary><div class="in">
+    <p>"Our standard model is a license fee with no royalty. Let me take your request to our management. What volume do you plan?"</p>
+    <p class="note">Take the request to Mahesh. Do not agree to terms in the meeting.</p></div></details>
+  <details><summary>"Our IP selection is complete for this chip."</summary><div class="in">
+    <p>"Good. Then let us talk about the next chip. Which node will it use, and when do you select IP for it? Also, how was the IP support at bring-up?"</p></div></details>
+  <details><summary>"We are a small company. Will you support us?"</summary><div class="in">
+    <p>"Yes. We are in Bengaluru, and our engineers support integration and bring-up. The same IP is in production with large customers."</p></div></details>
+</section>
+
+<section id="glossary">
+  <h2>Glossary</h2>
+  <div class="scroll"><table id="gloss"></table></div>
+</section>
+
+<section id="sources">
+  <h2>Sources and limits</h2>
+  <ul>
+    <li>Product data: Analog Bits Sales Training deck (October 2024) and Corporate Presentation (April 2025). Confidential.</li>
+    <li>DLI scheme data: <a href="https://www.pib.gov.in/PressNoteDetails.aspx?NoteId=156811&ModuleId=3&reg=3&lang=1">PIB backgrounder, 4 January 2026</a> and <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2219248&reg=3&lang=1">PIB release, 27 January 2026</a>.</li>
+    <li>Company data: press reports found in October 2026. Each company card has its links.</li>
+    <li>The first 12 DLI companies come from the MeitY announcement of September 2024. I did not find a full public list of all 24 projects.</li>
+    <li>For some companies I found only the DLI project name. Their cards say this.</li>
+    <li>Fit, offers and questions are my analysis. Confirm them.</li>
+  </ul>
+  <p class="note">Made on 6 October 2026.</p>
+</section>
+
+</main>
+
+<nav class="tabs" aria-label="Quick links">
+  <a href="#start">Home</a><a href="#products">Products</a><a href="#finder">Nodes</a><a href="#companies">Companies</a><a href="#questions">Questions</a>
+</nav>
+
+<script>
+/* ---------- Node finder ---------- */
+const NODES = [
+ ["TSMC 28HPC+ / 22ULL", ["Integer PLL","FracN PLL","PVT sensor","POR","Oscillator pads","Clock buffers","SERDES 1-8G, PCIe Gen2/3 (28HPC, 28HPC+): production silicon"], "Not listed: LDO, droop detector, glitch detector, pinless products."],
+ ["TSMC 12FFC", ["Integer PLL","FracN/SSCG PLL","PCIe Gen3 reference clock PLL","PVT sensor","POR","Oscillator pads (crystal and crystal-less)","Clock buffers","SERDES 1-8G, PCIe Gen2/3: production silicon"], "Not listed: PCIe Gen4/5 clock PLL, glitch and droop detector, bandgap, C2C I/O."],
+ ["TSMC 16FFC", ["Integer PLL","FracN/SSCG PLL","PCIe Gen3 reference clock PLL","PCIe Gen4/5 reference clock PLL","PVT sensor","POR","Oscillator pads","Clock buffers","SERDES 1-25G, 1-16G and 1-8G: production silicon"], "Not listed: glitch and droop detector, C2C PLL, C2C I/O."],
+ ["TSMC 40G", ["Integer PLL","FracN PLL","PVT sensor","Clock buffers","SERDES 1-8G production; 1-10G available"], "Not listed: POR, oscillator pads, LDO. The deck says there is no SERDES competition on this node."],
+ ["TSMC 40LP / 40ULP", ["Integer PLL","FracN PLL","PVT sensor","Oscillator pads"], "Not listed: POR, clock buffers, LDO."],
+ ["TSMC 0.25 µm to 65 nm", ["More IP is available. The deck gives no table."], "Ask your application engineers for the list."],
+ ["TSMC N7 / N6", ["Integer PLL","FracN/SSCG PLL","PCIe Gen3 and Gen4/5 reference clock PLL","20 GHz C2C PLL","PVT sensor","POR","Glitch detector","Bandgap","ADC","C2C I/O","Oscillator pads","Clock buffers"], "Not listed: droop detector."],
+ ["TSMC N5 / N4 / N4P", ["Integer PLL","FracN/SSCG PLL","Pinless PLL","PCIe Gen3 and Gen4/5 reference clock PLL","20 GHz C2C PLL","PVT sensor and pinless PVT sensor","POR","Glitch detector","Power supply droop detector","Bandgap","C2C I/O","Oscillator pads","Clock buffers","N5A automotive set with ASIL-B Ready certificates","SERDES PCIe Gen3/4 and Ethernet on N5: available; automotive grade in production silicon"], "The full portfolio. A strong node."],
+ ["TSMC N3E / N3P", ["Integer PLL and pinless integer PLL","Pinless FracN PLL","PCIe Gen4/5 LC PLL","20 GHz C2C PLL","PVT, high-accuracy PVT, pinless high-accuracy PVT","Glitch detector","Droop detector","Bandgap","C2C I/O","Oscillator pads","LDO","Clock buffers"], "POR had a front-end kit only in April 2025. A strong node."],
+ ["TSMC N2P", ["Front-end kits for all IP (April 2025)","Back-end kits: integer PLL, PVT sensors, droop detector, bandgap, oscillator pads, low-area LDO, clock buffers"], "Other back-end kits had dates of Q2 2025 or later. Ask for the current status."],
+ ["UMC 28 / 22ULL / 40LP", ["Integer PLL","PLLs also on UMC 28, 40 and 65 nm"], "All other IP is a port with a fee. Qualify with care."],
+ ["GF 22FDX (automotive Grade 1)", ["Integer PLL","PVT sensor","POR","Oscillator pads","Clock buffers","LDOs: 0.8 V and 1.8 V regulators"], "FracN PLL is not listed. Silicon Creations has one."],
+ ["GF 12LP / 12LP+", ["Integer PLL","FracN/SSCG PLL","PCIe Gen3 reference clock PLL","PCIe Gen4/5 reference clock PLL (12LP+ only)","PVT sensor","POR"], "Almost no competition. Keep the price high."],
+ ["GF 28SLP / 28SLPE / 40LP", ["Integer PLL (all three)","PVT sensor (28SLPE)","FracN PLL (40LP)"], "Price-sensitive markets."],
+ ["Intel 16", ["FracN/SSCG PLL","PCIe Gen3 and Gen4/5 reference clock PLL","Oscillator pads","Clock buffers"], "Integer PLL was TBD. Few customers."],
+ ["Samsung 32LP / 28LPP / 28FDSOI", ["SERDES 1-8G, PCIe Gen2/3, SATA, eDP: production silicon"], "Samsung internal teams compete on SERDES."],
+ ["Intel 3", ["PCIe Gen4/5, SAS3, SATA3 SERDES: planned for Q2 2025 in the corporate deck"], "The training deck said this program was stalled. Confirm the status."],
+ ["Samsung 14LPP", ["Integer PLL","PVT sensor","SERDES 1-16G and 1-8G: production silicon"], "Samsung internal teams compete."],
+ ["Samsung 8LPP / 4LPP", ["8LPP: PCIe Gen4/5 SERDES available; PVT sensor and glitch detector planned for Q3 2025","4LPP: integer PLL, 20 GHz C2C PLL, POR"], "Confirm the status."]
+];
+const sel = document.getElementById('nodeSel'), out = document.getElementById('finderOut');
+NODES.forEach((n,i)=>{const o=document.createElement('option');o.value=i;o.textContent=n[0];sel.appendChild(o)});
+function showNode(){const n=NODES[sel.value];out.innerHTML='<h4>'+n[0]+'</h4><ul>'+n[1].map(x=>'<li>'+x+'</li>').join('')+'</ul><p class="note">'+n[2]+'</p>'}
+sel.addEventListener('change',showNode);showNode();
+
+/* ---------- Product finder ---------- */
+const PRODS = [
+ ["Integer PLL", ["TSMC N3E/N3P, N5/N4, N7/N6, 16FFC, 12FFC","TSMC 28HPC+/22ULL, 40G, 40LP/ULP","TSMC N2P (back-end kit available)","GF 12LP+, 12LP, 22FDX, 28SLPE, 28SLP, 40LP","UMC 28/22ULL/40LP (also UMC 65 nm)","Samsung 14LPP, 4LPP","Fujitsu 40 nm"], "Intel 16 was TBD.", "yes"],
+ ["FracN/SSCG PLL", ["TSMC N5/N4, N7/N6, 16FFC, 12FFC","TSMC 28HPC+/22ULL, 40G, 40LP/ULP","GF 12LP+, 12LP, 40LP","Intel 16"], "On N3 and N2 it is the pinless FracN PLL. Not listed on GF 22FDX or UMC.", "yes"],
+ ["Pinless PLL (integer and FracN)", ["TSMC N5, N4 (N5A with ASIL-B Ready certificate)","TSMC N3E/N3P: pinless integer and pinless FracN","TSMC N2P: front-end kit; test chip April 2025"], "Advanced nodes only.", "no"],
+ ["PCIe Gen3 reference clock PLL", ["TSMC N5/N4, N7/N6, 16FFC, 12FFC","GF 12LP+, 12LP","Intel 16"], "Not listed on 28 nm.", "12"],
+ ["PCIe Gen4/5 reference clock PLL (LC)", ["TSMC N3E/N3P, N5/N4, N7/N6, 16FFC","GF 12LP+","Intel 16"], "N2P: front-end kit; back-end kit had a date of Q2 2025. Not listed on 12FFC or 28 nm.", "no"],
+ ["20 GHz C2C PLL", ["TSMC N3E/N3P, N5/N4, N7/N6","Samsung 4LPP"], "N2P: front-end kit only.", "no"],
+ ["PVT sensor", ["TSMC N2P, N3E/N3P, N5/N4, N7/N6, 16FFC, 12FFC","TSMC 28HPC+/22ULL, 40G, 40LP/ULP","GF 12LP+, 12LP, 22FDX, 28SLPE","Samsung 14LPP"], "Samsung 8LPP was planned for Q3 2025. Not listed on UMC.", "yes"],
+ ["High-accuracy and pinless PVT sensor", ["TSMC N5A, N4/N4P, N3P: working silicon","TSMC N2P: back-end kit available","Pinless PVT: N5, N4, N3P"], "Advanced nodes only.", "no"],
+ ["Power-on reset (POR)", ["TSMC N5/N4 (N5A automotive), N7/N6, 16FFC, 12FFC","TSMC 28HPC+/22ULL","GF 12LP+, 12LP, 22FDX","Samsung 4LPP"], "N3 and N2P: front-end kit only in April 2025.", "yes"],
+ ["Glitch detector", ["TSMC N5/N4, N7/N6","TSMC N3E/N3P: in customer silicon"], "N2P: front-end kit only. Samsung 8LPP was planned for Q3 2025. Not listed on 12FFC or 28 nm.", "no"],
+ ["Droop detector", ["TSMC N5/N4 (N5A with ASIL-B Ready certificate)","TSMC N3E/N3P","TSMC N2P"], "Advanced nodes only.", "no"],
+ ["Bandgap", ["TSMC N2P, N3E/N3P, N5/N4, N7/N6"], "Not listed on other nodes.", "no"],
+ ["ADC (low speed)", ["TSMC N7/N6"], "A low-speed ADC family is new on advanced nodes.", "no"],
+ ["LDO and regulators", ["TSMC N3E/N3P: on-die LDO","TSMC N2P: low-area LDO","GF 22FDX: automotive 0.8 V and 1.8 V regulators"], "Not listed on 28 nm, 16 nm or 12 nm.", "no"],
+ ["Oscillator pads (crystal and crystal-less)", ["TSMC N2P, N3E/N3P, N5/N4, N7/N6, 16FFC, 12FFC","TSMC 28HPC+/22ULL, 40LP/ULP","GF 22FDX","Intel 16"], "Crystal oscillator on N5A has an ASIL-B Ready certificate.", "yes"],
+ ["Clock buffers (TX/RX)", ["TSMC N2P, N3E/N3P, N5/N4, N7/N6, 16FFC, 12FFC","TSMC 28HPC+/22ULL, 40G","GF 22FDX","Intel 16"], "", "yes"],
+ ["C2C I/O", ["TSMC N5/N4, N7/N6","TSMC N3E/N3P: in customer silicon"], "N2P: front-end kit only.", "no"],
+ ["SERDES, low-power 1-8G (PCIe Gen2/3)", ["TSMC 40G (also 1-10G), 28HPC, 28HPC+","TSMC 16FFC, 12FFC","Samsung 32LP, 28LPP, 28FDSOI, 14LPP"], "All are production silicon. Speak to Mahesh first.", "yes"],
+ ["SERDES, enterprise (PCIe Gen4/5)", ["TSMC 16FFC: 1-25G and 1-16G, production silicon","Samsung 14LPP: 1-16G, production silicon","Samsung 8LPP: PCIe Gen4/5 available","Samsung 7FF/5LPE: PCIe Gen3/4 and Ethernet","TSMC N5: PCIe Gen3/4 and Ethernet; automotive grade in production"], "Intel 3 was planned; TSMC N3 was in planning. Speak to Mahesh first.", "no"]
+];
+const INDIA={yes:"Available on TSMC 28HPC+ and 12FFC. You can offer it off-the-shelf to most Indian accounts.",
+ "12":"Available on TSMC 12FFC, not on 28 nm. Off-the-shelf for a 12 nm account such as Netrasemi.",
+ no:"Not listed on TSMC 28HPC+ or 12FFC. For most Indian accounts it is custom work with a fee."};
+const psel=document.getElementById('prodSel'), pout=document.getElementById('prodOut');
+PRODS.forEach((x,i)=>{const o=document.createElement('option');o.value=i;o.textContent=x[0];psel.appendChild(o)});
+function showProd(){const x=PRODS[psel.value];
+ pout.innerHTML='<h4>'+x[0]+'</h4><ul style="columns:1">'+x[1].map(n=>'<li>'+n+'</li>').join('')+'</ul>'+(x[2]?'<p class="note">'+x[2]+'</p>':'')
+ +'<div class="box '+(x[3]==="no"?"warn":"tip")+'"><p><b>For India:</b> '+INDIA[x[3]]+'</p></div>'}
+psel.addEventListener('change',showProd);showProd();
+
+/* ---------- Companies ---------- */
+const S={
+ pib:["PIB backgrounder, Jan 2026","https://www.pib.gov.in/PressNoteDetails.aspx?NoteId=156811&ModuleId=3&reg=3&lang=1"],
+ dli12:["MeitY list of 12 start-ups, Sep 2024","https://www.indianweb2.com/2024/09/meity-approves-incentives-for-12.html"]
+};
+const CO=[
+{n:"Morphing Machines",c:"Bengaluru",d:1,fit:"high",
+ makes:"REDEFINE: a many-core processor that changes its connections while it operates. For data centres, AI, telecom, avionics.",
+ status:"First silicon MuDRA-1 shown at SEMICON India, September 2026. Back from the fab; packaging and bring-up are next. Commercial MuDRA planned for Q4 2027. Series A of about ₹80 crore closed April 2026.",
+ node:"TSMC 28 nm. 16 RISC-V cores, 800 MHz clock.",
+ people:"Deepak Shapeti (CEO), Dr Ranjani Narayan (CTO), Prof. S K Nandy (chief scientific advisor). Team growing from 50 to 90.",
+ offer:"Integer and FracN PLL, PVT sensor, POR, oscillator pads, clock buffers. PCIe Gen3 SERDES if they need a host link (check with Mahesh). Droop detector is a custom port on 28 nm.",
+ note:"They also sell REDEFINE as soft IP. Their customers will need clocks and sensors too. A joint offer is possible. IAN Alpha Fund and IvyCap are investors here and at BigEndian.",
+ q:["How is the bring-up of MuDRA-1?","Is the commercial chip on TSMC 28 nm also? Which variant: HPC+ or other?","Which PLL and sensor IP did you use in MuDRA-1?","How do you monitor temperature across the compute grid?","How does the chip connect to its host: PCIe? Which generation?","When customers license REDEFINE, who supplies the analog IP?","When do you select IP for the commercial chip?"],
+ src:[["Inc42 on seed round","https://inc42.com/buzz/semiconductor-startup-morphing-machines-raises-inr-38-4-cr/"],["Inc42 on Series A","https://inc42.com/buzz/exclusive-morphing-machines-raises-%E2%82%B942-cr-to-close-series-a-round-at-%E2%82%B980-cr/"]]},
+{n:"Netrasemi",c:"Thiruvananthapuram",d:1,fit:"high",
+ makes:"Edge-AI SoCs: A2000 (AI video analytics), R1000 (AI microcontroller for IoT sensors), and a CCTV camera chip.",
+ status:"Series A of ₹107 crore in July 2025, led by Zoho and Unicorn India Ventures. Tape-outs on 12 nm. More tape-outs planned, from low-end to high-end surveillance SoCs. A next-generation SoC for edge servers and smart NVR is in research.",
+ node:"TSMC 12 nm.",
+ people:"Jyothis Indirabhai (CEO), Sreejith Varma, Deepa Geetha. Target of 166 engineers.",
+ offer:"On 12FFC the decks list integer PLL, FracN/SSCG PLL, PCIe Gen3 clock PLL, PVT sensor, POR, oscillator pads, clock buffers and the 1-8G SERDES. This is a full bundle.",
+ note:"They say they have many in-house IPs. Find out which analog blocks they make and which they buy. They compete with BigEndian and Mindgrove in cameras.",
+ q:["Which analog IP in the A2000 and R1000 is in-house, and which is licensed?","Are the next SoCs on 12 nm also?","Does the edge-server or NVR SoC need PCIe?","How do you control heat in a camera with AI processing?","Do you need spread spectrum to pass EMI tests?","How many tape-outs do you plan in the next 12 months?"],
+ src:[["Entrepreneur India, Jul 2025","https://india.entrepreneur.com/news-and-trends/netrasemi-raises-inr-107-cr-in-series-a-round-from-zoho-and/494988"],S.pib]},
+{n:"Mindgrove Technologies",c:"Chennai (IIT Madras Research Park)",d:1,fit:"high",
+ makes:"RISC-V SoCs on the Shakti core. Secure IoT: a 700 MHz microcontroller SoC. Vision SoC: for CCTV, dashcams, ADAS, smart TVs.",
+ status:"Series A of $8 million in December 2024. ₹15 crore DLI approval for Vision SoC. Plan: Secure IoT in the market by early 2026, Vision SoC by late 2026.",
+ node:"TSMC 28 nm (Secure IoT).",
+ people:"Shashwath T R (CEO), Sharan Srinivas J (CTO).",
+ offer:"Integer and FracN PLL, PVT sensor, POR with brown-out detect, oscillator pads, clock buffers. Glitch detector for their security message is a custom port on 28 nm.",
+ note:"They sell on low cost (they say 30% lower than competitors). Expect strong price pressure. Investors: Peak XV, Speciale Invest, Rocketship.vc.",
+ q:["Is Vision SoC on TSMC 28 nm also? Which variant?","Where is Vision SoC now: before or after IP selection?","Which PLL and sensor IP is in Secure IoT today?","Security is in your message. How do you detect voltage glitch attacks?","Which interfaces does Vision SoC have?","Is IP license cost in your DLI claim?"],
+ src:[["Circuit Digest, Dec 2024","https://circuitdigest.com/news/mindgrove-technologies-raises-8-million-for-chip-development-and-expansion"],["EPDT profile","https://www.epdtonthenet.net/article/219560/Top-Start-Up-of-2025-Mindgrove-Technologies.aspx"]]},
+{n:"BigEndian Semiconductors",c:"Bengaluru",d:1,fit:"medium",
+ makes:"Secure SoCs for surveillance cameras. First chip: 2 to 5 megapixel cameras, dual-core Arm Cortex-A53, RISC-V security subsystem.",
+ status:"First commercial chip taped out. $6 million pre-Series A in May 2026, led by IAN Alpha Fund. Total funding $9 million. Now in certification, field trials and small-volume production.",
+ node:"2024 reports said UMC 28 nm. Not confirmed for the final chip.",
+ people:"Sunil Kumar (CEO; before at Intel, Broadcom, Arm), Renuka Prasad, Dinesh Annayya, Kanagaraju Ponnusamy. The founders worked together for 25 years.",
+ offer:"If UMC 28 nm: only the integer PLL is off-the-shelf. PVT sensor, POR and glitch detector are ports with a fee. If the next chip moves to TSMC, the full 28HPC+ or 12FFC bundle is available.",
+ note:"They license Arm cores and \"select physical IPs\" and make the other blocks in-house. IP for chip one is locked. Your window is the next chip. Camera interfaces (MIPI, USB) are not in the decks.",
+ q:["How is the bring-up of first silicon?","Which foundry and node does the next chip use?","Which physical IPs do you license today, and from which vendor?","How do you control heat in outdoor cameras?","How do you detect voltage or clock glitch attacks?","What do you want from an IP partner?"],
+ src:[["Entrepreneur India, May 2026","https://india.entrepreneur.com/technology/bigendian-semiconductors-bags-usd-6-mn-in-ian-alpha-fund-led-round"],["Vertex","https://vertexholdings.com/news/bigendian-semiconductors-raises-usd-6m-to-build-india-s-silicon-answer-to-a-sovereignty-led-surveillance-market/"]]},
+{n:"Aheesa Digital Innovations",c:"To confirm",d:1,fit:"medium",
+ makes:"Vihaan: a fiber broadband chip. A GPON network SoC with the Indian VEGA processor.",
+ status:"Reference platforms for customers planned in 2026.",
+ node:"Not public.",
+ people:"Not found in my search.",
+ offer:"PLLs and oscillator pads. A network SoC also needs a serial link for the fiber side; check if the low-power SERDES fits (speak to Mahesh).",
+ note:"Find the node first.",
+ q:["Which foundry and node is Vihaan on?","Which PLL and SERDES IP do you use for the fiber interface?","Is a second chip in the plan after Vihaan?","What do your reference platform customers ask for?"],
+ src:[S.pib,S.dli12]},
+{n:"Saankhya Labs",c:"Bengaluru",d:1,fit:"medium",
+ makes:"Communication chips. DLI project: a base station SoC for 5G.",
+ status:"One of the first fabless companies in India (2006). More than 100 employees.",
+ node:"Not public for the DLI chip.",
+ people:"Not checked in my search. Confirm the current ownership before the call.",
+ offer:"PLLs with low jitter, PVT sensor, SERDES for base station links (check first).",
+ note:"An established company. Expect an analog team and current IP vendors.",
+ q:["Which node is the 5G base station SoC on?","Which clocking IP is in-house and which is licensed?","What jitter do your radio interfaces need?","When is the next tape-out?"],
+ src:[S.dli12,["EngineersGarage, 2026","https://www.engineersgarage.com/indias-top-semiconductor-startups-of-2026/"]]},
+{n:"Calligo Technologies",c:"Bengaluru",d:1,fit:"medium",
+ makes:"DLI project: hardware accelerators for AI.",
+ status:"I found only the DLI project name.",
+ node:"Not public.",
+ people:"Not found in my search.",
+ offer:"An accelerator needs PLLs, a PVT sensor and POR. PCIe to a host is possible.",
+ note:"Learn the node and the product stage in the first call.",
+ q:["What does your accelerator connect to: a server, an edge device?","Which foundry and node?","Do you have first silicon?","How does the chip connect to its host?"],
+ src:[S.dli12]},
+{n:"InCore Semiconductors",c:"Chennai",d:1,fit:"partner",
+ makes:"RISC-V processor IP and SoC design tools. Goal: Dolomite, a strong embedded processor.",
+ status:"Its cores are in customer chips from 180 nm to 16 nm.",
+ node:"An IP company. Its customers select the node.",
+ people:"Started in 2018. Investors include Peak XV.",
+ offer:"A partner more than a buyer. Each InCore customer makes a chip and needs clocks, sensors and pads.",
+ note:"Ask for introductions to their SoC customers. Ask if they make reference SoCs.",
+ q:["Which of your customers are in SoC design now?","Do you supply a reference SoC? Which analog IP is in it?","Do your customers ask you to recommend PLL and sensor vendors?","Can we do a joint offer for a RISC-V SoC on 28 nm?"],
+ src:[S.pib]},
+{n:"MosChip Technologies",c:"Hyderabad",d:1,fit:"partner",
+ makes:"A design service company. DLI project: a smart energy meter IC.",
+ status:"A listed company with design service customers.",
+ node:"Depends on the project.",
+ people:"Not checked in my search.",
+ offer:"Two ways: IP for its own meter IC, and a channel to its service customers.",
+ note:"Design service companies influence IP selection. Build a relation with their IP sourcing team.",
+ q:["For your customers' SoCs, who selects the analog IP: you or the customer?","Which nodes do most of your projects use?","Which PLL and sensor vendors do you use today?","Which node is the energy meter IC on?"],
+ src:[S.dli12]},
+{n:"TYLsemi",c:"Bengaluru and Hyderabad",d:0,fit:"partner",
+ makes:"Chiplet infrastructure IP for AI and HPC chips: I/O, power delivery and interconnect blocks.",
+ status:"Building a design centre in Bengaluru. Hiring analog, layout, PCIe and physical design engineers. I found job postings only; no press reports.",
+ node:"Advanced FinFET nodes (16 nm and below).",
+ people:"The company says its founders built and sold semiconductor companies before.",
+ offer:"This is where Analog Bits is strongest: N5, N3, N2 with pinless PLL, PVT sensors, C2C I/O and LDO.",
+ note:"They make I/O and power IP. They can be a competitor, a partner or a customer. Find out which before you show the roadmap. I did not find them in the DLI lists.",
+ q:["Which blocks do you design, and which do you license?","Which foundry and node is your first test chip on?","Do you need PLLs or PVT sensors from a vendor for your IP?","Who are your target customers: hyperscalers or ASIC companies?","Is there a place where our IP and your IP go together in one offer?"],
+ src:[["Job posting","https://www.jobtarget.com/jobs/jt-suk3snl9gb/principal-analog-design-engineer-power-management-bangalore-karnataka"]]},
+{n:"DV2JS Innovation",c:"To confirm",d:1,fit:"low",
+ makes:"DLI project: an image sensor SoC for automotive.",status:"I found only the DLI project name.",node:"Not public. Image sensors often use special processes.",people:"Not found.",
+ offer:"A PLL and possibly a PVT sensor, if the process is in the portfolio.",note:"Automotive needs qualified IP. Check the process first.",
+ q:["Which process is the image sensor SoC on?","Do you need automotive-qualified IP?","Which clocking IP do you use?"],src:[S.dli12]},
+{n:"Sensesemi Technologies",c:"Bengaluru",d:1,fit:"low",
+ makes:"A wearable SoC for healthcare: microcontroller, wireless, low-power analog front end and AI.",status:"DLI approved in 2024.",node:"Not public.",people:"Founder: Muktamath (named in press).",
+ offer:"IoT PLL (under 1 microwatt), crystal-less oscillator pads, POR.",note:"They design analog blocks. They possibly make their own.",
+ q:["Which node is the wearable SoC on?","Which low-power clock source do you use?","Which analog blocks are in-house?"],src:[["Inc42","https://inc42.com/startups/meet-the-7-semiconductor-startups-powering-indias-technological-prowess/"],S.dli12]},
+{n:"WiSig Networks",c:"Hyderabad",d:1,fit:"low",
+ makes:"DLI project: a NarrowBand IoT SoC.",status:"I found only the DLI project name.",node:"Not public.",people:"Not found.",
+ offer:"Low-power PLL and oscillator pads.",note:"A radio chip. Much of its analog is RF, which is not in the portfolio.",
+ q:["Which node is the NB-IoT SoC on?","Which reference clock and PLL do you use?","Is a second chip in the plan?"],src:[S.dli12]},
+{n:"Vervesemi Microelectronics",c:"Noida",d:1,fit:"low",
+ makes:"Analog and mixed-signal ICs. Motor-control chips for fans, appliances, e-scooters and drones.",status:"110+ IPs, 25 IC variants, 10 patents. Two chips in pilot lots. Volume production planned for late 2026 to early 2027.",node:"Not public.",people:"Started in 2017.",
+ offer:"Small. They have their own analog IP and they export IP.",note:"A peer in analog IP. A possible competitor in some sockets.",
+ q:["Which analog IP do you make, and which do you buy?","Which nodes do your ICs use?","Do you license your IP to other Indian startups?"],src:[S.pib]},
+{n:"C2i Semiconductors",c:"Bengaluru",d:1,fit:"low",
+ makes:"Power-management chips for AI data centres. A \"grid-to-GPU\" power system.",status:"$16.7 million Series A in 2026, led by Peak XV. Started 2024 by engineers from Texas Instruments. About 65 engineers. A smart power stage chip is taped out.",node:"Not public. Power chips usually use special power processes.",people:"Ram Anant (CEO).",
+ offer:"Small. Their chips are power devices, not SoCs.",note:"Good to know for the AI data centre subject. Their work is near the Analog Bits power message.",
+ q:["Which process are your power stage chips on?","Do your controllers need PLLs or sensors from a vendor?"],src:[["DataCenterDynamics","https://www.datacenterdynamics.com/en/news/c2i-semiconductors-raises-15m-in-series-a-funding/"]]},
+{n:"Fermionic Design",c:"Bengaluru",d:1,fit:"low",
+ makes:"DLI project: a beamformer IC for satellite communication.",status:"In the first DLI group.",node:"Not public. RF chips often use RF processes.",people:"Not found.",
+ offer:"Small. RF design is their own work.",note:"Low priority.",
+ q:["Which process do your beamformer ICs use?","Do you license any clocking IP?"],src:[S.dli12]},
+{n:"Green PMU Semi",c:"To confirm",d:1,fit:"low",
+ makes:"DLI project: an energy-harvesting power management IC for IoT.",status:"I found only the DLI project name.",node:"Not public.",people:"Not found.",
+ offer:"Small. They design power circuits.",note:"Low priority.",
+ q:["Which process is your PMIC on?","Do you need an oscillator or POR IP?"],src:[S.dli12]},
+{n:"AAGYAVISION",c:"To confirm",d:1,fit:"low",
+ makes:"Radar-on-chip for all weather. For safety, drone detection and 6G sensing.",status:"Named as a DLI success story in January 2026.",node:"Not public.",people:"Not found.",
+ offer:"A radar chip needs a clean PLL, but radar PLLs are special RF designs.",note:"Ask before you assume a fit.",
+ q:["Which process is your radar chip on?","Is the PLL in-house?","Does the digital part need a PVT sensor or POR?"],src:[S.pib]},
+{n:"Others to qualify: Bitsilica, Innosilica, Siplont",c:"India",d:1,fit:"low",
+ makes:"Bitsilica: automotive platforms for driver assistance. Innosilica: design services and IP cores. Siplont: analog and mixed-signal IP and design services.",status:"One 2026 article names them with DLI support. I did not confirm this.",node:"Not public.",people:"Not found.",
+ offer:"Bitsilica and Innosilica: possible buyers or channels. Siplont: an analog IP peer.",note:"Qualify with one call each.",
+ q:["What chip or IP do you make now?","Which foundry and node?","Which analog IP do you buy today?"],src:[["EngineersGarage, 2026","https://www.engineersgarage.com/indias-top-semiconductor-startups-of-2026/"]]}
+];
+const FIT={high:"High fit",medium:"Medium fit",low:"Low fit",partner:"Partner or rival"};
+const list=document.getElementById('coList');let curFit="all";
+function coHTML(c){return '<details class="co"><summary>'+c.n+' <span class="pill f-'+c.fit+'">'+FIT[c.fit]+'</span>'+(c.d?' <span class="pill dli">DLI</span>':' <span class="pill dli">DLI not confirmed</span>')+'<span class="co-sub">'+c.c+'</span></summary><div class="in"><dl class="kv">'
+ +'<dt>Makes</dt><dd>'+c.makes+'</dd><dt>Status</dt><dd>'+c.status+'</dd><dt>Node</dt><dd>'+c.node+'</dd><dt>People</dt><dd>'+c.people+'</dd><dt>Where Analog Bits fits</dt><dd>'+c.offer+'</dd><dt>Note</dt><dd>'+c.note+'</dd></dl>'
+ +'<h4>Questions for '+c.n.split(':')[0]+'</h4><ol class="q">'+c.q.map(x=>'<li>'+x+'</li>').join('')+'</ol>'
+ +'<p class="note">Sources: '+c.src.map(s=>'<a href="'+s[1]+'" target="_blank" rel="noopener">'+s[0]+'</a>').join(', ')+'</p></div></details>'}
+function renderCo(){const t=document.getElementById('coSearch').value.trim().toLowerCase();
+ const r=CO.filter(c=>(curFit==="all"||c.fit===curFit)&&(!t||(c.n+c.makes+c.node+c.c+c.offer).toLowerCase().includes(t)));
+ list.innerHTML=r.length?r.map(coHTML).join(''):'<p class="empty">No company agrees with this search. Clear the search or select All.</p>'}
+document.getElementById('coSearch').addEventListener('input',renderCo);
+document.querySelectorAll('.chip').forEach(b=>b.addEventListener('click',()=>{curFit=b.dataset.fit;document.querySelectorAll('.chip').forEach(x=>x.setAttribute('aria-pressed',x===b));renderCo()}));
+renderCo();
+
+/* ---------- Question bank ---------- */
+const QB=[
+["To start the conversation",[
+ ["What does your chip do, and who uses it?","Let them tell their story first."],
+ ["What was the most difficult part to get to tape-out?",""],
+ ["What is the plan for the next 12 months: bring-up, production or the next chip?","This tells you the stage."],
+ ["Which customers or applications pull you most now?",""]]],
+["To understand the chip",[
+ ["Which foundry, node and process variant do you use?","Always ask this."],
+ ["Which CPU cores and which accelerators are in the chip?",""],
+ ["Which block is your own special design?",""],
+ ["Which interfaces connect the chip to other devices?","Listen for PCIe, Ethernet, DDR."],
+ ["Which package do you use? Is it wire-bond or flip-chip?",""],
+ ["What is the power budget? Which block uses the most power?",""]]],
+["Clocking",[
+ ["How many PLLs are in the chip, and what does each feed?",""],
+ ["What is your reference clock: a crystal or an external oscillator?","Opens oscillator pads."],
+ ["Which clocks have the tightest jitter limit?","Opens LC PLL."],
+ ["Do you need spread spectrum to pass EMI tests?","Opens FracN/SSCG PLL."],
+ ["Do you use an external clock chip for PCIe?","Opens PCIe reference clock PLL."],
+ ["Did the clocks start correctly at bring-up?",""]]],
+["Sensors and power",[
+ ["How many temperature sensors are in the chip?",""],
+ ["What do you do with the sensor data: protection only, or speed and voltage control?",""],
+ ["What accuracy do you need? Do you trim each chip in production?","Opens high-accuracy PVT."],
+ ["How does the chip start up and reset? Who made the POR?",""],
+ ["How do you detect a supply problem or an attack on the supply?","Opens glitch and droop detectors."],
+ ["How many supply rails go into the package?",""]]],
+["I/O",[
+ ["Which I/O voltages does your board need?",""],
+ ["Where do your I/O pads come from: the foundry library or a vendor?",""],
+ ["Do you want to remove the external crystal to decrease cost?","Opens crystal-less pads."]]],
+["To find the problem",[
+ ["If you could change one IP decision in the last chip, which one?","The best question in this list."],
+ ["Which IP block took the most time to integrate?",""],
+ ["How was the support from your current IP vendor at bring-up?",""],
+ ["Where do you want to decrease cost: board parts, pins or die area?",""]]],
+["To qualify the opportunity",[
+ ["When does IP selection close for the next chip?",""],
+ ["When are design start and tape-out?",""],
+ ["Who decides on IP: the architect, the analog lead or the CEO?",""],
+ ["Does a design service partner take part in the IP selection?",""],
+ ["Do you need silicon-proven IP on the same node, or is a port acceptable?",""],
+ ["Which IP vendors do you use today?",""],
+ ["How do you prefer to pay for IP?","Tell them there is no royalty."]]],
+["DLI and funding",[
+ ["Is this chip a DLI project? Which milestone is next?",""],
+ ["Is IP license cost eligible in your DLI claim?",""],
+ ["Which IP do you get from the C-DAC repository?",""],
+ ["Do you use the MPW support for prototypes? When is the next shuttle?",""]]],
+["To close the meeting",[
+ ["Can I send datasheets for the blocks that we discussed? We will need an NDA.",""],
+ ["Can your team try our front-end kit?",""],
+ ["Can we set up a call with our application engineer on a date this week?",""],
+ ["Who more in your team must I include?",""]]]
+];
+document.getElementById('qBank').innerHTML=QB.map((g,i)=>'<details'+(i<2?' open':'')+'><summary>'+g[0]+'</summary><div class="in"><ol class="q">'+g[1].map(q=>'<li>'+q[0]+(q[1]?'<small>'+q[1]+'</small>':'')+'</li>').join('')+'</ol></div></details>').join('');
+
+/* ---------- Glossary ---------- */
+const G=[["ASIL-B","A safety level for automotive parts (ISO 26262)."],["Back-end kit","Layout and netlist files necessary for tape-out."],["Bandgap","A circuit that gives a stable reference voltage."],["Bring-up","The first test of a new chip."],["C2C","Chip-to-chip. Links between chips in one package."],["Chiplet","A small chip that connects to other chips in one package."],["DLI","Design Linked Incentive scheme of the Indian government."],["Droop","A short decrease in supply voltage under load."],["EMI","Electromagnetic interference. Products must pass EMI tests."],["Fabless","A company that designs chips and does not manufacture them."],["FinFET","The transistor type at 16 nm and below."],["FracN","Fractional-N PLL. It can make almost any frequency."],["Front-end kit","Model and timing files that let a customer start the design."],["GDSII","The layout file of a chip or an IP block."],["Glitch","A fast, short change in voltage."],["HCSL","A clock signal standard that PCIe uses."],["Jitter","The time error of clock edges."],["LC PLL","A PLL with an inductor. Very low jitter."],["LDO","A regulator that gives a clean supply voltage."],["LEF","A file with the outline and pins of an IP block."],["MPW","Multi-project wafer. A shared, low-cost prototype run."],["NDA","Non-disclosure agreement."],["NRE","Non-recurring engineering fee for custom work."],["OTS","Off-the-shelf IP with a part number."],["PCIe","A high-speed interface standard."],["Pinless","IP that uses the core supply and needs no dedicated pin."],["PLL","Phase-locked loop. It makes clocks."],["POR","Power-on reset."],["PPA","Power, performance and area."],["PVT","Process, voltage and temperature."],["RISC-V","An open CPU instruction set."],["SERDES","A block that sends data at high speed on few pins."],["SoC","System on chip."],["SSCG","Spread-spectrum clock generation. It decreases EMI."],["Tape-out","The release of the final design to the foundry."],["Trim","Calibration of each chip in production test."],["Xtal","Crystal."]];
+document.getElementById('gloss').innerHTML='<tr><th>Term</th><th>Meaning</th></tr>'+G.map(g=>'<tr><td><b>'+g[0]+'</b></td><td>'+g[1]+'</td></tr>').join('');
+
+/* ---------- Navigation ---------- */
+const side=document.getElementById('side'),scrim=document.getElementById('scrim'),btn=document.getElementById('menuBtn');
+function setMenu(o){side.classList.toggle('open',o);scrim.classList.toggle('open',o);btn.setAttribute('aria-expanded',o)}
+btn.addEventListener('click',()=>setMenu(!side.classList.contains('open')));
+scrim.addEventListener('click',()=>setMenu(false));
+side.addEventListener('click',e=>{if(e.target.tagName==='A')setMenu(false)});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')setMenu(false)});
+const links=[...document.querySelectorAll('.side a, .tabs a')];
+const targets=[...new Set(links.map(a=>a.getAttribute('href')))].map(h=>document.querySelector(h)).filter(Boolean);
+function spy(){let cur=targets[0];const y=window.scrollY+110;for(const t of targets){if(t.getBoundingClientRect().top+window.scrollY<=y)cur=t}
+ const id='#'+cur.id;const sec='#'+(cur.closest('section')||cur).id;
+ links.forEach(a=>{const h=a.getAttribute('href');a.classList.toggle('on',h===id||(a.parentElement.classList.contains('tabs')&&h===sec))})}
+window.addEventListener('scroll',spy,{passive:true});spy();
+</script>
+</body>
+</html>
